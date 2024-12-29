@@ -110,9 +110,6 @@ const Section7 = () => {
       <div className="mt-16 flex justify-center items-center">
         <Button buttonName={`View All Blogs`}></Button>
       </div>
-      <div>
-        s practice  eerror sol
-      </div>
     </div>
   );
 };
