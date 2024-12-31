@@ -1,4 +1,5 @@
 import "../UI/bannerSearchInput.css";
+import Button from "./Button";
 const Banner = () => {
   return (
     <div>
@@ -25,7 +26,9 @@ const Banner = () => {
               />
             </div>
 
-          
+            <div className="mt-10">
+              <Button buttonName={`Properties`}></Button>
+            </div>
           </div>
         </div>
       </div>
