@@ -1,5 +1,6 @@
 import "../UI/bannerSearchInput.css";
 import Button from "./Button";
+import { Link } from "react-router";
 const Banner = () => {
   return (
     <div>
@@ -27,7 +28,9 @@ const Banner = () => {
             </div>
 
             <div className="mt-10">
+              <Link to='/properties'>
               <Button buttonName={`Properties`}></Button>
+              </Link>
             </div>
           </div>
         </div>

@@ -4,6 +4,7 @@ import Home from "../Pages/Home/Home";
 import Login from "../components/Login/Login";
 import SignUp from "../components/SignUp/SignUp";
 import MealsCategoryCard from "../components/mealsCategory/MealsCategoryCard/MealsCategoryCard";
+import PropertyDropdown from "../components/properties/PropertyDropdown";
 
 const router = createBrowserRouter([
   {
@@ -17,6 +18,10 @@ const router = createBrowserRouter([
       {
         path: "/meal-category-details",
         element: <MealsCategoryCard />,
+      },
+      {
+        path: "/properties",
+        element: <PropertyDropdown />,
       },
     ],
   },

@@ -14,7 +14,9 @@ const Navbar = () => {
       <div>
         <ul className="menu menu-horizontal px-1 font-semibold text-[16px]">
           <li>
+            <Link to='/'>
             <div>Home</div>
+            </Link>
           </li>
 
           <li>
