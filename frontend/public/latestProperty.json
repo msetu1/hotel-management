@@ -1,0 +1,239 @@
+[
+    {
+      "id": 1,
+      "title": "Skyline Luxury Apartments",
+      "bedrooms": 3,
+      "bathrooms": 3,
+      "carsBikes": 2,
+      "petsAllowed": false,
+      "shortDescription": "Modern apartments offering city skyline views with top-tier amenities, suitable for business and leisure travelers.",
+      "description": "Skyline Luxury Apartments redefine urban living with spacious layouts, modern interiors, and unmatched views of the city skyline. Each apartment is designed to provide maximum comfort and convenience, featuring state-of-the-art appliances, high-speed internet, and elegant furnishings. Guests can enjoy access to a rooftop lounge, fitness center, and on-site dining options. Located in the city's prime area, this property ensures proximity to business hubs, shopping districts, and cultural landmarks.",
+      "priceDetails": {
+      "shortPeriod": 1000,
+      "mediumPeriod": 2000,
+      "longPeriod": 2000
+      },
+      "reviews": 124,
+      "location": "Downtown City Center",
+      "rating": 4.7,
+      "offeredAmenities": [
+        "Rooftop Lounge",
+        "Fitness Center",
+        "Wi-Fi",
+        "24/7 Concierge",
+        "Secure Parking",
+        "Fully Equipped Kitchen",
+        "Smart Home Features",
+        "Laundry Services",
+        "On-site Dining",
+        "Business Center"
+      ],
+      "safetyAndHygiene": [
+        "Sanitized Rooms",
+        "Contactless Check-In",
+        "Regular Disinfection",
+        "Safety Alarms",
+        "Smoke Detectors",
+        "Emergency Exits",
+        "24/7 Security Surveillance",
+        "Medical Kit Available",
+        "Staff Trained in Hygiene Protocols",
+        "Social Distancing Practices"
+      ],
+      "nearbyServices": [
+        {
+          "name": "City Mall",
+          "metersAway": 500,
+          "rating": 4.5
+        },
+        {
+          "name": "Central Park",
+          "metersAway": 800,
+          "rating": 4.8
+        },
+        {
+          "name": "Metro Station",
+          "metersAway": 300,
+          "rating": 4.3
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Seaside Serenity Villa",
+      "bedrooms": 4,
+      "bathrooms": 3,
+      "carsBikes": 2,
+      "petsAllowed": true,
+      "shortDescription": "A tranquil beachfront villa offering luxury, privacy, and direct ocean access for an unforgettable stay.",
+      "description": "Seaside Serenity Villa offers an exclusive escape on the pristine beachfront. With its private swimming pool, spacious bedrooms, and open-plan living area, this property embodies relaxation and luxury. Enjoy your morning coffee on the deck with panoramic ocean views, or unwind in the jacuzzi under the stars. Guests are treated to premium services such as a personal chef, housekeeping, and customized travel arrangements. Ideal for families or couples looking to relax and rejuvenate by the sea.",
+      "priceDetails": {
+      "shortPeriod": 1500,
+      "mediumPeriod": 2000,
+      "longPeriod": 2000
+      },
+      "reviews": 87,
+      "location": "Blue Water Bay",
+      "rating": 4.9,
+      "offeredAmenities": [
+        "Private Beach Access",
+        "Swimming Pool",
+        "Outdoor Jacuzzi",
+        "Personal Chef",
+        "Wi-Fi",
+        "Sun Deck",
+        "BBQ Area",
+        "Daily Housekeeping",
+        "Spa Services",
+        "Fitness Area"
+      ],
+      "safetyAndHygiene": [
+        "Daily Sanitization",
+        "Private Pool Maintenance",
+        "Fire Extinguishers",
+        "Secure Perimeter",
+        "Emergency First Aid Kit",
+        "Surveillance Cameras",
+        "Individual HVAC Systems",
+        "No Shared Spaces",
+        "Trained Staff",
+        "Smoke and Carbon Monoxide Detectors"
+      ],
+      "nearbyServices": [
+        {
+          "name": "Ocean View Restaurant",
+          "metersAway": 200,
+          "rating": 4.6
+        },
+        {
+          "name": "Blue Waves Spa",
+          "metersAway": 150,
+          "rating": 4.8
+        },
+        {
+          "name": "Coastal Shopping Plaza",
+          "metersAway": 800,
+          "rating": 4.4
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Mountain Retreat Cabins",
+      "bedrooms": 3,
+      "bathrooms": 3,
+      "carsBikes": 1,
+      "petsAllowed": false,
+      "shortDescription": "Cozy cabins nestled in the mountains, offering serene views, hiking trails, and a peaceful getaway.",
+      "description": "Mountain Retreat Cabins provide the perfect backdrop for a quiet, nature-filled vacation. The rustic design of the cabins is complemented by modern comforts, including high-speed internet, wood-burning fireplaces, and fully equipped kitchens. Surrounded by scenic hiking trails and wildlife, this property caters to adventurers and relaxation seekers alike. Guests can stargaze around a campfire or explore local artisan markets and eateries. A memorable retreat for anyone seeking solitude and natural beauty.",
+      "priceDetails": {
+      "shortPeriod": 1800,
+      "mediumPeriod": 3000,
+      "longPeriod": 3000
+      },
+      "reviews": 57,
+      "location": "Whispering Pines Mountain Range",
+      "rating": 4.6,
+      "offeredAmenities": [
+        "Fireplace",
+        "Free Wi-Fi",
+        "Hiking Trails Access",
+        "Full Kitchen",
+        "Outdoor Firepit",
+        "Pet-Friendly",
+        "Private Patio",
+        "Hot Tub",
+        "Secure Parking",
+        "Mountain View Deck"
+      ],
+      "safetyAndHygiene": [
+        "Fire Safety Tools",
+        "Regular Cabin Cleaning",
+        "Distanced Cabins",
+        "Smoke Detectors",
+        "Carbon Monoxide Monitors",
+        "24/7 Maintenance Support",
+        "On-Call Emergency Services",
+        "Sanitized Linens",
+        "Private Entry",
+        "No Overcrowding Policies"
+      ],
+      "nearbyServices": [
+        {
+          "name": "Nature Trailhead",
+          "metersAway": 100,
+          "rating": 5.0
+        },
+        {
+          "name": "Local Coffeehouse",
+          "metersAway": 300,
+          "rating": 4.7
+        },
+        {
+          "name": "Mountain Grocery Store",
+          "metersAway": 600,
+          "rating": 4.3
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Urban Oasis Studios",
+      "bedrooms": 4,
+      "bathrooms": 3,
+      "carsBikes": 2,
+      "petsAllowed": true,
+      "shortDescription": "Stylish studio apartments in the heart of the city with easy access to cultural landmarks and entertainment hubs.",
+      "description": "Urban Oasis Studios are tailored for those who appreciate modern city life. Each studio features sleek designs, functional layouts, and advanced smart home technology. Located in a vibrant neighborhood, guests can explore the city's best restaurants, theaters, and shopping centers. Designed for comfort and convenience, these studios offer exceptional living experiences with amenities like high-speed internet, secured parking, and round-the-clock concierge services. Perfect for business professionals and urban explorers.",
+      "priceDetails": {
+      "shortPeriod": 2000,
+      "mediumPeriod": 4000,
+      "longPeriod": 4000
+      },
+      "reviews": 101,
+      "location": "Central Urban District",
+      "rating": 4.5,
+      "offeredAmenities": [
+        "Smart Home Automation",
+        "Wi-Fi",
+        "Concierge Service",
+        "Fitness Center",
+        "Shared Workspace",
+        "Private Balcony",
+        "Modern Appliances",
+        "Secure Parking",
+        "Rooftop Garden",
+        "Laundry Service"
+      ],
+      "safetyAndHygiene": [
+        "Contactless Entry",
+        "Sanitized Keypads",
+        "Round-the-Clock Surveillance",
+        "Secure Lobby Access",
+        "Emergency Fire Safety Protocols",
+        "Non-Smoking Property",
+        "Fresh Air Ventilation",
+        "Regular Disinfection",
+        "Trained Security Staff",
+        "On-Site Medical Assistance"
+      ],
+      "nearbyServices": [
+        {
+          "name": "City Art Museum",
+          "metersAway": 400,
+          "rating": 4.8
+        },
+        {
+          "name": "Grand Plaza Mall",
+          "metersAway": 250,
+          "rating": 4.6
+        },
+        {
+          "name": "Metro Central Station",
+          "metersAway": 100,
+          "rating": 4.4
+        }
+      ]
+    }
+  ]
+  

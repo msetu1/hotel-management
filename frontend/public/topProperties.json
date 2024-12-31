@@ -1,0 +1,195 @@
+[
+    {
+      "id": 1,
+      "title": "Ocean View Luxury Resort",
+      "bedrooms": 3,
+      "bathrooms": 2,
+      "carsBikes": 2,
+      "petsAllowed": true,
+      "shortDescription": "Nestled on a private coastline, Ocean View Luxury Resort offers a unique blend of luxury and nature with world-class amenities and breathtaking ocean views.",
+      "description": "Ocean View Luxury Resort is the ultimate destination for those seeking tranquility and luxury. With its infinity pool overlooking the sea, exquisite dining options, and full-service spa, it ensures that guests feel pampered and rejuvenated. The resort offers a variety of activities, including water sports, yoga classes, and nature tours. Each room is equipped with the finest amenities, including private balconies with scenic views, king-sized beds, and modern bath facilities. Whether you’re looking to relax on the beach or explore the local culture, Ocean View guarantees an unforgettable experience.",
+      "priceDetails": {
+      "shortPeriod": 1000,
+      "mediumPeriod": 2000,
+      "longPeriod": 2000
+      },
+      "reviews": 120,
+      "location": "123 Seaside Road, Ocean City, FL",
+      "rating": 4.8,
+      "offeredAmenities": [
+        "Infinity Pool",
+        "Private Beach",
+        "Full-Service Spa",
+        "Fine Dining Restaurant",
+        "Fitness Center",
+        "24/7 Concierge Service",
+        "Private Balconies",
+        "Free Wi-Fi",
+        "Yoga Classes",
+        "Water Sports Activities"
+      ],
+      "safetyAndHygiene": [
+        "24-hour security",
+        "Regular cleaning and disinfecting of common areas",
+        "Hand sanitizers available at key locations",
+        "Staff trained in hygiene protocols"
+      ],
+      "nearbyServices": [
+        {
+          "name": "Seaside Cafe",
+          "distance": "100 meters",
+          "rating": 4.5
+        },
+        {
+          "name": "Ocean City Tours",
+          "distance": "500 meters",
+          "rating": 4.7
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Mountain Escape Lodge",
+      "bedrooms": 4,
+      "bathrooms": 3,
+      "carsBikes": 2,
+      "petsAllowed": false,
+      "shortDescription": "Located in the serene hills, Mountain Escape Lodge offers a tranquil retreat with panoramic views, cozy rooms, and adventure-filled activities.",
+      "description": "Mountain Escape Lodge is a retreat nestled in the heart of the hills. With its rustic charm and intimate atmosphere, it provides guests a true connection to nature. The lodge features hiking trails, horseback riding, and a cozy mountain-view restaurant serving local delicacies. Rooms are designed for comfort, with warm wooden accents and large windows showcasing majestic mountain landscapes. Guests can relax by the stone fireplace, enjoy a hot cocoa in the lounge, or embark on guided treks. Perfect for nature lovers and adventure seekers, Mountain Escape is an ideal place to unwind and recharge.",
+      "priceDetails": {
+      "shortPeriod": 2000,
+      "mediumPeriod": 3000,
+      "longPeriod": 3000
+      },
+      "reviews": 200,
+      "location": "456 Summit Ridge, Mountain Peak, CO",
+      "rating": 4.9,
+      "offeredAmenities": [
+        "Mountain Trails",
+        "Hot Tub",
+        "Stone Fireplace Lounge",
+        "Local Dining Restaurant",
+        "Complimentary Shuttle Service",
+        "Guided Treks",
+        "Free Parking",
+        "Pet-Friendly",
+        "Wi-Fi",
+        "Outdoor Adventure Gear Rentals"
+      ],
+      "safetyAndHygiene": [
+        "Air filtration systems in all rooms",
+        "Routine deep cleaning of rooms and high-touch areas",
+        "Temperature checks for all visitors",
+        "Staff fully vaccinated"
+      ],
+      "nearbyServices": [
+        {
+          "name": "Summit Spa",
+          "distance": "200 meters",
+          "rating": 4.6
+        },
+        {
+          "name": "Adventure Hub",
+          "distance": "700 meters",
+          "rating": 4.8
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Urban Retreat Hotel",
+      "bedrooms": 3,
+      "bathrooms": 2,
+      "carsBikes": 1,
+      "petsAllowed": true,
+      "shortDescription": "A modern city hotel offering luxury accommodations, top-notch amenities, and easy access to local attractions and shopping districts.",
+      "description": "Urban Retreat Hotel stands as the epitome of sophistication in the heart of the city. Featuring contemporary designs and five-star amenities, this urban sanctuary provides the perfect blend of style and comfort. Each room comes fully equipped with smart technology, high-end bedding, and expansive views of the skyline. The hotel includes a rooftop bar, a world-class restaurant, and a fully stocked business center. Located just minutes from shopping centers, cultural hotspots, and public transport, Urban Retreat makes it easy for both leisure and business travelers to explore the city.",
+      "priceDetails": {
+      "shortPeriod": 1000,
+      "mediumPeriod": 2500,
+      "longPeriod": 2500
+      },
+      "reviews": 90,
+      "location": "789 City Central, Metropolis, NY",
+      "rating": 4.7,
+      "offeredAmenities": [
+        "Rooftop Bar",
+        "Gourmet Restaurant",
+        "Business Center",
+        "Concierge Service",
+        "Fitness Center",
+        "Room Service",
+        "City Tours",
+        "In-Room Smart Devices",
+        "Dry Cleaning",
+        "Valet Parking"
+      ],
+      "safetyAndHygiene": [
+        "Keyless room entry for minimal contact",
+        "24/7 sanitization team",
+        "Contactless check-in/out",
+        "Masks provided for guests"
+      ],
+      "nearbyServices": [
+        {
+          "name": "Metro Station",
+          "distance": "150 meters",
+          "rating": 4.4
+        },
+        {
+          "name": "Luxury Mall",
+          "distance": "800 meters",
+          "rating": 4.9
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Lakeview Villas",
+      "bedrooms": 3,
+      "bathrooms": 3,
+      "carsBikes": 2,
+      "petsAllowed": false,
+      "shortDescription": "Set by the serene lake, Lakeview Villas offers peaceful retreats with luxury amenities and stunning views perfect for a peaceful getaway.",
+      "description": "Lakeview Villas combines peace and luxury in a secluded lakeside setting. This collection of elegant villas provides the perfect escape with breathtaking views over the water. Each villa comes with a private terrace, Jacuzzi, and spacious living areas designed for absolute comfort. Enjoy private dining experiences, boat rentals, and fishing excursions to make your stay truly unique. Designed for those seeking privacy and serenity, Lakeview Villas also offers yoga and meditation classes to add a touch of tranquility to your stay. Ideal for couples or those who simply need a break from city life.",
+      "priceDetails": {
+      "shortPeriod": 1500,
+      "mediumPeriod": 3000,
+      "longPeriod": 3000
+      },
+      "reviews": 80,
+      "location": "123 Lake Road, Lakeside, MN",
+      "rating": 5.0,
+      "offeredAmenities": [
+        "Private Villas",
+        "Jacuzzi",
+        "Boat Rentals",
+        "Fishing Excursions",
+        "Private Dining Service",
+        "Yoga and Meditation",
+        "Full Spa Service",
+        "Lakeside Pool",
+        "Outdoor BBQ Area",
+        "Bicycle Rentals"
+      ],
+      "safetyAndHygiene": [
+        "Private, contactless check-in",
+        "Disinfecting of all areas between guest stays",
+        "Outdoor activities with social distancing",
+        "Sanitized boats and bicycles"
+      ],
+      "nearbyServices": [
+        {
+          "name": "Fishing Spot",
+          "distance": "100 meters",
+          "rating": 4.7
+        },
+        {
+          "name": "Vineyard Cafe",
+          "distance": "500 meters",
+          "rating": 4.6
+        }
+      ]
+    }
+  ]
+  

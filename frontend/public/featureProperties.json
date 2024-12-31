@@ -1,0 +1,327 @@
+[
+    {
+      "id": 1,
+      "title": "Skyline Hills Residence",
+      "bedrooms": 5,
+      "bathrooms": 4,
+      "carsBikes": 3,
+      "petsAllowed": true,
+      "shortDescription": "Perched high atop the hills with panoramic city views, this luxury residence offers the perfect blend of elegance and tranquility, providing a private, sophisticated retreat.",
+      "description": "Skyline Hills Residence is a luxurious five-bedroom, four-bathroom home located at the top of a scenic hill, offering sweeping views of the city below. Every room has been thoughtfully designed with contemporary features and high-end finishes, creating a luxurious living space. The open-concept living room opens up to a sprawling deck with panoramic views, ideal for both relaxation and entertaining guests. The fully equipped kitchen is a chef's dream, with stainless steel appliances and a custom marble island. Bedrooms are spacious and feature ensuite bathrooms with soaking tubs and rain showers. The home also features a private pool, a fully equipped gym, and a media room, making it ideal for both relaxation and entertainment. With 3-car parking, high-speed internet, and luxurious services available upon request, Skyline Hills Residence is a dream home for anyone seeking exclusivity and comfort.",
+      "priceDetails": {
+      "shortPeriod": 1000,
+      "mediumPeriod": 2000,
+      "longPeriod": 2000
+      },
+      "reviews": 180,
+      "location": "Skyline Hill Road, Crestview, CA, USA",
+      "rating": 4.9,
+      "offeredAmenities": [
+        "Infinity Pool",
+        "Private Gym",
+        "Home Theater System",
+        "Chef’s Kitchen",
+        "Granite Countertops",
+        "Smart Home Features",
+        "Fireplace",
+        "Private Outdoor Deck",
+        "Spa Bathroom",
+        "High-Speed Wi-Fi"
+      ],
+      "safetyAndHygiene": [
+        "Enhanced sanitation between guests",
+        "Contactless check-in",
+        "Sanitized high-touch surfaces",
+        "Regular safety protocol checks",
+        "Safe distancing arrangements"
+      ],
+      "nearbyServices": [
+        {
+          "name": "Hilltop Café",
+          "distance": "500 meters",
+          "rating": 4.8
+        },
+        {
+          "name": "Crestview Shopping Mall",
+          "distance": "2 km",
+          "rating": 4.7
+        },
+        {
+          "name": "Glenview Fitness Studio",
+          "distance": "800 meters",
+          "rating": 4.6
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Beachside Luxury Villa",
+      "bedrooms": 6,
+      "bathrooms": 5,
+      "carsBikes": 3,
+      "petsAllowed": true,
+      "shortDescription": "This gorgeous beachfront villa offers direct beach access, luxurious amenities, and the perfect setting for both relaxation and extravagant celebrations.",
+      "description": "Beachside Luxury Villa is designed to offer the ultimate seaside living experience, with 6 spacious bedrooms, 5 bathrooms, and breathtaking views of the pristine beach. This villa is a stunning blend of modern and coastal decor, offering large glass windows for unparalleled views of the ocean. The open-plan design features a spacious living area, dining area, and gourmet kitchen that seamlessly connects to the expansive outdoor terrace. Outside, a large infinity pool leads to a private beach, offering access to pristine sand and water activities. The villa is equipped with a fitness center, entertainment lounge, and a private movie theater, offering the ultimate relaxation experience. An outdoor kitchen and bar area is perfect for hosting large gatherings. This luxury property offers everything needed for both day-to-day living and special events.",
+      "priceDetails": {
+      "shortPeriod": 2000,
+      "mediumPeriod": 4000,
+      "longPeriod": 4000
+      },
+      "reviews": 220,
+      "location": "Pacific Beach, Oceanview, FL, USA",
+      "rating": 5.0,
+      "offeredAmenities": [
+        "Infinity Pool",
+        "Private Beach Access",
+        "Outdoor Barbecue",
+        "Entertainment Lounge",
+        "Cinema Room",
+        "Fitness Center",
+        "Gourmet Kitchen",
+        "Smart Home Automation",
+        "High-Speed Internet",
+        "24/7 Concierge Service"
+      ],
+      "safetyAndHygiene": [
+        "Contactless check-in and check-out",
+        "Temperature monitoring at arrival",
+        "Sanitation of high-traffic areas",
+        "Guest health screenings",
+        "Touch-free amenities"
+      ],
+      "nearbyServices": [
+        {
+          "name": "Beachside Café",
+          "distance": "200 meters",
+          "rating": 4.9
+        },
+        {
+          "name": "Oceanside Spa Retreat",
+          "distance": "1.5 km",
+          "rating": 4.8
+        },
+        {
+          "name": "Oceanview Golf Club",
+          "distance": "3 km",
+          "rating": 4.7
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Mountain Retreat Chalet",
+      "bedrooms": 4,
+      "bathrooms": 3,
+      "carsBikes": 2,
+      "petsAllowed": false,
+      "shortDescription": "Nestled in the heart of the mountains, this rustic yet luxurious chalet provides the ideal winter getaway, complete with ski-in/ski-out access and ample space for relaxation.",
+      "description": "Mountain Retreat Chalet offers a cozy and luxurious escape in the heart of the mountains, ideal for both winter sports enthusiasts and those seeking solitude in nature. With 4 bedrooms, 3 bathrooms, and an open-concept living space, the chalet provides both warmth and comfort, perfect for hosting families or small groups. The large windows offer incredible mountain views, and the stone fireplace adds an extra layer of charm. Ski enthusiasts will appreciate the ski-in/ski-out access directly from the property, along with plenty of options for apres-ski relaxation in the chalet's private hot tub. Other highlights include a fully stocked kitchen, a game room, a yoga studio, and a spacious outdoor terrace with a firepit. Its cozy charm and high-end amenities make this a perfect winter retreat.",
+      "priceDetails": {
+      "shortPeriod": 1500,
+      "mediumPeriod": 3000,
+      "longPeriod": 3000
+      },
+      "reviews": 150,
+      "location": "Snowpeak Mountain, Aspen, CO, USA",
+      "rating": 4.8,
+      "offeredAmenities": [
+        "Ski-in/Ski-out Access",
+        "Private Hot Tub",
+        "Gourmet Kitchen",
+        "Outdoor Firepit",
+        "Stone Fireplace",
+        "Game Room",
+        "Private Yoga Studio",
+        "High-Speed Wi-Fi",
+        "24-Hour Heating System",
+        "Washer & Dryer"
+      ],
+      "safetyAndHygiene": [
+        "Enhanced disinfecting measures",
+        "Personal protective equipment for staff",
+        "Non-contact services",
+        "Sanitizing kits for guests",
+        "Daily cleaning of shared spaces"
+      ],
+      "nearbyServices": [
+        {
+          "name": "Mountain Spa & Sauna",
+          "distance": "300 meters",
+          "rating": 4.9
+        },
+        {
+          "name": "Aspen Ski Resort",
+          "distance": "5 km",
+          "rating": 5.0
+        },
+        {
+          "name": "Alpine Bistro",
+          "distance": "1 km",
+          "rating": 4.7
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "City View Loft",
+      "bedrooms": 3,
+      "bathrooms": 2,
+      "carsBikes": 2,
+      "petsAllowed": true,
+      "shortDescription": "This chic, modern city loft offers dramatic skyline views and an ideal location in the heart of downtown, perfect for urban professionals and those seeking a stylish retreat.",
+      "description": "City View Loft combines contemporary elegance with urban convenience, located in the downtown core with impressive views of the city skyline. This 3-bedroom, 2-bathroom apartment features an open-plan living and dining area, a fully equipped kitchen with high-end appliances, and large windows that offer expansive city views. It boasts sleek furnishings and a sophisticated ambiance perfect for those who appreciate modern style. The spacious balcony offers an ideal spot to unwind while taking in the city lights. Additional amenities include a private parking garage, fitness center access, and a rooftop garden with seating areas. This property also offers proximity to local art galleries, bars, and shopping districts, making it a top choice for professionals seeking a balance between work, leisure, and luxury.",
+      "priceDetails": {
+      "shortPeriod": 1000,
+      "mediumPeriod": 2000,
+      "longPeriod": 2000
+      },
+      "reviews": 95,
+      "location": "Downtown, Metro City, NY, USA",
+      "rating": 4.7,
+      "offeredAmenities": [
+        "Rooftop Garden",
+        "Fitness Center",
+        "High-Speed Wi-Fi",
+        "Private Parking",
+        "Central Heating and AC",
+        "Fully Equipped Kitchen",
+        "Smart Home Technology",
+        "Laundry Facility",
+        "24/7 Concierge",
+        "Smart Security System"
+      ],
+      "safetyAndHygiene": [
+        "Strict sanitation policies",
+        "Contactless services",
+        "Thorough deep cleaning of common spaces",
+        "Daily health check for staff",
+        "Sanitization of all key objects"
+      ],
+      "nearbyServices": [
+        {
+          "name": "Metropolitan Art Gallery",
+          "distance": "400 meters",
+          "rating": 4.9
+        },
+        {
+          "name": "Skyline Cafe",
+          "distance": "500 meters",
+          "rating": 4.8
+        },
+        {
+          "name": "Grand Central Station",
+          "distance": "1.5 km",
+          "rating": 4.7
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Rustic Lake Cottage",
+      "bedrooms": 2,
+      "bathrooms": 1,
+      "carsBikes": 1,
+      "petsAllowed": true,
+      "shortDescription": "Situated on the edge of a serene lake, this cozy cottage provides a peaceful escape from the bustle of everyday life, surrounded by nature's beauty.",
+      "description": "Rustic Lake Cottage offers a charming getaway for those looking to reconnect with nature, nestled on the edge of a tranquil lake. With two bedrooms and one bathroom, this cozy retreat offers the perfect space for a couple or small family. The wooden interiors create a rustic yet modern feel, and the expansive windows offer fantastic lake views. A fully equipped kitchen, a living area with a stone fireplace, and a large porch make it ideal for lazy evenings. Outdoor activities like kayaking, fishing, and hiking are popular in the surrounding areas. Perfect for escaping the city, this cottage combines the beauty of the natural world with modern comforts to create an unforgettable lakeside experience.",
+      "priceDetails": {
+      "shortPeriod": 800,
+      "mediumPeriod": 1000,
+      "longPeriod": 1000
+      },
+      "reviews": 70,
+      "location": "Lakeview Valley, Lakedale, VT, USA",
+      "rating": 4.6,
+      "offeredAmenities": [
+        "Wooden Fireplace",
+        "Private Dock",
+        "Fully Equipped Kitchen",
+        "Outdoor Patio",
+        "Lake Access",
+        "High-Speed Wi-Fi",
+        "Fishing Gear",
+        "Outdoor Seating Area",
+        "Heated Flooring",
+        "Washer & Dryer"
+      ],
+      "safetyAndHygiene": [
+        "Comprehensive cleaning protocols",
+        "Protective guest materials",
+        "Verified sanitation procedures",
+        "Cleaning between guests",
+        "No-contact check-in/out"
+      ],
+      "nearbyServices": [
+        {
+          "name": "Lakeview Trails Hiking",
+          "distance": "200 meters",
+          "rating": 4.8
+        },
+        {
+          "name": "Woodsman Tavern",
+          "distance": "4 km",
+          "rating": 4.6
+        },
+        {
+          "name": "Lakedale Ski Resort",
+          "distance": "12 km",
+          "rating": 4.7
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Luxury Penthouse Suite",
+      "bedrooms": 3,
+      "bathrooms": 3,
+      "carsBikes": 2,
+      "petsAllowed": false,
+      "shortDescription": "With stunning views of the skyline and elite amenities, this lavish penthouse suite offers a luxurious urban escape in the heart of the city.",
+      "description": "The Luxury Penthouse Suite is a statement of opulence in the heart of the city, offering a perfect combination of exclusive comfort and convenience. With three elegantly designed bedrooms and three pristine bathrooms, this suite is perfect for high-profile individuals and sophisticated travelers. Inside, the open-concept living area is bathed in natural light from floor-to-ceiling windows that frame panoramic city views. The fully equipped modern kitchen, complemented by luxury furnishings, creates an atmosphere of refinement and elegance. The suite also offers direct access to a rooftop terrace featuring lush landscaping, lounge areas, and a private hot tub. It includes exceptional services, including a personal concierge, valet parking, and an array of high-end amenities.",
+      "priceDetails": {
+      "shortPeriod": 1500,
+      "mediumPeriod": 3000,
+      "longPeriod": 3000
+      },
+      "reviews": 135,
+      "location": "City Center, Skyline Tower, Chicago, IL, USA",
+      "rating": 5.0,
+      "offeredAmenities": [
+        "Private Rooftop Terrace",
+        "High-End Kitchen Appliances",
+        "Personal Concierge Service",
+        "Smart Home Automation",
+        "Private Hot Tub",
+        "Luxury Bath Fixtures",
+        "Home Theater",
+        "24/7 Security",
+        "Heated Floors",
+        "Air Purification System"
+      ],
+      "safetyAndHygiene": [
+        "Full hygiene services",
+        "Disinfecting protocols for all areas",
+        "Air filtration systems in place",
+        "Non-touch amenities",
+        "In-room guest sanitization kits"
+      ],
+      "nearbyServices": [
+        {
+          "name": "Skyline Spa & Wellness",
+          "distance": "500 meters",
+          "rating": 5.0
+        },
+        {
+          "name": "Luxury Shopping Mall",
+          "distance": "600 meters",
+          "rating": 4.8
+        },
+        {
+          "name": "Gourmet Bistro",
+          "distance": "800 meters",
+          "rating": 4.7
+        }
+      ]
+    }
+  ]
+  

@@ -1,0 +1,239 @@
+[
+    {
+      "id": 1,
+      "title": "Grand Urban Residences",
+      "bedrooms": 3,
+      "bathrooms": 3,
+      "carsBikes": 2,
+      "petsAllowed": false,
+      "shortDescription": "Experience luxury and comfort in the heart of the city, with fully-furnished apartments and premium services catering to your every need.",
+      "description": "Grand Urban Residences offer an exceptional living experience in a vibrant urban setting. The property features spacious and elegantly furnished apartments designed for modern living. Guests have access to a fully equipped gym, a relaxing spa, and an infinity pool with breathtaking city views. Conveniently located near entertainment and business districts, this property is perfect for business professionals and leisure travelers alike. Every apartment includes high-speed Wi-Fi, smart home features, and 24/7 security for a safe and hassle-free stay.",
+      "priceDetails": {
+      "shortPeriod": 1000,
+      "mediumPeriod": 2000,
+      "longPeriod": 2000
+      },
+      "reviews": 189,
+      "location": "Central Business District",
+      "rating": 4.8,
+      "offeredAmenities": [
+        "Infinity Pool",
+        "Gym",
+        "Spa",
+        "Wi-Fi",
+        "Smart Home Features",
+        "Rooftop Lounge",
+        "Underground Parking",
+        "In-room Dining",
+        "Concierge Service",
+        "Daily Housekeeping"
+      ],
+      "safetyAndHygiene": [
+        "Daily Cleaning Services",
+        "Sanitized Keypads",
+        "24/7 Security",
+        "Fire Safety Equipment",
+        "Emergency Response System",
+        "Contactless Check-In",
+        "Safe Drinking Water",
+        "Well-Ventilated Rooms",
+        "Non-Smoking Policy",
+        "Medical Assistance Available"
+      ],
+      "nearbyServices": [
+        {
+          "name": "City Mall",
+          "metersAway": 150,
+          "rating": 4.7
+        },
+        {
+          "name": "Central Park",
+          "metersAway": 300,
+          "rating": 4.5
+        },
+        {
+          "name": "Grand Plaza Theater",
+          "metersAway": 500,
+          "rating": 4.6
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Haven on the Lake",
+      "bedrooms": 4,
+      "bathrooms": 3,
+      "carsBikes": 1,
+      "petsAllowed": true,
+      "shortDescription": "An idyllic lakeside retreat offering tranquility and luxury, with personalized services to create memorable stays.",
+      "description": "Haven on the Lake is the ultimate sanctuary for travelers seeking peace and serenity. Set along a pristine lake, this property boasts stylish cottages with private balconies and scenic views. Enjoy a leisurely stroll along the boardwalk, unwind in the lakeside gazebo, or indulge in spa treatments by the water. Each cottage features modern interiors, premium linens, and personalized service to ensure a remarkable experience. Ideal for families or couples, this haven is perfect for rejuvenating and reconnecting with nature.",
+      "priceDetails": {
+      "shortPeriod": 1000,
+      "mediumPeriod": 4000,
+      "longPeriod": 4000
+      },
+      "reviews": 112,
+      "location": "Crystal Lake Shoreline",
+      "rating": 4.9,
+      "offeredAmenities": [
+        "Lakeside Gazebo",
+        "Spa",
+        "Boardwalk",
+        "Wi-Fi",
+        "Premium Bedding",
+        "Outdoor Pool",
+        "Free Parking",
+        "Private Dining",
+        "Bicycles for Rent",
+        "24/7 Reception"
+      ],
+      "safetyAndHygiene": [
+        "Daily Sanitation",
+        "Private Entry for Cottages",
+        "Smoke Detectors",
+        "Emergency Medical Aid",
+        "Fire Extinguishers",
+        "Contactless Dining",
+        "Fresh Air Circulation",
+        "Individualized Cleaning Supplies",
+        "Limited Occupancy Policy",
+        "Staff Vaccination Certificate"
+      ],
+      "nearbyServices": [
+        {
+          "name": "Lakeside Café",
+          "metersAway": 200,
+          "rating": 4.6
+        },
+        {
+          "name": "Fishing Dock",
+          "metersAway": 100,
+          "rating": 4.8
+        },
+        {
+          "name": "Boat Rentals",
+          "metersAway": 300,
+          "rating": 4.7
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Greenwood Garden Villas",
+      "bedrooms": 3,
+      "bathrooms": 2,
+      "carsBikes": 2,
+      "petsAllowed": false,
+      "shortDescription": "A collection of eco-friendly villas surrounded by lush gardens, designed for ultimate relaxation and sustainable living.",
+      "description": "Greenwood Garden Villas combine eco-conscious living with modern luxury. These villas are crafted with sustainable materials and feature solar-powered systems, rainwater harvesting, and energy-efficient appliances. Each villa has a private garden, a shaded patio, and natural decor elements for a tranquil and refreshing ambiance. Ideal for nature lovers and sustainability enthusiasts, guests can enjoy organic farm-to-table dining, guided garden tours, and wellness activities like yoga and meditation.",
+      "priceDetails": {
+      "shortPeriod": 1300,
+      "mediumPeriod": 3000,
+      "longPeriod": 3000
+      },
+      "reviews": 94,
+      "location": "Botanic Hills",
+      "rating": 4.7,
+      "offeredAmenities": [
+        "Private Garden",
+        "Farm-to-Table Dining",
+        "Solar Energy",
+        "Eco-Friendly Toiletries",
+        "Wi-Fi",
+        "Guided Tours",
+        "Yoga Sessions",
+        "Meditation Spaces",
+        "Organic Farm Access",
+        "Shuttle Service"
+      ],
+      "safetyAndHygiene": [
+        "Sustainably Sourced Supplies",
+        "Daily Room Sanitization",
+        "Socially Distanced Events",
+        "Sanitized Bikes for Tours",
+        "Medical Kits Available",
+        "Fire Safety Features",
+        "Filtered Drinking Water",
+        "Frequent Cleaning of Common Areas",
+        "Open-Air Venues",
+        "In-House Safety Workshops"
+      ],
+      "nearbyServices": [
+        {
+          "name": "Nature Trails",
+          "metersAway": 500,
+          "rating": 4.9
+        },
+        {
+          "name": "Green Market",
+          "metersAway": 600,
+          "rating": 4.5
+        },
+        {
+          "name": "Artisan Shop",
+          "metersAway": 300,
+          "rating": 4.6
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Coastal Breeze Inn",
+      "bedrooms": 5,
+      "bathrooms": 3,
+      "carsBikes": 2,
+      "petsAllowed": true,
+      "shortDescription": "Charming seaside inn offering warm hospitality, cozy rooms, and convenient access to the best coastal attractions.",
+      "description": "Coastal Breeze Inn provides a delightful beachfront experience for travelers. Its cozy rooms are equipped with modern conveniences and thoughtfully designed to reflect the coastal vibe. Enjoy local seafood specialties at the on-site restaurant or take a sunset walk along the sandy shores. This property is perfect for exploring nearby coastal attractions, such as lighthouses, museums, and artisan shops. The friendly staff ensures guests feel at home while soaking up the coastal charm.",
+      "priceDetails": {
+      "shortPeriod": 2000,
+      "mediumPeriod": 3900,
+      "longPeriod": 3900
+      },
+      "reviews": 146,
+      "location": "Sunny Shores Beachfront",
+      "rating": 4.6,
+      "offeredAmenities": [
+        "Beach Access",
+        "Restaurant",
+        "Free Wi-Fi",
+        "Pet-Friendly Rooms",
+        "Room Service",
+        "Sun Loungers",
+        "Free Breakfast",
+        "Shuttle to Nearby Attractions",
+        "Fishing Gear Rentals",
+        "Outdoor Patio"
+      ],
+      "safetyAndHygiene": [
+        "Regular Sanitization",
+        "Disposable Utensils",
+        "Contactless Room Access",
+        "Emergency Safety Equipment",
+        "Trained Hygiene Staff",
+        "Medical Assistance",
+        "Air Purifiers in Rooms",
+        "Safety Alarms",
+        "Fire-Extinguishing Sprinklers",
+        "Periodic Staff Testing"
+      ],
+      "nearbyServices": [
+        {
+          "name": "Beachfront Café",
+          "metersAway": 250,
+          "rating": 4.4
+        },
+        {
+          "name": "Maritime Museum",
+          "metersAway": 800,
+          "rating": 4.7
+        },
+        {
+          "name": "Seaside Art Gallery",
+          "metersAway": 450,
+          "rating": 4.5
+        }
+      ]
+    }
+  ]
+  
