@@ -1,0 +1,755 @@
+[
+    {
+      "id":1,
+      "title": "Modern Downtown Loft",
+      "image": "downtown-loft.jpg",
+      "bedrooms": 2,
+      "bathrooms": 1,
+      "carsBikes": 1,
+      "petsAllowed": true,
+      "shortDescription": "A stylish downtown loft offering modern amenities in a central location.",
+      "description": "This two-bedroom loft is designed with urban living in mind. Boasting high ceilings, an open-plan layout, and sleek finishes, it's the perfect fit for professionals or small families. Conveniently located near public transport and popular city attractions, this property provides the ultimate city-living experience. The pet-friendly policy ensures that you can enjoy it with your furry companions, while its prime downtown location gives easy access to all major conveniences.",
+      "priceDetails": {
+          "shortPeriod": 800,
+          "mediumPeriod": 1500,
+          "longPeriod": 1800
+        },
+      "reviews": 85,
+      "location": {
+        "address": "New York, NY, USA",
+        "latitude": 37.7740,
+        "longitude": -122.4312
+      },
+      "rating": 4.5,
+      "offeredAmenities": [
+        "Wi-Fi included",
+        "Gym access",
+        "Secured parking",
+        "Shared terrace",
+        "Stainless steel appliances",
+        "24/7 concierge",
+        "Laundry facilities",
+        "Smart home system",
+        "Bicycle parking",
+        "On-site maintenance"
+      ],
+      "safetyAndHygiene": [
+        "CCTV monitoring",
+        "Daily cleaning",
+        "Fire extinguishers",
+        "Emergency evacuation plans",
+        "Sanitation certifications"
+      ],
+      "nearbyServices": [
+        { "name": "Supermarket", "distance": "300 meters", "rating": 4.5 },
+        { "name": "Metro Station", "distance": "500 meters", "rating": 4.7 },
+        { "name": "Coffee Shop", "distance": "200 meters", "rating": 4.8 }
+      ]
+    },
+    { 
+      "id":2,
+      "title": "Scenic Lakeview Apartment",
+      "image": "lakeview-apartment.jpg",
+      "bedrooms": 3,
+      "bathrooms": 2,
+      "carsBikes": 2,
+      "petsAllowed": false,
+      "shortDescription": "Spacious apartment with stunning lake views, designed for relaxation.",
+      "description": "This three-bedroom apartment offers breathtaking views of the nearby lake. Featuring expansive windows, an airy open layout, and serene surroundings, it's perfect for families seeking a tranquil environment. With modern interiors, two bathrooms, and parking for two vehicles, it combines luxury and functionality. Located minutes away from key recreational spots, this property is ideal for water enthusiasts and nature lovers alike.",
+      "priceDetails": {
+          "shortPeriod": 200,
+          "mediumPeriod": 4500,
+          "longPeriod": 4800
+        },
+      "reviews": 102,
+      "location": {
+        "address": "Seattle, WA, USA",
+        "latitude": 47.6062,
+        "longitude": -122.3321
+      },
+      "rating": 4.6,
+      "offeredAmenities": [
+        "Large balcony",
+        "Community swimming pool",
+        "Yoga room",
+        "Playground",
+        "Fast Wi-Fi",
+        "Modern appliances",
+        "Elevator access",
+        "Pet-free zone",
+        "Secured bike storage",
+        "Walking trails"
+      ],
+      "safetyAndHygiene": [
+        "Regular disinfection",
+        "Fireproof doors",
+        "Emergency exit plan",
+        "Round-the-clock security",
+        "Filtered air system"
+      ],
+      "nearbyServices": [
+        { "name": "Lake Park", "distance": "800 meters", "rating": 4.9 },
+        { "name": "Boating Club", "distance": "1 km", "rating": 4.6 },
+        { "name": "Pharmacy", "distance": "600 meters", "rating": 4.8 }
+      ]
+    },
+    {
+     "id":3,
+      "title": "Luxurious Penthouse Suite",
+      "image": "penthouse-suite.jpg",
+      "bedrooms": 4,
+      "bathrooms": 3,
+      "carsBikes": 3,
+      "petsAllowed": true,
+      "shortDescription": "An exquisite penthouse suite designed to blend comfort with opulence.",
+      "description": "Enjoy unrivaled luxury in this four-bedroom penthouse that defines high-end living. Located in a vibrant city hub, this suite boasts sprawling city views, a fully equipped kitchen, and premium furniture. Additional perks like a private terrace and smart home integrations make it the pinnacle of comfort and convenience. Ideal for large families or those desiring a truly indulgent lifestyle.",
+      "priceDetails": {
+          "shortPeriod": 1000,
+          "mediumPeriod": 2500,
+          "longPeriod": 3800
+        },
+      "reviews": 48,
+      "location": {
+    "address": "Miami, FL, USA",
+    "latitude": 25.7617,
+    "longitude": -80.1918
+  },
+      "rating": 4.9,
+      "offeredAmenities": [
+        "Private terrace",
+        "Rooftop swimming pool",
+        "Jacuzzi",
+        "Dedicated staff",
+        "Underground parking",
+        "Exclusive elevator access",
+        "Wine cellar",
+        "Home theater",
+        "Gaming room",
+        "Pet-friendly terrace"
+      ],
+      "safetyAndHygiene": [
+        "Daily cleaning services",
+        "Disinfection after every guest",
+        "Smoke detectors",
+        "24/7 on-site medical aid",
+        "Secure building access"
+      ],
+      "nearbyServices": [
+        { "name": "Luxury Mall", "distance": "500 meters", "rating": 4.9 },
+        { "name": "Fine Dining", "distance": "400 meters", "rating": 4.8 },
+        { "name": "Art Museum", "distance": "2 km", "rating": 4.7 }
+      ]
+    },
+    { 
+      "id":4,
+      "title": "Minimalist Studio Apartment",
+      "image": "studio-apartment.jpg",
+      "bedrooms": 1,
+      "bathrooms": 1,
+      "carsBikes": 1,
+      "petsAllowed": true,
+      "shortDescription": "Simple yet sophisticated studio apartment designed for modern living.",
+      "description": "Perfect for single professionals or young couples, this studio offers an efficient layout that maximizes every inch of space. Clean lines and contemporary furnishings create a calm and clutter-free environment. A compact kitchen and bathroom, along with a private balcony, complete the amenities that make this a desirable urban haven. Located close to downtown attractions and public transit.",
+      "priceDetails": {
+          "shortPeriod": 1500,
+          "mediumPeriod": 4500,
+          "longPeriod": 4800
+        },
+      "reviews": 67,
+      "location": {
+    "address": "Austin, TX, USA",
+    "latitude": 30.2672,
+    "longitude": -97.7431
+  },
+      "rating": 4.4,
+      "offeredAmenities": [
+        "Compact kitchen",
+        "Fast Wi-Fi",
+        "Shared rooftop deck",
+        "Co-working spaces",
+        "Laundry facilities",
+        "Fitness center access",
+        "Secure bike storage",
+        "Pet-friendly amenities",
+        "Concierge services",
+        "Smart home system"
+      ],
+      "safetyAndHygiene": [
+        "Regular cleaning",
+        "Video surveillance",
+        "Secure access",
+        "Non-smoking units",
+        "Emergency exits"
+      ],
+      "nearbyServices": [
+        { "name": "Bus Stop", "distance": "100 meters", "rating": 4.7 },
+        { "name": "Food Truck Park", "distance": "300 meters", "rating": 4.8 },
+        { "name": "Downtown Plaza", "distance": "1 km", "rating": 4.5 }
+      ]
+    },
+    {   
+        "id":5,
+        "title": "Perfect Rental Property",
+        "image": "https://example.com/images/perfect-rental-property.jpg",
+        "Bedrooms": 3,
+        "Bathrooms": 2,
+        "Cars/Bikes": 2,
+        "Pets Allowed": true,
+        "shortDescription": "This rental property combines luxurious living with affordability, offering three bedrooms, two baths, and a range of amenities that meet modern lifestyles.",
+        "description": "Discover the perfect rental property, an ideal home blending comfort, convenience, and luxury. This spacious property features three bedrooms filled with natural light, two contemporary bathrooms, and designated parking space for two cars or bikes. Perfectly situated in a family-friendly neighborhood, it is close to schools, shopping centers, and parks, offering unparalleled convenience. The open-plan kitchen comes fully equipped with modern appliances, making it ideal for those who love to cook. The property is pet-friendly with an expansive backyard for outdoor activities. Security measures such as 24/7 surveillance and smoke detectors are in place to ensure peace of mind. The nearby community park and local grocery store are just minutes away. Whether you're a young professional, growing family, or someone looking for an affordable yet premium rental experience, this property provides everything you need and more for a happy and comfortable living experience.",
+        "priceDetails": {
+          "shortPeriod": 1000,
+          "mediumPeriod": 2000,
+          "longPeriod": 2500
+        },
+        "reviews": 48,
+        "location": {
+    "address": "123 Harmony Drive, Serenity Town, USA",
+    "latitude": 40.7128,
+    "longitude": -74.0060
+  },
+        "rating": 4.9,
+        "offeredAmenities": [
+          "High-speed Internet",
+          "Air Conditioning",
+          "Modern Kitchen Appliances",
+          "Private Garden",
+          "In-unit Washer/Dryer",
+          "Energy-efficient Lighting",
+          "Secure Parking Space",
+          "Pet-friendly Backyard",
+          "Nearby Jogging Trail",
+          "Eco-friendly Architecture"
+        ],
+        "SafetyAndHygiene": [
+          "Regular sanitization of shared spaces",
+          "Smoke detectors in all rooms",
+          "Fire extinguishers provided",
+          "Carbon monoxide detectors",
+          "Secure electronic locks",
+          "CCTV surveillance around property",
+          "Anti-slip flooring in bathrooms",
+          "Monthly pest control services",
+          "Filtered and safe drinking water",
+          "24/7 emergency maintenance"
+        ],
+        "NearbyServices": [
+          {
+            "name": "Tranquil Supermarket",
+            "distance": "500 meters",
+            "rating": 4.7
+          },
+          {
+            "name": "Fitness Bliss Gym",
+            "distance": "700 meters",
+            "rating": 4.8
+          },
+          {
+            "name": "Happy Pet Groomers",
+            "distance": "1 km",
+            "rating": 4.9
+          },
+          {
+            "name": "Serenity Community School",
+            "distance": "1.2 km",
+            "rating": 4.6
+          }
+        ]
+    },
+    {  
+        "id":6,
+        "title": "A Comprehensive Guide to Budget-Friendly Renting",
+        "image": "https://example.com/images/budget-friendly-renting.jpg",
+        "Bedrooms": 2,
+        "Bathrooms": 1,
+        "Cars/Bikes": 1,
+        "Pets Allowed": true,
+        "shortDescription": "Explore this budget-friendly rental option, perfect for those seeking affordability without compromising on comfort. Featuring two bedrooms and modern amenities in a serene location.",
+        "description": "Finding an affordable rental property doesn't mean sacrificing comfort and quality. This charming two-bedroom rental provides a well-designed living space suited for small families, students, or professionals. The property features one spacious bathroom, a compact kitchen fitted with essential appliances, and a dedicated parking space accommodating either a car or a bike. The cozy living area opens to plenty of natural light, creating a warm and inviting atmosphere. Pets are welcome, making it ideal for animal lovers. Located in a quiet and well-connected neighborhood, the property is close to key conveniences such as grocery stores, gyms, and schools. Safety features like electronic locks, smoke detectors, and a secure building entrance provide peace of mind. With easy access to nearby services, this rental embodies the perfect balance between affordability and essential living amenities, giving you the lifestyle you desire on a budget.",
+        "priceDetails": {
+          "shortPeriod": 800,
+          "mediumPeriod": 1500,
+          "longPeriod": 1800
+        },
+        "reviews": 32,
+        "location": {
+            "address": "45 Affordable Lane, Budgetville, USA",
+            "latitude": 38.8954,
+            "longitude": -77.0365
+          },
+        "rating": 4.5,
+        "offeredAmenities": [
+          "Fast Wi-Fi Connection",
+          "Energy-efficient Appliances",
+          "Modern Bathroom Fixtures",
+          "Dedicated Parking Space",
+          "Pet-friendly Environment",
+          "Gated Community",
+          "Easy Access to Public Transport",
+          "Water-efficient Showerheads",
+          "Smoke-free Premises",
+          "On-call Maintenance Service"
+        ],
+        "SafetyAndHygiene": [
+          "Regular cleaning of shared spaces",
+          "Fire extinguishers installed",
+          "Secure digital entry system",
+          "Smoke detectors in key areas",
+          "On-site security personnel",
+          "Anti-slip flooring",
+          "Monthly pest control checks",
+          "Hygienic garbage disposal",
+          "Sanitized water filtration system",
+          "Emergency power backup"
+        ],
+        "NearbyServices": [
+          {
+            "name": "BudgetMart Grocery Store",
+            "distance": "300 meters",
+            "rating": 4.3
+          },
+          {
+            "name": "Neighborhood Fitness Gym",
+            "distance": "500 meters",
+            "rating": 4.5
+          },
+          {
+            "name": "Pet Paradise Groomers",
+            "distance": "800 meters",
+            "rating": 4.7
+          },
+          {
+            "name": "Budgetville Community School",
+            "distance": "1 km",
+            "rating": 4.4
+          }
+        ]
+    },
+    { 
+        "id":7,
+        "title": "Pet-Friendly Rentals: What You Need to Know",
+        "image": "https://example.com/images/pet-friendly-rentals.jpg",
+        "Bedrooms": 3,
+        "Bathrooms": 2,
+        "Cars/Bikes": 2,
+        "Pets Allowed": true,
+        "shortDescription": "Discover the essentials of finding and living in pet-friendly rentals. This charming property provides all the comforts of home for both you and your furry friends.",
+        "description": "For pet lovers, finding a rental property that allows and accommodates pets can be a challenge. This thoughtfully designed three-bedroom, two-bathroom rental caters to tenants with pets, ensuring that both humans and animals can enjoy the space. The property includes a spacious living area, a modern kitchen, and pet-friendly flooring that's durable and easy to clean. With ample parking for two vehicles, including cars or bikes, the home is situated in a quiet, pet-friendly neighborhood. Outside, you’ll find a small private yard perfect for pet playtime. The property management team understands the unique needs of pet owners, offering flexible pet policies and welcoming small or medium-sized animals. Located close to key amenities and services such as parks, pet stores, and veterinary clinics, this rental ensures your beloved pet's comfort and well-being. Safety features like secured gates, fire extinguishers, and smoke alarms add peace of mind, making it the perfect choice for a pet-inclusive lifestyle.",
+        "priceDetails": {
+          "shortPeriod": 1200,
+          "mediumPeriod": 2200,
+          "longPeriod": 2500
+        },
+        "reviews": 45,
+        "location": {
+            "address": "12 Pet Lovers Lane, Dogwood City, USA",
+            "latitude": 34.0522,
+            "longitude": -118.2437
+          },
+        "rating": 4.8,
+        "offeredAmenities": [
+          "Private Pet-friendly Yard",
+          "Durable Pet-friendly Flooring",
+          "Spacious Living Room",
+          "Air Conditioning",
+          "Ample Natural Lighting",
+          "Modern Kitchen Appliances",
+          "Gated Entry for Security",
+          "High-speed Internet Access",
+          "On-site Maintenance Team",
+          "Nearby Pet-friendly Parks"
+        ],
+        "SafetyAndHygiene": [
+          "Secure Fencing Around Property",
+          "Smoke Alarms Installed",
+          "Regular Pest Control",
+          "Non-slip Flooring",
+          "On-call Emergency Maintenance",
+          "Sanitized Water Supply",
+          "Fire Extinguishers in Key Areas",
+          "Electronic Security Locks",
+          "Dedicated Waste Disposal Area",
+          "First Aid Kit On-Site"
+        ],
+        "NearbyServices": [
+          {
+            "name": "Bark and Purr Pet Store",
+            "distance": "500 meters",
+            "rating": 4.6
+          },
+          {
+            "name": "Happy Tails Veterinary Clinic",
+            "distance": "700 meters",
+            "rating": 4.9
+          },
+          {
+            "name": "Dogwood Park and Play Area",
+            "distance": "1 km",
+            "rating": 4.8
+          },
+          {
+            "name": "Healthy Paws Grooming Services",
+            "distance": "400 meters",
+            "rating": 4.7
+          }
+        ]
+    },
+    { 
+        "id":8,
+        "title": "Understanding Lease Agreements: A Beginner’s Guide",
+        "image": "https://example.com/images/lease-agreement-guide.jpg",
+        "Bedrooms": 2,
+        "Bathrooms": 1,
+        "Cars/Bikes": 1,
+        "Pets Allowed": false,
+        "shortDescription": "Explore the basics of lease agreements and how they impact rental living. This beginner’s guide provides insights to help you navigate rental contracts confidently.",
+        "description": "Lease agreements are an essential part of renting a property, yet they can often seem overwhelming to first-time renters. This comprehensive guide takes the mystery out of lease agreements, explaining common terms, obligations, and legalities. Learn how to identify key clauses, negotiate terms, and avoid potential pitfalls. Whether it’s a two-bedroom apartment with a single bathroom or a small unit with limited parking, understanding the lease ensures a smooth rental experience. Important elements such as security deposits, maintenance responsibilities, and termination clauses are broken down to empower renters in making informed decisions. While some properties allow pets, this guide also explains how to spot restrictions and policies that could impact your rental choices. By understanding your rights and responsibilities, you can confidently sign your next lease agreement without worry. Coupled with tips on reading between the lines and leveraging local rental laws, this guide is a must-read for new and experienced tenants alike.",
+        "priceDetails": {
+          "shortPeriod": 800,
+          "mediumPeriod": 1400,
+          "longPeriod": 1800
+        },
+        "reviews": 27,
+        "location": {
+    "location": {
+    "address": "23 Main Street, Rentalville, USA",
+    "latitude": 36.1699,
+    "longitude": -115.1398
+  },
+    "latitude": 36.1699,
+    "longitude": -115.1398
+  },
+        "rating": 4.7,
+        "offeredAmenities": [
+          "Central Heating",
+          "Spacious Living Area",
+          "High-speed WiFi",
+          "Fully Equipped Kitchen",
+          "On-Site Laundry",
+          "Natural Light Optimization",
+          "Close to Public Transit",
+          "Dedicated Parking Space",
+          "Secure Entry System",
+          "Community Lounge Access"
+        ],
+        "SafetyAndHygiene": [
+          "Smoke Detectors in All Rooms",
+          "Regular Pest Control",
+          "Sanitized Kitchen and Bathrooms",
+          "Anti-slip Flooring",
+          "Fire Extinguishers Available",
+          "Emergency Contact Information",
+          "Secure Locking Systems",
+          "Clean Waste Disposal Area",
+          "Eco-friendly Cleaning Practices",
+          "First Aid Kits On-Site"
+        ],
+        "NearbyServices": [
+          {
+            "name": "Legal Aid for Renters",
+            "distance": "300 meters",
+            "rating": 4.8
+          },
+          {
+            "name": "Rental Agreement Services",
+            "distance": "500 meters",
+            "rating": 4.5
+          },
+          {
+            "name": "Coffee Shop on Main",
+            "distance": "200 meters",
+            "rating": 4.6
+          },
+          {
+            "name": "Local Library and Study Center",
+            "distance": "700 meters",
+            "rating": 4.9
+          }
+        ]
+     },
+     { 
+        "id":9,
+        "title": "The Pros and Cons of Furnished vs. Unfurnished Rentals",
+        "image": "https://example.com/images/furnished-vs-unfurnished.jpg",
+        "Bedrooms": 3,
+        "Bathrooms": 2,
+        "Cars/Bikes": 2,
+        "Pets Allowed": true,
+        "shortDescription": "Discover the differences between furnished and unfurnished rentals to make an informed decision about your next home. This guide dives into the benefits and drawbacks of both options.",
+        "description": "Choosing between a furnished and unfurnished rental is a key decision when searching for a new home. Furnished rentals provide the convenience of ready-to-use spaces, saving you the hassle of buying and moving furniture. They’re ideal for short-term stays or people constantly on the move. However, they often come with higher rent costs, limited customization options, and potential wear-and-tear liabilities. On the other hand, unfurnished rentals allow you to create a personalized space with your own belongings. These are better suited for long-term tenants who plan to settle in a place for a while. While initial setup costs might be higher for furniture and essentials, the lower rent usually offsets these expenses. This guide explores the pros and cons of both types of rentals, factoring in budgets, lifestyle needs, and flexibility preferences. Armed with this knowledge, renters can confidently decide which option aligns with their housing priorities.",
+        "priceDetails": {
+          "shortPeriod": 1200,
+          "mediumPeriod": 2000,
+          "longPeriod": 2500
+        },
+        "reviews": 45,
+        "location": {
+    "address": "456 Maple Lane, Hometown, USA",
+    "latitude": 42.3601,
+    "longitude": -71.0589
+  },
+        "rating": 4.6,
+        "offeredAmenities": [
+          "Fully Furnished Option",
+          "Unfurnished Flexibility",
+          "Spacious Living Area",
+          "On-Site Maintenance",
+          "High-speed Internet",
+          "Fully Equipped Kitchen",
+          "Climate Control",
+          "Dedicated Parking",
+          "Quiet Neighborhood",
+          "Pet-Friendly Policies"
+        ],
+        "SafetyAndHygiene": [
+          "Smoke Detectors Installed",
+          "Sanitized Common Areas",
+          "Well-lit Hallways",
+          "Secure Lock Systems",
+          "Non-slip Flooring",
+          "Fire Extinguisher Availability",
+          "Routine Pest Control",
+          "Hygienic Waste Disposal",
+          "Carbon Monoxide Detectors",
+          "Accessible Emergency Exits"
+        ],
+        "NearbyServices": [
+          {
+            "name": "Furniture Store",
+            "distance": "500 meters",
+            "rating": 4.5
+          },
+          {
+            "name": "Interior Design Consultancy",
+            "distance": "300 meters",
+            "rating": 4.7
+          },
+          {
+            "name": "Local Coffee Shop",
+            "distance": "200 meters",
+            "rating": 4.6
+          },
+          {
+            "name": "Home Improvement Supplies",
+            "distance": "600 meters",
+            "rating": 4.8
+          }
+        ]
+     },
+     { 
+        "id":10,
+        "title": "How to Find the Best Rentals in Prime Locations",
+        "image": "https://example.com/rental-image.jpg",
+        "bedrooms": "3",
+        "bathrooms": "2",
+        "cars_bikes": "2 Bikes, 1 Car",
+        "pets_allowed": true,
+        "shortDescription": "This rental property offers a comfortable and convenient living space in a prime location. It features 3 spacious bedrooms, modern amenities, and proximity to essential services, making it the perfect choice for families and professionals alike.",
+        "description": "Discover the best rental properties in prime locations where comfort meets convenience. This apartment boasts 3 spacious bedrooms, 2 bathrooms, and a fully equipped kitchen. The living room provides a cozy atmosphere with abundant natural light, making it the ideal space for relaxing or entertaining guests. With parking for both cars and bikes, residents can easily access their vehicles. For pet owners, pets are allowed, ensuring a hassle-free experience. Additionally, the property is within walking distance of restaurants, parks, and public transport. The nearby services and modern amenities elevate your lifestyle. The short-term and long-term rental options provide flexibility for tenants. Book your viewing today and explore why this is one of the best rentals in town.",
+        "priceDetails": {
+          "shortPeriod": 500,
+          "mediumPeriod": 1200,
+          "longPeriod": 2500
+        },
+        "reviews": [
+          {
+            "user": "John Doe",
+            "rating": 4,
+            "comment": "Great location and amenities, highly recommend!"
+          },
+          {
+            "user": "Jane Smith",
+            "rating": 5,
+            "comment": "Spacious, comfortable, and perfect for families."
+          }
+        ],
+        "location": {
+          "address": "123 Prime Location Blvd, City, Country",
+          "latitude": 37.7749,
+          "longitude": -122.4194
+        },
+        "rating": 4.5,
+        "offered_amenities": [
+          "Wi-Fi",
+          "24/7 Security",
+          "Gym",
+          "Swimming Pool",
+          "Parking",
+          "Pet-friendly",
+          "Air Conditioning",
+          "Elevator",
+          "Central Heating",
+          "Laundry Facilities"
+        ],
+        "safety_and_hygiene": [
+          "Sanitized regularly",
+          "Security Cameras",
+          "Smoke Detectors",
+          "First Aid Kit available",
+          "Fire Escape Plan"
+        ],
+        "nearby_services": [
+          {
+            "name": "Supermarket",
+            "distance_meters": 150,
+            "rating": 4.3
+          },
+          {
+            "name": "Park",
+            "distance_meters": 300,
+            "rating": 4.7
+          },
+          {
+            "name": "Public Transport",
+            "distance_meters": 250,
+            "rating": 4.6
+          }
+        ]
+     },
+     { 
+        "id":11,
+        "title": "Essential Safety Features to Look for in Rental Homes",
+        "image": "https://example.com/safety-rental-image.jpg",
+        "bedrooms": "4",
+        "bathrooms": "3",
+        "cars_bikes": "2 Cars, 1 Bike",
+        "pets_allowed": true,
+        "shortDescription": "This rental property emphasizes safety with essential features like fire alarms, secure locks, and emergency exits. It offers a spacious living environment with 4 bedrooms, 3 bathrooms, and easy access to nearby services.",
+        "description": "When it comes to rental properties, safety is a top priority. This home offers 4 spacious bedrooms and 3 well-equipped bathrooms, ideal for families and professionals. Among its many features, it prioritizes tenant safety with well-maintained fire alarms, carbon monoxide detectors, secure locks on all windows and doors, and a reliable emergency exit route. The property also includes modern amenities such as air conditioning, a security system, and a smart home interface for easy monitoring. Beyond safety, the location provides convenient access to nearby parks, restaurants, and shopping centers. For car owners, there is sufficient parking space for up to two cars and one bike. Furthermore, the house is pet-friendly, accommodating tenants with pets. With the right balance of comfort, security, and proximity to services, this home provides peace of mind for those looking for a safe and modern living space.",
+        "priceDetails": {
+          "shortPeriod": 600,
+          "mediumPeriod": 1500,
+          "longPeriod": 3200
+        },
+        "reviews": [
+          {
+            "user": "Alice Brown",
+            "rating": 5,
+            "comment": "The safety features make this place feel secure. Highly recommended!"
+          },
+          {
+            "user": "Mark Taylor",
+            "rating": 4,
+            "comment": "Great home with excellent safety features, would definitely stay again."
+          }
+        ],
+        "location": {
+          "address": "456 Safe Street, Suburban Area, City, Country",
+          "latitude": 37.7890,
+          "longitude": -122.3982
+        },
+        "rating": 4.7,
+        "offered_amenities": [
+          "Fire Alarms",
+          "Carbon Monoxide Detectors",
+          "Secure Locking System",
+          "Emergency Exits",
+          "Smart Home Features",
+          "24/7 Security Surveillance",
+          "Pet-friendly",
+          "Parking Space",
+          "Air Conditioning",
+          "Elevator"
+        ],
+        "safety_and_hygiene": [
+          "Sanitized regularly",
+          "Fire Escape Routes",
+          "Smoke Detectors",
+          "Carbon Monoxide Detectors",
+          "Emergency First Aid Kit",
+          "Security Cameras",
+          "Gated Community",
+          "Fire Extinguishers"
+        ],
+        "nearby_services": [
+          {
+            "name": "Grocery Store",
+            "distance_meters": 200,
+            "rating": 4.5
+          },
+          {
+            "name": "Public Hospital",
+            "distance_meters": 500,
+            "rating": 4.8
+          },
+          {
+            "name": "Gym",
+            "distance_meters": 350,
+            "rating": 4.2
+          }
+        ]
+     },
+     { 
+        "id":12,
+        "title": "Maximizing Space in Small Apartment Rentals",
+        "image": "https://example.com/small-apartment-image.jpg",
+        "bedrooms": "2",
+        "bathrooms": "1",
+        "cars_bikes": "1 Car, 2 Bikes",
+        "pets_allowed": false,
+        "shortDescription": "This small apartment rental uses clever design and smart storage solutions to maximize space. It includes 2 bedrooms, 1 bathroom, and well-utilized living areas for comfort and style.",
+        "description": "In today’s urban living spaces, making the most of limited space is essential. This small apartment rental showcases smart design solutions aimed at maximizing space and functionality. The apartment features 2 comfortable bedrooms, an open-concept living area, and a fully equipped kitchen, all designed with practicality in mind. It offers clever storage options like under-bed storage, built-in shelving, and multifunctional furniture such as foldable tables and storage ottomans. Despite its compact layout, the apartment feels spacious, with large windows that allow ample natural light to flood the space. The bathroom is efficiently designed with modern fixtures and clever use of mirrors to create an illusion of more space. Additionally, the apartment is situated in a location with easy access to essential services like grocery stores, public transport, and fitness centers. Whether you're living solo or as a couple, this rental is perfect for those looking to optimize small spaces while maintaining a comfortable and stylish lifestyle.",
+        "priceDetails": {
+          "shortPeriod": 450,
+          "mediumPeriod": 1200,
+          "longPeriod": 2400
+        },
+        "reviews": [
+          {
+            "user": "Emily Clarke",
+            "rating": 4,
+            "comment": "Small but well-designed! Maximized space with great storage options."
+          },
+          {
+            "user": "James Wood",
+            "rating": 5,
+            "comment": "Perfect for those who want an efficient living space. Loved the layout!"
+          }
+        ],
+        "location": {
+          "address": "789 Compact Living Ave, City, Country",
+          "latitude": 37.7740,
+          "longitude": -122.4312
+        },
+        "rating": 4.6,
+        "offered_amenities": [
+          "Multifunctional Furniture",
+          "Built-in Shelving",
+          "Natural Lighting",
+          "Foldable Dining Table",
+          "Efficient Storage Solutions",
+          "High-speed Wi-Fi",
+          "Parking Space",
+          "Central Air Conditioning",
+          "Microwave Oven",
+          "Laundry Facilities"
+        ],
+        "safety_and_hygiene": [
+          "Sanitized regularly",
+          "Smoke Detectors",
+          "Secure Locking System",
+          "Gated Entry",
+          "Fire Extinguisher",
+          "24/7 Security",
+          "First Aid Kit available"
+        ],
+        "nearby_services": [
+          {
+            "name": "Grocery Store",
+            "distance_meters": 150,
+            "rating": 4.3
+          },
+          {
+            "name": "Public Transport Station",
+            "distance_meters": 200,
+            "rating": 4.5
+          },
+          {
+            "name": "Fitness Center",
+            "distance_meters": 300,
+            "rating": 4.2
+          }
+        ]
+     }
+  ]
+  

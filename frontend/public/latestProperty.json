@@ -2,6 +2,7 @@
     {
       "id": 1,
       "title": "Skyline Luxury Apartments",
+      "image":"https://media.istockphoto.com/id/2156880991/photo/cozy-living-room-on-christmas-day.jpg?s=612x612&w=0&k=20&c=NNBmKClmhWEDqxUdiaHOGkivQOGmmQ6yLftSiQCuM5o=",
       "bedrooms": 3,
       "bathrooms": 3,
       "carsBikes": 2,
@@ -61,6 +62,7 @@
     {
       "id": 2,
       "title": "Seaside Serenity Villa",
+      "image":"https://cdn.pixabay.com/photo/2021/04/05/18/02/villa-balbiano-6154200_1280.jpg",
       "bedrooms": 4,
       "bathrooms": 3,
       "carsBikes": 2,
@@ -120,6 +122,7 @@
     {
       "id": 3,
       "title": "Mountain Retreat Cabins",
+      "image":"https://media.istockphoto.com/id/1350915033/photo/luxurious-log-cabin-interior.jpg?s=612x612&w=0&k=20&c=lCDBeS9bL69WBtf5Gs4qupOEWRrEjpMc_Q0JAXgPQnA=",
       "bedrooms": 3,
       "bathrooms": 3,
       "carsBikes": 1,
@@ -179,6 +182,7 @@
     {
       "id": 4,
       "title": "Urban Oasis Studios",
+      "image":"https://media.istockphoto.com/id/184871028/photo/cozy-bedroom-and-a-fireplace.jpg?s=612x612&w=0&k=20&c=cMVhQaYTVgcwAFHFDgcA91h53dHfG6jEcawDNWoUXMQ=",
       "bedrooms": 4,
       "bathrooms": 3,
       "carsBikes": 2,

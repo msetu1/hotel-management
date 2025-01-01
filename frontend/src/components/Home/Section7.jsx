@@ -1,114 +1,33 @@
+import { useEffect, useState } from "react";
 import Button from "../Banner/Button";
 import HostTitle from "../Common/HostTitle";
+import GuidesAndTips from "../Section/GuidesAndTips";
 
 const Section7 = () => {
+  const [properties, setProperties] = useState([]);
+  const [showAll, setShowAll] = useState(false);
+  useEffect(() => {
+    fetch("/guidesAndTips.json")
+      .then((response) => response.json())
+      .then((data) => setProperties(data));
+  }, []);
+
+  const propertiesToShow = showAll ? properties : properties.slice(0, 4);
   return (
     <div className="mt-16">
       <HostTitle title={`Property Rental Guides & Tips`} />
       <div className=" grid lg:grid-cols-4 gap-10">
-        <div className="overflow-hidden rounded bg-white text-slate-500 shadow-md shadow-slate-200">
-          {/*  <!-- Image --> */}
-          <figure>
-            <img
-              src="https://picsum.photos/id/101/800/600"
-              alt="card image"
-              className="aspect-video w-full"
-            />
-          </figure>
-          {/*  <!-- Body--> */}
-          <div className="p-6">
-            <header className="mb-4">
-              <h3 className="text-xl font-medium text-slate-700">
-                The easy way to go
-              </h3>
-              <p className="text-sm text-slate-400"> By George, jun 3 2023</p>
-            </header>
-            <p>
-              Experience the simple pleasures of a world with no cars, and only
-              gentle walks through palm tree forests, and fallen coconuts. An
-              island that’s home to extraordinary cliffs, swelling oceans, and
-              mammoth manta rays.
-            </p>
-          </div>
-        </div>
-        <div className="overflow-hidden rounded bg-white text-slate-500 shadow-md shadow-slate-200">
-          {/*  <!-- Image --> */}
-          <figure>
-            <img
-              src="https://picsum.photos/id/101/800/600"
-              alt="card image"
-              className="aspect-video w-full"
-            />
-          </figure>
-          {/*  <!-- Body--> */}
-          <div className="p-6">
-            <header className="mb-4">
-              <h3 className="text-xl font-medium text-slate-700">
-                The easy way to go
-              </h3>
-              <p className="text-sm text-slate-400"> By George, jun 3 2023</p>
-            </header>
-            <p>
-              Experience the simple pleasures of a world with no cars, and only
-              gentle walks through palm tree forests, and fallen coconuts. An
-              island that’s home to extraordinary cliffs, swelling oceans, and
-              mammoth manta rays.
-            </p>
-          </div>
-        </div>
-        <div className="overflow-hidden rounded bg-white text-slate-500 shadow-md shadow-slate-200">
-          {/*  <!-- Image --> */}
-          <figure>
-            <img
-              src="https://picsum.photos/id/101/800/600"
-              alt="card image"
-              className="aspect-video w-full"
-            />
-          </figure>
-          {/*  <!-- Body--> */}
-          <div className="p-6">
-            <header className="mb-4">
-              <h3 className="text-xl font-medium text-slate-700">
-                The easy way to go
-              </h3>
-              <p className="text-sm text-slate-400"> By George, jun 3 2023</p>
-            </header>
-            <p>
-              Experience the simple pleasures of a world with no cars, and only
-              gentle walks through palm tree forests, and fallen coconuts. An
-              island that’s home to extraordinary cliffs, swelling oceans, and
-              mammoth manta rays.
-            </p>
-          </div>
-        </div>
-        <div className="overflow-hidden rounded bg-white text-slate-500 shadow-md shadow-slate-200">
-          {/*  <!-- Image --> */}
-          <figure>
-            <img
-              src="https://picsum.photos/id/101/800/600"
-              alt="card image"
-              className="aspect-video w-full"
-            />
-          </figure>
-          {/*  <!-- Body--> */}
-          <div className="p-6">
-            <header className="mb-4">
-              <h3 className="text-xl font-medium text-slate-700">
-                The easy way to go
-              </h3>
-              <p className="text-sm text-slate-400"> By George, jun 3 2023</p>
-            </header>
-            <p>
-              Experience the simple pleasures of a world with no cars, and only
-              gentle walks through palm tree forests, and fallen coconuts. An
-              island that’s home to extraordinary cliffs, swelling oceans, and
-              mammoth manta rays.
-            </p>
-          </div>
-        </div>
+        {propertiesToShow?.map((property) => (
+          <GuidesAndTips key={property.id} property={property}></GuidesAndTips>
+        ))}
       </div>
       <div className="mt-16 flex justify-center items-center">
-        <Button buttonName={`View All Blogs`}></Button>
+        <button
+          className="bg-rose-500 hover:bg-black text-[16px] font-bold rounded-full w-[205px] py-3  text-white"
+          onClick={() => setShowAll(!showAll)}
+        >
+          {showAll ? "View Less Blogs" : "View All Blogs"}
+        </button>
       </div>
     </div>
   );
