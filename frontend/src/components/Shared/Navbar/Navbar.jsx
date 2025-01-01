@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import '../../DarkMode/darkMode.css'
 
 const Navbar = () => {
   return (

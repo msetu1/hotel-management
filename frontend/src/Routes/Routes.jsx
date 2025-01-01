@@ -5,6 +5,7 @@ import Login from "../components/Login/Login";
 import SignUp from "../components/SignUp/SignUp";
 import MealsCategoryCard from "../components/mealsCategory/MealsCategoryCard/MealsCategoryCard";
 import PropertyDropdown from "../components/properties/PropertyDropdown";
+import Gallery from "../Pages/Gallery/Gallery";
 
 const router = createBrowserRouter([
   {
@@ -25,7 +26,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/gallery",
-        element: <PropertyDropdown />,
+        element: <Gallery />,
       },
     ],
   },
