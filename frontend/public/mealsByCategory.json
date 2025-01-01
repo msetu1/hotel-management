@@ -10,7 +10,7 @@
       "dietaryInformation": ["Vegetarian", "Nut-Free"],
       "rating": 4.7,
       "reviews": 124,
-      "image": "https://example.com/images/pancakes.jpg",
+      "image": "https://cdn.pixabay.com/photo/2021/07/20/20/58/pancakes-6481745_640.jpg",
       "ingredients": ["Flour", "Eggs", "Milk", "Maple Syrup", "Berries"],
       "preparationTime": "20 minutes"
     },
@@ -25,7 +25,7 @@
       "dietaryInformation": ["Gluten-Free Option"],
       "rating": 4.8,
       "reviews": 89,
-      "image": "https://example.com/images/eggs-benedict.jpg",
+      "image": "https://cdn.pixabay.com/photo/2021/08/21/07/55/croissant-6562091_640.jpg",
       "ingredients": ["Eggs", "Butter", "English Muffins", "Lemon", "Ham"],
       "preparationTime": "25 minutes"
     },
@@ -40,7 +40,7 @@
       "dietaryInformation": ["Vegan Option Available", "Dairy-Free"],
       "rating": 4.6,
       "reviews": 103,
-      "image": "https://example.com/images/avocado-toast.jpg",
+      "image": "https://cdn.pixabay.com/photo/2021/11/08/15/57/avocado-toast-6779457_640.jpg",
       "ingredients": ["Avocado", "Bread", "Olive Oil", "Chili Flakes", "Eggs"],
       "preparationTime": "10 minutes"
     },
@@ -55,7 +55,7 @@
       "dietaryInformation": ["Vegetarian"],
       "rating": 4.5,
       "reviews": 78,
-      "image": "https://example.com/images/croissant.jpg",
+      "image": "https://cdn.pixabay.com/photo/2016/03/27/21/59/bread-1284438_640.jpg",
       "ingredients": ["Butter", "Flour", "Milk", "Yeast"],
       "preparationTime": "15 minutes"
     },
@@ -70,7 +70,7 @@
       "dietaryInformation": ["Vegan", "Dairy-Free"],
       "rating": 4.9,
       "reviews": 145,
-      "image": "https://example.com/images/smoothie-bowl.jpg",
+      "image": "https://cdn.pixabay.com/photo/2022/07/14/06/35/smoothie-7320560_640.jpg",
       "ingredients": ["Banana", "Blueberries", "Spinach", "Chia Seeds", "Granola"],
       "preparationTime": "15 minutes"
     },
@@ -85,7 +85,7 @@
       "dietaryInformation": ["Gluten-Free Option"],
       "rating": 4.6,
       "reviews": 67,
-      "image": "https://example.com/images/breakfast-burrito.jpg",
+      "image": "https://cdn.pixabay.com/photo/2022/05/23/20/47/burrito-7217208_640.jpg",
       "ingredients": ["Eggs", "Tortilla", "Vegetables", "Cheese", "Bacon"],
       "preparationTime": "20 minutes"
     },
@@ -100,7 +100,7 @@
         "dietaryInformation": ["High Protein", "Low Carb", "Gluten-Free Option"],
         "rating": 4.7,
         "reviews": 145,
-        "image": "caesar_salad.jpg",
+        "image": "https://cdn.pixabay.com/photo/2019/04/07/17/22/chicken-4110212_640.jpg",
         "ingredients": ["Romaine Lettuce", "Grilled Chicken", "Parmesan Cheese", "Caesar Dressing", "Croutons"],
         "preparationTime": "20 mins"
       },
@@ -115,7 +115,7 @@
         "dietaryInformation": ["High Protein"],
         "rating": 4.8,
         "reviews": 195,
-        "image": "spaghetti_bolognese.jpg",
+        "image": "https://cdn.pixabay.com/photo/2019/10/13/14/23/spaghetti-bolognese-4546233_640.jpg",
         "ingredients": ["Spaghetti", "Ground Beef", "Tomato Sauce", "Parmesan Cheese", "Garlic", "Olive Oil"],
         "preparationTime": "35 mins"
       },
@@ -130,7 +130,7 @@
         "dietaryInformation": ["High Protein", "Spicy"],
         "rating": 4.6,
         "reviews": 135,
-        "image": "chicken_tikka_wrap.jpg",
+        "image": "https://cdn.pixabay.com/photo/2020/03/13/20/16/paneer-tikka-4929034_640.jpg",
         "ingredients": ["Chicken Tikka", "Flatbread", "Lettuce", "Onion", "Yogurt Sauce"],
         "preparationTime": "25 mins"
       },
@@ -145,7 +145,7 @@
         "dietaryInformation": ["Vegan", "Low Fat"],
         "rating": 4.5,
         "reviews": 112,
-        "image": "vegetable_stir_fry.jpg",
+        "image": "https://cdn.pixabay.com/photo/2020/06/15/13/05/vegetables-5301827_1280.jpg",
         "ingredients": ["Tofu", "Broccoli", "Bell Peppers", "Carrots", "Soy Sauce", "Ginger"],
         "preparationTime": "30 mins"
       },
@@ -160,7 +160,7 @@
         "dietaryInformation": ["High Protein"],
         "rating": 4.6,
         "reviews": 140,
-        "image": "turkey_club_sandwich.jpg",
+        "image": "https://cdn.pixabay.com/photo/2018/07/14/21/30/club-sandwich-3538455_640.jpg",
         "ingredients": ["Turkey", "Bacon", "Lettuce", "Tomato", "Whole-Grain Bread", "Mayonnaise"],
         "preparationTime": "15 mins"
       },
@@ -175,7 +175,7 @@
         "dietaryInformation": ["High Protein", "Gluten-Free Option"],
         "rating": 4.7,
         "reviews": 150,
-        "image": "beef_burrito_bowl.jpg",
+        "image": "https://cdn.pixabay.com/photo/2018/08/29/19/03/steak-3640560_640.jpg",
         "ingredients": ["Ground Beef", "Rice", "Black Beans", "Salsa", "Guacamole", "Cheese", "Sour Cream"],
         "preparationTime": "30 mins"
       },
@@ -190,7 +190,7 @@
         "dietaryInformation": ["High Protein", "Gluten-Free"],
         "rating": 4.9,
         "reviews": 215,
-        "image": "grilled_salmon.jpg",
+        "image": "https://cdn.pixabay.com/photo/2021/06/21/15/03/salmon-6353898_1280.jpg",
         "ingredients": ["Salmon", "Asparagus", "Lemon", "Butter", "Olive Oil", "Garlic"],
         "preparationTime": "25 mins"
       },
@@ -205,7 +205,7 @@
         "dietaryInformation": ["High Protein", "Contains Dairy", "Gluten"],
         "rating": 4.8,
         "reviews": 98,
-        "image": "beef_wellington.jpg",
+        "image": "https://cdn.pixabay.com/photo/2018/08/29/19/03/steak-3640560_640.jpg",
         "ingredients": ["Beef Tenderloin", "Mushrooms", "Puff Pastry", "Dijon Mustard", "Egg Yolk", "Garlic"],
         "preparationTime": "90 mins"
       },
@@ -220,7 +220,7 @@
         "dietaryInformation": ["High Protein", "Contains Dairy"],
         "rating": 4.7,
         "reviews": 180,
-        "image": "chicken_alfredo.jpg",
+        "image": "https://cdn.pixabay.com/photo/2023/07/26/16/43/food-8151625_640.jpg",
         "ingredients": ["Fettuccine Pasta", "Chicken Breast", "Heavy Cream", "Parmesan Cheese", "Garlic", "Butter"],
         "preparationTime": "30 mins"
       },
@@ -235,7 +235,7 @@
         "dietaryInformation": ["High Protein", "Gluten-Free"],
         "rating": 4.6,
         "reviews": 140,
-        "image": "lamb_chops.jpg",
+        "image": "https://cdn.pixabay.com/photo/2015/12/16/09/40/lamb-1095653_640.jpg",
         "ingredients": ["Lamb Chops", "Garlic", "Rosemary", "Mint", "Lemon", "Olive Oil"],
         "preparationTime": "40 mins"
       },
@@ -250,7 +250,7 @@
         "dietaryInformation": ["Vegetarian", "Contains Dairy"],
         "rating": 4.5,
         "reviews": 205,
-        "image": "vegetable_lasagna.jpg",
+        "image": "https://cdn.pixabay.com/photo/2014/03/08/18/48/cheese-casserole-283285_640.jpg",
         "ingredients": ["Lasagna Noodles", "Spinach", "Zucchini", "Mushrooms", "Ricotta Cheese", "Mozzarella Cheese", "Marinara Sauce"],
         "preparationTime": "50 mins"
       },
@@ -265,7 +265,7 @@
         "dietaryInformation": ["High Protein", "Gluten-Free Option"],
         "rating": 4.8,
         "reviews": 210,
-        "image": "shrimp_scampi.jpg",
+        "image": "https://cdn.pixabay.com/photo/2015/09/26/15/33/prawns-959219_640.jpg",
         "ingredients": ["Shrimp", "Garlic", "Butter", "Lemon", "Parsley", "Spaghetti"],
         "preparationTime": "25 mins"
       }

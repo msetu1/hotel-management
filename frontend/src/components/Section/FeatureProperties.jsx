@@ -15,11 +15,11 @@ const FeatureProperties = ({ property }) => {
     petsAllowed,
   } = property;
   return (
-    <div className="border rounded-lg shadow-md p-4 bg-white">
+    <div className=" rounded-lg shadow-md p-4 bg-white">
       <img
         src={image}
         alt={title}
-        className="w-full h-48 object-cover rounded-t-lg"
+        className="w-full h-[210px] object-cover  "
       />
       <div className="p-4">
         <h3 className="text-lg font-bold mb-2">{title}</h3>

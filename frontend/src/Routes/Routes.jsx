@@ -23,6 +23,10 @@ const router = createBrowserRouter([
         path: "/properties",
         element: <PropertyDropdown />,
       },
+      {
+        path: "/gallery",
+        element: <PropertyDropdown />,
+      },
     ],
   },
   {

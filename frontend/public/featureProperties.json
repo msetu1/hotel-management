@@ -2,6 +2,7 @@
     {
       "id": 1,
       "title": "Skyline Hills Residence",
+      "image":"https://cdn.pixabay.com/photo/2017/12/10/03/18/beautiful-3009151_640.jpg",
       "bedrooms": 5,
       "bathrooms": 4,
       "carsBikes": 3,
@@ -56,6 +57,7 @@
     {
       "id": 2,
       "title": "Beachside Luxury Villa",
+      "image":"https://cdn.pixabay.com/photo/2021/12/05/02/34/real-estate-6846358_640.jpg",
       "bedrooms": 6,
       "bathrooms": 5,
       "carsBikes": 3,
@@ -110,6 +112,7 @@
     {
       "id": 3,
       "title": "Mountain Retreat Chalet",
+      "image":"https://cdn.pixabay.com/photo/2018/07/08/18/25/lake-geneva-3524431_640.jpg",
       "bedrooms": 4,
       "bathrooms": 3,
       "carsBikes": 2,
@@ -164,6 +167,7 @@
     {
       "id": 4,
       "title": "City View Loft",
+      "image":"https://cdn.pixabay.com/photo/2014/11/11/22/54/bedroom-527645_640.jpg",
       "bedrooms": 3,
       "bathrooms": 2,
       "carsBikes": 2,
@@ -218,6 +222,7 @@
     {
       "id": 5,
       "title": "Rustic Lake Cottage",
+      "image":"https://cdn.pixabay.com/photo/2019/07/22/21/17/house-4356107_640.jpg",
       "bedrooms": 2,
       "bathrooms": 1,
       "carsBikes": 1,
@@ -272,6 +277,7 @@
     {
       "id": 6,
       "title": "Luxury Penthouse Suite",
+      "image":"https://cdn.pixabay.com/photo/2016/08/22/19/28/governors-mansion-1612734_640.jpg",
       "bedrooms": 3,
       "bathrooms": 3,
       "carsBikes": 2,

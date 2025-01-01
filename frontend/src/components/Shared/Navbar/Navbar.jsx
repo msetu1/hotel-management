@@ -14,8 +14,8 @@ const Navbar = () => {
       <div>
         <ul className="menu menu-horizontal px-1 font-semibold text-[16px]">
           <li>
-            <Link to='/'>
-            <div>Home</div>
+            <Link to="/">
+              <div>Home</div>
             </Link>
           </li>
 
@@ -27,6 +27,11 @@ const Navbar = () => {
           </li>
           <li>
             <div>Find a Property</div>
+          </li>
+          <li>
+            <Link to="/gallery">
+              <div>Gallery</div>
+            </Link>
           </li>
           <Link to="/login">
             <li>

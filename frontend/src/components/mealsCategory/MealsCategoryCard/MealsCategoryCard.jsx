@@ -2,11 +2,11 @@ const MealsCategoryCard = ({ meal }) => {
   const { title, shortDescription, price, rating, image } = meal;
 
   return (
-    <div className="border rounded-lg shadow-md p-4 bg-white">
+    <div className="rounded-lg shadow-md p-4 bg-white">
       <img
         src={image}
         alt={title}
-        className="w-full h-48 object-cover rounded-t-lg"
+        className="w-full h-[220px] object-cover rounded-t-lg"
       />
       <div className="p-4">
         <h3 className="text-lg font-bold mb-2">{title}</h3>
