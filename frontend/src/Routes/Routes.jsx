@@ -6,6 +6,8 @@ import SignUp from "../components/SignUp/SignUp";
 import MealsCategoryCard from "../components/mealsCategory/MealsCategoryCard/MealsCategoryCard";
 import PropertyDropdown from "../components/properties/PropertyDropdown";
 import Gallery from "../Pages/Gallery/Gallery";
+import HostAccount from "../Profile/HostAccount";
+import Profile from "../Profile/Profile";
 
 const router = createBrowserRouter([
   {
@@ -28,6 +30,7 @@ const router = createBrowserRouter([
         path: "/gallery",
         element: <Gallery />,
       },
+      
     ],
   },
   {
@@ -37,6 +40,10 @@ const router = createBrowserRouter([
   {
     path: "/signup",
     element: <SignUp />,
+  },
+  {
+    path: "/profile",
+    element: <Profile />,
   },
 ]);
 

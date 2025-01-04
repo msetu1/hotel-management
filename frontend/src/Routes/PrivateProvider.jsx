@@ -2,7 +2,7 @@ import { Navigate, useLocation } from "react-router-dom";
 import useUsers from "../hooks/useUsers";
 
 const PrivateProvider = ({children}) => {
-    const {user,loading}=useUsers()
+    const {user,loading}=useUsers();
     const location=useLocation();
 
     if(loading){
@@ -13,7 +13,7 @@ const PrivateProvider = ({children}) => {
         return children;
     }
     return <Navigate state={
-        location.pathname} to='/authentication'></Navigate>
+        location.pathname} to='/login' replace='true'></Navigate>
 };
 
 export default PrivateProvider;
