@@ -1,39 +1,67 @@
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { FcGoogle } from "react-icons/fc";
-import { useContext, useState } from "react";
-import { AuthContext } from "../../providers/AuthProvider";
 import toast from "react-hot-toast";
-import { BsEyeFill, BsEyeSlashFill } from "react-icons/bs";
+import { TbFidgetSpinner } from "react-icons/tb";
+import { useEffect, useState } from "react";
+import useAuth from "../../Hooks/useAuth";
 
 const Login = () => {
-  const { signIn } = useContext(AuthContext);
-  // password
-  const [showPassword, setShowPassword] = useState(false);
-  const location = useLocation();
   const navigate = useNavigate();
+  const location = useLocation();
+  const from = location?.state || "/";
+  const { user, signIn, signInWithGoogle, loading, setLoading, resetPassword } =
+    useAuth();
+  const [email, setEmail] = useState("");
 
-  const onSubmit = (e) => {
+  useEffect(() => {
+    if (user) {
+      navigate(from);
+    }
+  }, [navigate, user]);
+
+  const onSubmit = async (e) => {
     e.preventDefault();
     const form = e.target;
-
     const email = form.email.value;
     const password = form.password.value;
 
-    
-    signIn(email, password)
-      .then((result) => {
-        console.log(result.user);
+    try {
+      setLoading(true);
+      await signIn(email, password);
 
-        // navigate
-        navigate(location?.state ? location.state : "/");
-        toast.success("User Logged is successfully");
-      })
-      .catch((error) => {
-        console.error(error);
-        toast.error("Invalid email and password");
-      });
+      navigate(from);
+      toast.success("User Login successfully !");
+    } catch (err) {
+      console.log(err);
+      toast.error(err.message);
+      setLoading(false);
+    }
   };
-
+  // reset password
+  const handleResetPassword = async () => {
+    if (!email) return toast.error("Please, Write your email address !");
+    try {
+      await resetPassword(email);
+      toast.success("Request Success, Check your email !");
+      setLoading(false);
+    } catch (err) {
+      console.log(err);
+      toast.error(err.message);
+      setLoading(false);
+    }
+  };
+  // google sign in
+  const handleGoogleSignIn = async () => {
+    try {
+      await signInWithGoogle();
+      navigate(from);
+      toast.success("User Login successfully !");
+    } catch (err) {
+      console.log(err);
+      toast.error(err.message);
+    }
+  };
+  if (user || loading) return;
   return (
     <div className="flex justify-center items-center min-h-screen">
       <div className="flex flex-col max-w-md p-6 rounded-md sm:p-10 bg-gray-100 text-gray-900">
@@ -43,14 +71,8 @@ const Login = () => {
             Sign in to access your account
           </p>
         </div>
-        <form
-          onSubmit={onSubmit}
-          noValidate=""
-          action=""
-          className="space-y-6 ng-untouched ng-pristine ng-valid"
-        >
+        <form onSubmit={onSubmit} className="space-y-6 ">
           <div className="space-y-4">
-            {/* email  */}
             <div>
               <label htmlFor="email" className="block mb-2 text-sm">
                 Email address
@@ -59,46 +81,49 @@ const Login = () => {
                 type="email"
                 name="email"
                 id="email"
+                onBlur={(e) => setEmail(e.target.value)}
                 required
                 placeholder="Enter Your Email Here"
                 className="w-full px-3 py-2 border rounded-md border-gray-300 focus:outline-rose-500 bg-gray-200 text-gray-900"
                 data-temp-mail-org="0"
               />
             </div>
-            {/* Password input */}
-            <div className="space-y-2 relative">
-              <label htmlFor="password">Password</label>
+            <div>
+              <div className="flex justify-between">
+                <label htmlFor="password" className="text-sm mb-2">
+                  Password
+                </label>
+              </div>
               <input
-                type={`${showPassword ? "text" : "password"}`}
+                type="password"
                 name="password"
                 id="password"
+                required
                 placeholder="*******"
                 className="w-full px-3 py-2 border rounded-md border-gray-300 focus:outline-rose-500 bg-gray-200 text-gray-900"
               />
-              <span
-                onClick={() => setShowPassword(!showPassword)}
-                className="absolute top-1/2 right-5 cursor-pointer"
-              >
-                {showPassword ? (
-                  <BsEyeFill className="common-color text-xl" />
-                ) : (
-                  <BsEyeSlashFill className="common-color text-xl" />
-                )}
-              </span>
             </div>
           </div>
 
           <div>
             <button
+              disabled={loading}
               type="submit"
               className="bg-rose-500 w-full rounded-md py-3 text-white"
             >
-              Continue
+              {loading ? (
+                <TbFidgetSpinner className="animate-spin m-auto" />
+              ) : (
+                "Sign in"
+              )}
             </button>
           </div>
         </form>
         <div className="space-y-1">
-          <button className="text-xs hover:underline hover:text-rose-500 text-gray-400">
+          <button
+            onClick={handleResetPassword}
+            className="text-xs hover:underline hover:text-rose-500 text-gray-400"
+          >
             Forgot password?
           </button>
         </div>
@@ -109,11 +134,15 @@ const Login = () => {
           </p>
           <div className="flex-1 h-px sm:w-16 dark:bg-gray-700"></div>
         </div>
-        <div className="flex justify-center items-center space-x-2 border m-3 p-2 border-gray-300 border-rounded cursor-pointer">
+        <button
+          disabled={loading}
+          onClick={handleGoogleSignIn}
+          className="disabled:cursor-not-allowed flex justify-center items-center space-x-2 border m-3 p-2 border-gray-300 border-rounded cursor-pointer"
+        >
           <FcGoogle size={32} />
 
           <p>Continue with Google</p>
-        </div>
+        </button>
         <p className="px-6 text-sm text-center text-gray-400">
           Don&apos;t have an account yet?{" "}
           <Link

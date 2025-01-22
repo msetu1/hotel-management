@@ -1,27 +1,24 @@
-import { Link } from "react-router-dom";
-import { BsEyeFill, BsEyeSlashFill } from "react-icons/bs";
+import { Link, useNavigate } from "react-router-dom";
 import { FcGoogle } from "react-icons/fc";
 import toast from "react-hot-toast";
-import { useContext, useState } from "react";
-import { AuthContext } from "../../providers/AuthProvider";
+import { TbFidgetSpinner } from "react-icons/tb";
+import useAuth from "../../Hooks/useAuth";
+import { imageUpload } from "../../utils";
+
 
 const SignUp = () => {
-  const { createUser } = useContext(AuthContext);
+  const navigate = useNavigate();
+  const { createUser, signInWithGoogle, updateUserProfile,loading,setLoading } = useAuth();
 
-  // show password
-  const [showPassword, setShowPassword] = useState(false);
-
-  const onSubmit = (e) => {
+  const onSubmit = async (e) => {
     e.preventDefault();
     const form = e.target;
-
     const name = form.name.value;
     const email = form.email.value;
     const password = form.password.value;
-    const image = form.image.files;
-    console.log(name, email, password, image);
+    const image = form.image.files[0];
 
-    // password validation
+      // password validation
     if (password.length < 6) {
       return toast.error("Please password must be at least 6 characters");
     } else if (!/[A-Z]/.test(password)) {
@@ -34,16 +31,37 @@ const SignUp = () => {
       );
     }
 
-    createUser(email, password)
-      .then((result) => {
-        console.log(result.user);
-        toast.success("User Register successfully");
-      })
-      .catch((error) => {
-        console.error(error);
-        toast.error("Something went wrong!!");
-      });
+    try {
+      setLoading(true);
+      //1. update image and get image url
+      const image_url = await imageUpload(image);
+
+      // 2 User registration
+      const result = await createUser(email, password);
+      console.log(result);
+
+      // 3. save userName and photo in firebase
+      await updateUserProfile(name, image_url);
+
+      navigate("/");
+      toast.success("User Register successfully !");
+    } catch (err) {
+      console.log(err);
+      toast.error(err.message);
+    }
   };
+
+  // google sign in 
+  const handleGoogleSignIn =async()=>{
+    try {
+      await signInWithGoogle()
+      navigate("/");
+      toast.success("User Register successfully !");
+    } catch (err) {
+      console.log(err);
+      toast.error(err.message);
+    }
+  }
   return (
     <div className="flex justify-center items-center min-h-screen">
       <div className="flex flex-col max-w-md p-6 rounded-md sm:p-10 bg-gray-100 text-gray-900">
@@ -51,14 +69,8 @@ const SignUp = () => {
           <h1 className="my-3 text-4xl font-bold">Sign Up</h1>
           <p className="text-sm text-gray-400">Welcome to StayVista</p>
         </div>
-        <form
-          onSubmit={onSubmit}
-          noValidate=""
-          action=""
-          className="space-y-6 ng-untouched ng-pristine ng-valid"
-        >
+        <form onSubmit={onSubmit} className="space-y-6 ">
           <div className="space-y-4">
-            {/* name  */}
             <div>
               <label htmlFor="email" className="block mb-2 text-sm">
                 Name
@@ -72,7 +84,6 @@ const SignUp = () => {
                 data-temp-mail-org="0"
               />
             </div>
-            {/* image  */}
             <div>
               <label htmlFor="image" className="block mb-2 text-sm">
                 Select Image:
@@ -85,7 +96,6 @@ const SignUp = () => {
                 accept="image/*"
               />
             </div>
-            {/* email */}
             <div>
               <label htmlFor="email" className="block mb-2 text-sm">
                 Email address
@@ -100,36 +110,31 @@ const SignUp = () => {
                 data-temp-mail-org="0"
               />
             </div>
-
-            {/* Password input */}
-            <div className="space-y-2 relative">
-              <label htmlFor="password">Password</label>
+            <div>
+              <div className="flex justify-between">
+                <label htmlFor="password" className="text-sm mb-2">
+                  Password
+                </label>
+              </div>
               <input
-                type={`${showPassword ? "text" : "password"}`}
+                type="password"
                 name="password"
+                autoComplete="new-password"
                 id="password"
+                required
                 placeholder="*******"
                 className="w-full px-3 py-2 border rounded-md border-gray-300 focus:outline-rose-500 bg-gray-200 text-gray-900"
               />
-              <span
-                onClick={() => setShowPassword(!showPassword)}
-                className="absolute top-1/2 right-5 cursor-pointer"
-              >
-                {showPassword ? (
-                  <BsEyeFill className="common-color text-xl" />
-                ) : (
-                  <BsEyeSlashFill className="common-color text-xl" />
-                )}
-              </span>
             </div>
           </div>
 
           <div>
             <button
+            disabled={loading}
               type="submit"
               className="bg-rose-500 w-full rounded-md py-3 text-white"
             >
-              Continue
+              {loading? <TbFidgetSpinner className="animate-spin m-auto" />:'Continue'}
             </button>
           </div>
         </form>
@@ -140,11 +145,14 @@ const SignUp = () => {
           </p>
           <div className="flex-1 h-px sm:w-16 dark:bg-gray-700"></div>
         </div>
-        <div className="flex justify-center items-center space-x-2 border m-3 p-2 border-gray-300 border-rounded cursor-pointer">
+        <button 
+        disabled={loading}
+        onClick={handleGoogleSignIn} 
+        className="disabled:cursor-not-allowed cursor-pointer flex justify-center items-center space-x-2 border m-3 p-2 border-gray-300 border-rounded">
           <FcGoogle size={32} />
 
           <p>Continue with Google</p>
-        </div>
+        </button>
         <p className="px-6 text-sm text-center text-gray-400">
           Already have an account?{" "}
           <Link
