@@ -11,7 +11,6 @@ const SignUp = () => {
   // show password
   const [showPassword, setShowPassword] = useState(false);
 
-
   const onSubmit = (e) => {
     e.preventDefault();
     const form = e.target;
@@ -19,8 +18,8 @@ const SignUp = () => {
     const name = form.name.value;
     const email = form.email.value;
     const password = form.password.value;
-    const photoUrl = form.photoUrl.value;
-    console.log(name, email, password, photoUrl);
+    const image = form.image.files;
+    console.log(name, email, password, image);
 
     // password validation
     if (password.length < 6) {
@@ -44,8 +43,7 @@ const SignUp = () => {
         console.error(error);
         toast.error("Something went wrong!!");
       });
-
-  }
+  };
   return (
     <div className="flex justify-center items-center min-h-screen">
       <div className="flex flex-col max-w-md p-6 rounded-md sm:p-10 bg-gray-100 text-gray-900">
@@ -54,12 +52,11 @@ const SignUp = () => {
           <p className="text-sm text-gray-400">Welcome to StayVista</p>
         </div>
         <form
-        onSubmit={onSubmit}
+          onSubmit={onSubmit}
           noValidate=""
           action=""
           className="space-y-6 ng-untouched ng-pristine ng-valid"
-        > 
-        
+        >
           <div className="space-y-4">
             {/* name  */}
             <div>
@@ -83,8 +80,8 @@ const SignUp = () => {
               <input
                 required
                 type="file"
-                id="photoUrl"
-                name="photoUrl"
+                id="image"
+                name="image"
                 accept="image/*"
               />
             </div>
@@ -104,28 +101,27 @@ const SignUp = () => {
               />
             </div>
 
-{/* Password input */}
-<div className="space-y-2 relative">
-            <label htmlFor="password">Password</label>
-            <input
-              type={`${showPassword ? "text" : "password"}`}
-              name="password"
-              id="password"
-              placeholder="*******"
+            {/* Password input */}
+            <div className="space-y-2 relative">
+              <label htmlFor="password">Password</label>
+              <input
+                type={`${showPassword ? "text" : "password"}`}
+                name="password"
+                id="password"
+                placeholder="*******"
                 className="w-full px-3 py-2 border rounded-md border-gray-300 focus:outline-rose-500 bg-gray-200 text-gray-900"
-            />
-            <span
-              onClick={() => setShowPassword(!showPassword)}
-              className="absolute top-1/2 right-5 cursor-pointer"
-            >
-              {showPassword ? (
-                <BsEyeFill className="common-color text-xl" />
-              ) : (
-                <BsEyeSlashFill className="common-color text-xl" />
-              )}
-            </span>
-          </div>
-
+              />
+              <span
+                onClick={() => setShowPassword(!showPassword)}
+                className="absolute top-1/2 right-5 cursor-pointer"
+              >
+                {showPassword ? (
+                  <BsEyeFill className="common-color text-xl" />
+                ) : (
+                  <BsEyeSlashFill className="common-color text-xl" />
+                )}
+              </span>
+            </div>
           </div>
 
           <div>

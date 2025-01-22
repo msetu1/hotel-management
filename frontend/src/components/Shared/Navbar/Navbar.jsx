@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import NVLink from "./NVLink";
 
 const Navbar = () => {
  
@@ -22,10 +23,11 @@ const Navbar = () => {
     <div className="bg-black bg-opacity-60 flex items-center justify-between py-8 fixed z-10 w-full px-7 text-white">
       <div className="">
         <div className="flex gap-2 items-center">
-          <img className="w-auto h-7" src="" alt="" />
+          <Link to='/'>
           <span className="font-bold text-3xl font-lobster">
             Stay<span>Sphere</span>
           </span>
+          </Link>
           <label className="grid cursor-pointer place-items-center">
               <input
                 type="checkbox"
@@ -61,36 +63,12 @@ const Navbar = () => {
               >
                 <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
               </svg>
-            </label>
+          </label>
         </div>
       </div>
       <div>
-        <ul className="menu menu-horizontal px-1 font-semibold text-[16px]">
-          <li>
-            <Link to="/">
-              <div>Home</div>
-            </Link>
-          </li>
-
-          <li>
-            <div>Meals</div>
-          </li>
-          <li>
-            <div>Share Stories</div>
-          </li>
-          <li>
-            <div>Find a Property</div>
-          </li>
-          <li>
-            <Link to="/gallery">
-              <div>Gallery</div>
-            </Link>
-          </li>
-          <Link to="/login">
-            <li>
-              <div>Login</div>
-            </li>
-          </Link>
+        <ul className="menu menu-horizontal px-1 font-semibold text-[16px] ">
+         <NVLink/>
         </ul>
       </div>
       <div className="flex gap-2 items-center">

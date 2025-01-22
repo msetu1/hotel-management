@@ -6,8 +6,12 @@ import SignUp from "../components/SignUp/SignUp";
 import MealsCategoryCard from "../components/mealsCategory/MealsCategoryCard/MealsCategoryCard";
 import PropertyDropdown from "../components/properties/PropertyDropdown";
 import Gallery from "../Pages/Gallery/Gallery";
-import HostAccount from "../Profile/HostAccount";
 import Profile from "../Profile/Profile";
+import Meals from "../Pages/Meals/Meals";
+import Rooms from "../Pages/Rooms/Rooms";
+import Events from "../Pages/Events/Events";
+import DashboardLayout from "../Layouts/DashboardLayout";
+import Statistics from "../components/Dashboard/Statistics/Statistics";
 
 const router = createBrowserRouter([
   {
@@ -23,6 +27,18 @@ const router = createBrowserRouter([
         element: <MealsCategoryCard />,
       },
       {
+        path: "/meals",
+        element: <Meals />,
+      },
+      {
+        path: "/rooms",
+        element: <Rooms />,
+      },
+      {
+        path: "/events",
+        element: <Events />,
+      },
+      {
         path: "/properties",
         element: <PropertyDropdown />,
       },
@@ -30,9 +46,9 @@ const router = createBrowserRouter([
         path: "/gallery",
         element: <Gallery />,
       },
-      
     ],
   },
+
   {
     path: "/login",
     element: <Login />,
@@ -44,6 +60,20 @@ const router = createBrowserRouter([
   {
     path: "/profile",
     element: <Profile />,
+  },
+  {
+    path: "/dashboard",
+    element: <DashboardLayout />,
+    children: [
+      {
+        index: true,
+        element: <Statistics />,
+      },
+      // Role:guest
+      // Role:events
+      // Role:host
+      // Role:admin
+    ],
   },
 ]);
 
