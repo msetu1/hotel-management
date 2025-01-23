@@ -196,9 +196,30 @@ async function run() {
     // -------- Guest--------//
 
     // -------- Host --------//
-     // Save a room data Add room
-     app.post("/room", verifyToken, verifyHost, async (req, res) => {
+    // Save a room data Add room
+    app.post("/room", verifyToken, verifyHost, async (req, res) => {
       const result = await roomsCollection.insertOne(req.body);
+      res.send(result);
+    });
+
+    // get all rooms and my listing for host
+    app.get(
+      "/my-listings/room/:email",
+      verifyToken,
+      verifyHost,
+      async (req, res) => {
+        const email = req.params.email;
+        let query = { "host.email": email };
+        const result = await roomsCollection.find(query).toArray();
+        res.send(result);
+      }
+    );
+
+    // delete a room for host
+    app.delete("/room/:id", verifyToken, verifyHost, async (req, res) => {
+      const id = req.params.id;
+      const query = { _id: new ObjectId(id) };
+      const result = await roomsCollection.deleteOne(query);
       res.send(result);
     });
 

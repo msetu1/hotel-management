@@ -95,6 +95,9 @@ const AddRooms = () => {
       <Helmet>
         <title>Add Room | Dashboard</title>
       </Helmet>
+      <div>
+        <h2 className="text-3xl font-semibold">Add Rooms</h2>
+      </div>
       <AddRoomForm
         dates={dates}
         handleDates={handleDates}
