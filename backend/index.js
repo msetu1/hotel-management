@@ -195,9 +195,14 @@ async function run() {
 
     // -------- Guest--------//
 
-    // -------- Events --------//
+    // -------- Host --------//
+     // Save a room data Add room
+     app.post("/room", verifyToken, verifyHost, async (req, res) => {
+      const result = await roomsCollection.insertOne(req.body);
+      res.send(result);
+    });
 
-    // -------- Host--------//
+    // -------- Admin--------//
 
     // Send a ping to confirm a successful connection
     await client.db("admin").command({ ping: 1 });

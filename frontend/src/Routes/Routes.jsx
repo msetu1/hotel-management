@@ -14,6 +14,7 @@ import DashboardLayout from "../Layouts/DashboardLayout";
 import Statistics from "../components/Dashboard/Statistics/Statistics";
 import RoomDetails from "../components/Page/Rooms/RoomDetails/RoomDetails";
 import AddRooms from "../Pages/Dashboard/Host/AddRoom/AddRooms";
+import AddProperty from "../Pages/Dashboard/Host/AddProperty/AddProperty";
 
 const router = createBrowserRouter([
   {
@@ -80,6 +81,10 @@ const router = createBrowserRouter([
       {
         path: "add-room",
         element: <AddRooms />
+      },
+      {
+        path: "add-property",
+        element: <AddProperty />
       },
       // Role:admin
     ],
