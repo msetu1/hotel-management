@@ -12,6 +12,8 @@ import Rooms from "../Pages/Rooms/Rooms";
 import Events from "../Pages/Events/Events";
 import DashboardLayout from "../Layouts/DashboardLayout";
 import Statistics from "../components/Dashboard/Statistics/Statistics";
+import RoomDetails from "../components/Page/Rooms/RoomDetails/RoomDetails";
+import AddRooms from "../Pages/Dashboard/Host/AddRoom/AddRooms";
 
 const router = createBrowserRouter([
   {
@@ -33,6 +35,10 @@ const router = createBrowserRouter([
       {
         path: "/rooms",
         element: <Rooms />,
+      },
+      {
+        path: '/room/:id',
+        element: <RoomDetails />,
       },
       {
         path: "/events",
@@ -70,8 +76,11 @@ const router = createBrowserRouter([
         element: <Statistics />,
       },
       // Role:guest
-      // Role:events
       // Role:host
+      {
+        path: "add-room",
+        element: <AddRooms />
+      },
       // Role:admin
     ],
   },

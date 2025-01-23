@@ -51,7 +51,7 @@ const Navbar = () => {
                 strokeLinecap="round"
                 strokeLinejoin="round"
               >
-                <circle cx="12" cy="12" r="5" />
+                <circle cx="12" cy="12" r="4" />
                 <path d="M12 1v2M12 21v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M1 12h2M21 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4" />
               </svg>
               <svg
@@ -76,36 +76,7 @@ const Navbar = () => {
          <NVLink/>
         </ul>
       </div>
-       {/* Dropdown Menu */}
-      {/* <div className="flex gap-2 items-center">
-        <div className="dropdown dropdown-end z-50">
-          <div
-            tabIndex={0}
-            role="button"
-            className="btn btn-ghost btn-circle avatar"
-          >
-            <AiOutlineMenu/>
-            <div className="w-10 rounded-full" title="">
-              <img
-                referrerPolicy="no-referrer"
-                alt="User Profile Photo"
-                src=""
-              />
-            </div>
-          </div>
-          <ul
-            tabIndex={0}
-            className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 font-semibold text-[16px]"
-          >
-            <li>
-              <div>Dashboard</div>
-            </li>
-            <li className="mt-2">
-              <button className="bg-gray-200 block text-center">Logout</button>
-            </li>
-          </ul>
-        </div>
-      </div> */}
+     
        {/* Dropdown Menu */}
        <div className='relative'>
               <div className='flex flex-row items-center gap-3'>
@@ -118,7 +89,7 @@ const Navbar = () => {
                   <div className='hidden md:block'>
                     {/* Avatar */}
                     <img
-                      className='rounded-full'
+                      className='rounded-full h-[40px] w-[40px]'
                       referrerPolicy='no-referrer'
                       src={user && user.photoURL ? user.photoURL : avatarImg}
                       alt='profile'

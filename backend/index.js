@@ -49,8 +49,31 @@ const client = new MongoClient(uri, {
 async function run() {
   try {
     // -------- collection--------//
+    const db = client.db("hotel-managements");
+    const usersCollection = db.collection("users");
+    const roomsCollection = db.collection("rooms");
 
     // --------  Verify Middleware--------//
+    // admin
+    const verifyAdmin = async (req, res, next) => {
+      const user = req.user;
+      console.log("uservvvvvv", user);
+      const query = { email: user?.email };
+      const result = await usersCollection.findOne(query);
+      if (!result || result?.role !== "admin")
+        return res.status(401).send({ message: "Unauthorized Access" });
+      next();
+    };
+    // host
+    const verifyHost = async (req, res, next) => {
+      const user = req.user;
+      const query = { email: user?.email };
+      const result = await usersCollection.findOne(query);
+      if (!result || result?.role !== "host")
+        return res.status(401).send({ message: "Unauthorized Access" });
+
+      next();
+    };
 
     // -------- auth related api--------//
     app.post("/jwt", async (req, res) => {
@@ -88,6 +111,87 @@ async function run() {
     // -------- Statistics --------//
 
     // -------- user--------//
+    // save user is required
+    app.put("/user", async (req, res) => {
+      const user = req.body;
+      const query = { email: user?.email };
+      // check if user already exists in db
+      const isExists = await usersCollection.findOne(query);
+      if (isExists) {
+        if (user.status === "Requested") {
+          const result = await usersCollection.updateOne(query, {
+            $set: { status: user?.status },
+          });
+          return res.send(result);
+        } else {
+          return res.send(isExists);
+        }
+      }
+
+      // save user for the first time
+      const options = { upsert: true };
+      const updateDoc = {
+        $set: {
+          ...user,
+          timestamp: Date.now(),
+        },
+      };
+      const result = await usersCollection.updateOne(query, updateDoc, options);
+      res.send(result);
+    });
+
+    // get a user info by email for db
+    app.get("/user/:email", async (req, res) => {
+      const email = req.params.email;
+      const result = await usersCollection.findOne({ email });
+
+      res.send(result);
+    });
+
+    // get all users data form db
+    app.get("/users", verifyToken, verifyAdmin, async (req, res) => {
+      const result = await usersCollection.find().toArray();
+      res.send(result);
+    });
+
+    // update a user role
+    app.patch("/users/update/:email", async (req, res) => {
+      const email = req.params.email;
+      const user = req.body;
+      const query = { email };
+      const updateDoc = {
+        $set: {
+          ...user,
+          timestamp: Date.now(),
+        },
+      };
+
+      const result = await usersCollection.updateOne(query, updateDoc);
+      res.send(result);
+    });
+
+    // -------- Rooms--------//
+    // get all rooms
+    app.get("/rooms", async (req, res) => {
+      const category = req.query.category;
+      let query = {};
+      if (category && category !== "null") query = { category };
+
+      const result = await roomsCollection.find(query).toArray();
+      res.send(result);
+    });
+
+    // single rooms
+    app.get("/room/:id", async (req, res) => {
+      const id = req.params.id;
+      const query = { _id: new ObjectId(id) };
+      const result = await roomsCollection.findOne(query);
+      res.send(result);
+    });
+
+    // -------- Events--------//
+
+    // -------- Properties--------//
 
     // -------- Guest--------//
 
