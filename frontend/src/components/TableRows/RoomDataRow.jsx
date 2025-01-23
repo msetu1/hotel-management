@@ -2,14 +2,15 @@ import { format } from "date-fns";
 import { useState } from "react";
 import { FaEdit, FaTrash } from "react-icons/fa";
 import DeleteModal from "../Modal/DeleteModal";
+import UpdateRoomModal from "../Modal/UpdateRoomModal";
 
-const RoomDataRow = ({ room, handleDelete, index }) => {
+const RoomDataRow = ({ room, handleDelete, index, refetch }) => {
   let [isOpen, setIsOpen] = useState(false);
+  let [isEditModalOpen, setIsEditModalOpen] = useState(false);
 
   const closeModal = () => {
     setIsOpen(false);
   };
-
   return (
     <tr
       className={`${
@@ -30,9 +31,16 @@ const RoomDataRow = ({ room, handleDelete, index }) => {
       <td className="p-4">{format(new Date(room?.to), "P")}</td>
 
       <td className="p-4 flex justify-center gap-2">
-        <button className=" text-rose-500 bg- rounded-full text-2xl">
+        <button onClick={()=>setIsEditModalOpen(true)} className=" text-rose-500 bg- rounded-full text-2xl">
           <FaEdit />
         </button>
+        {/* Update Modal */}
+        <UpdateRoomModal
+          refetch={refetch}
+          room={room}
+          setIsEditModalOpen={setIsEditModalOpen}
+          isOpen={isEditModalOpen}
+        />
 
         <button
           onClick={() => setIsOpen(true)}

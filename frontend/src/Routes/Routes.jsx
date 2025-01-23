@@ -16,6 +16,8 @@ import RoomDetails from "../components/Page/Rooms/RoomDetails/RoomDetails";
 import AddRooms from "../Pages/Dashboard/Host/AddRoom/AddRooms";
 import AddProperty from "../Pages/Dashboard/Host/AddProperty/AddProperty";
 import MyListings from "../Pages/Dashboard/Host/MyListings/MyListings";
+import ManageBookings from "../Pages/Dashboard/Host/ManageBookings/ManageBookings";
+import AddEvents from "../Pages/Dashboard/Host/AddEvents/AddEvents";
 
 const router = createBrowserRouter([
   {
@@ -84,12 +86,20 @@ const router = createBrowserRouter([
         element: <AddRooms />
       },
       {
+        path: "my-listings",
+        element: <MyListings />
+      },
+      {
+        path: "manage-bookings",
+        element: <ManageBookings />
+      },
+      {
         path: "add-property",
         element: <AddProperty />
       },
       {
-        path: "my-listings",
-        element: <MyListings />
+        path: "add-events",
+        element: <AddEvents />
       },
       // Role:admin
     ],
