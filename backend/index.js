@@ -6,6 +6,7 @@ const cors = require("cors");
 const cookieParser = require("cookie-parser");
 const { MongoClient, ServerApiVersion, ObjectId } = require("mongodb");
 const jwt = require("jsonwebtoken");
+const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
 
 const port = process.env.PORT || 7000;
 
@@ -52,6 +53,7 @@ async function run() {
     const db = client.db("hotel-managements");
     const usersCollection = db.collection("users");
     const roomsCollection = db.collection("rooms");
+    const bookingsCollection = db.collection("bookings");
 
     // --------  Verify Middleware--------//
     // admin
@@ -104,6 +106,26 @@ async function run() {
       } catch (err) {
         res.status(500).send(err);
       }
+    });
+
+   
+     // -------- crate payment intent--------//
+     app.post("/create-payment-intent", verifyToken, async (req, res) => {
+      const { price } = req.body;
+      const priceInCent = parseFloat(price) * 100;
+      if (!price || priceInCent < 1) return;
+
+      // generate client secret
+      const { client_secret } = await stripe.paymentIntents.create({
+        amount: priceInCent,
+        currency: "usd",
+        automatic_payment_methods: {
+          enabled: true,
+        },
+      });
+
+      //send client secret as response
+      res.send({ clientSecret: client_secret });
     });
 
     // -------- crate payment intent--------//
@@ -222,6 +244,35 @@ async function run() {
       const result = await roomsCollection.deleteOne(query);
       res.send(result);
     });
+
+
+    // Update a room for host data
+    app.put("/room/update/:id", verifyToken, verifyHost, async (req, res) => {
+      const id = req.params.id;
+      const roomData = req.body;
+      const query = { _id: new ObjectId(id) };
+      const updateDoc = {
+        $set: roomData,
+      };
+      const result = await roomsCollection.updateOne(query, updateDoc);
+      res.send(result);
+    });
+
+
+    // get all manage booking for room a host
+    app.get(
+      "/manage-bookings-room/:email",
+      verifyToken,
+      verifyHost,
+      async (req, res) => {
+        const email = req.params.email;
+        const query = { "host.email": email };
+
+        const result = await bookingsCollection.find(query).toArray();
+        res.send(result);
+      }
+    );
+
 
     // -------- Admin--------//
 
