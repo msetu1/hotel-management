@@ -18,6 +18,8 @@ import AddProperty from "../Pages/Dashboard/Host/AddProperty/AddProperty";
 import MyListings from "../Pages/Dashboard/Host/MyListings/MyListings";
 import ManageBookings from "../Pages/Dashboard/Host/ManageBookings/ManageBookings";
 import AddEvents from "../Pages/Dashboard/Host/AddEvents/AddEvents";
+import MyBookings from "../Pages/Dashboard/Guest/MyBookings";
+import ManageUsers from "../Pages/Dashboard/Admin/ManageUsers";
 
 const router = createBrowserRouter([
   {
@@ -41,7 +43,7 @@ const router = createBrowserRouter([
         element: <Rooms />,
       },
       {
-        path: '/room/:id',
+        path: "/room/:id",
         element: <RoomDetails />,
       },
       {
@@ -80,28 +82,37 @@ const router = createBrowserRouter([
         element: <Statistics />,
       },
       // Role:guest
+      {
+        path: "my-bookings",
+        element: <MyBookings />,
+      },
+
       // Role:host
       {
         path: "add-room",
-        element: <AddRooms />
+        element: <AddRooms />,
       },
       {
         path: "my-listings",
-        element: <MyListings />
+        element: <MyListings />,
       },
       {
         path: "manage-bookings",
-        element: <ManageBookings />
+        element: <ManageBookings />,
       },
       {
         path: "add-property",
-        element: <AddProperty />
+        element: <AddProperty />,
       },
       {
         path: "add-events",
-        element: <AddEvents />
+        element: <AddEvents />,
       },
       // Role:admin
+      {
+        path: "manage-users",
+        element: <ManageUsers />,
+      },
     ],
   },
 ]);

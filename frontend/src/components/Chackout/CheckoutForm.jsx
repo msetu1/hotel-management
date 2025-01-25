@@ -102,7 +102,7 @@ const CheckoutForm = ({ closeModal, bookingInfo, refetch }) => {
 
       try {
         // 2. set payment info booking in  collection (db)
-        const { data } = await axiosSecure.post("/booking", paymentInfo);
+        const { data } = await axiosSecure.post("/room-booking", paymentInfo);
         console.log(data);
 
         // 3. change room status to booked in db
