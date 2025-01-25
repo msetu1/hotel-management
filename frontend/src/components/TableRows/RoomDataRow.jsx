@@ -17,7 +17,7 @@ const RoomDataRow = ({ room, handleDelete, index, refetch }) => {
         index % 2 === 0 ? "bg-primaryLight bg-opacity-10" : "bg-white"
       }`}
     >
-      <td className="p-4 font-medium">1</td>
+      <td className="p-4 font-medium">{index + 1}</td>
       <td className="p-4">
         <img
           src={room?.image}

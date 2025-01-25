@@ -69,11 +69,12 @@ const MyBookings = () => {
                 </thead>
                 <tbody className="text-myGray">
                   {/* Room row data */}
-                  {bookings?.map((booking) => (
+                  {bookings?.map((booking,index) => (
                     <ManageBookingRoomDataRow
                       key={booking._id}
                       booking={booking}
                       refetch={refetch}
+                      index={index}
                     />
                   ))}
                 </tbody>

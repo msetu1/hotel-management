@@ -5,8 +5,8 @@ import { useMutation } from "@tanstack/react-query";
 import { format } from "date-fns";
 import DeleteModal from "../Modal/DeleteModal";
 
-const ManageBookingRoomDataRow = ({index,booking,refetch}) => {
-    const axiosSecure = useAxiosSecure();
+const ManageBookingRoomDataRow = ({ index, booking, refetch }) => {
+  const axiosSecure = useAxiosSecure();
   const [isOpen, setIsOpen] = useState(false);
 
   // close modal
@@ -20,7 +20,7 @@ const ManageBookingRoomDataRow = ({index,booking,refetch}) => {
       const { data } = await axiosSecure.delete(`/booking/${id}`);
       return data;
     },
-    onSuccess: async(data) => {
+    onSuccess: async (data) => {
       console.log(data);
       refetch();
       toast.success("Booking cancelled!");
@@ -41,13 +41,13 @@ const ManageBookingRoomDataRow = ({index,booking,refetch}) => {
     }
   };
 
-    return (
-        <tr
+  return (
+    <tr
       className={`${
         index % 2 === 0 ? "bg-primaryLight bg-opacity-10" : "bg-white"
       }`}
     >
-      <td className="p-4 font-medium">1</td>
+      <td className="p-4 font-medium">{index + 1}</td>
       <td className="p-4">
         <img
           src={booking?.image}
@@ -61,7 +61,7 @@ const ManageBookingRoomDataRow = ({index,booking,refetch}) => {
       <td className="p-4">{format(new Date(booking?.to), "P")}</td>
 
       <td className="p-4 flex justify-center gap-2">
-      <button
+        <button
           onClick={() => setIsOpen(true)}
           className="relative cursor-pointer inline-block px-3 py-1 font-semibold text-green-900 leading-tight"
         >
@@ -80,7 +80,7 @@ const ManageBookingRoomDataRow = ({index,booking,refetch}) => {
         />
       </td>
     </tr>
-    );
+  );
 };
 
 export default ManageBookingRoomDataRow;
