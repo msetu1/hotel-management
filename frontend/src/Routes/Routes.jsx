@@ -20,6 +20,9 @@ import ManageBookings from "../Pages/Dashboard/Host/ManageBookings/ManageBooking
 import AddEvents from "../Pages/Dashboard/Host/AddEvents/AddEvents";
 import MyBookings from "../Pages/Dashboard/Guest/MyBookings";
 import ManageUsers from "../Pages/Dashboard/Admin/ManageUsers";
+import PrivateRoute from "./PrivateRoute";
+import AdminRoute from "./AdminRoute";
+import HostRoute from "./HostRoute";
 
 const router = createBrowserRouter([
   {
@@ -44,7 +47,11 @@ const router = createBrowserRouter([
       },
       {
         path: "/room/:id",
-        element: <RoomDetails />,
+        element: (
+          <PrivateRoute>
+            <RoomDetails />
+          </PrivateRoute>
+        ),
       },
       {
         path: "/events",
@@ -75,43 +82,91 @@ const router = createBrowserRouter([
   },
   {
     path: "/dashboard",
-    element: <DashboardLayout />,
+    element: (
+      <PrivateRoute>
+        <DashboardLayout />
+      </PrivateRoute>
+    ),
     children: [
       {
         index: true,
-        element: <Statistics />,
+        element: (
+          <PrivateRoute>
+            <Statistics />
+          </PrivateRoute>
+        ),
       },
       // Role:guest
       {
         path: "my-bookings",
-        element: <MyBookings />,
+        element: (
+          <PrivateRoute>
+            <MyBookings />
+          </PrivateRoute>
+        ),
       },
 
       // Role:host
       {
         path: "add-room",
-        element: <AddRooms />,
+        element: (
+          <PrivateRoute>
+            <HostRoute>
+              <AddRooms />
+            </HostRoute>
+          </PrivateRoute>
+        ),
       },
       {
         path: "my-listings",
-        element: <MyListings />,
+        element: (
+          <PrivateRoute>
+            <HostRoute>
+              <MyListings />
+            </HostRoute>
+          </PrivateRoute>
+        ),
       },
       {
         path: "manage-bookings",
-        element: <ManageBookings />,
+        element: (
+          <PrivateRoute>
+            <HostRoute>
+              <ManageBookings />
+            </HostRoute>
+          </PrivateRoute>
+        ),
       },
       {
         path: "add-property",
-        element: <AddProperty />,
+        element: (
+          <PrivateRoute>
+            <HostRoute>
+              <AddProperty />
+            </HostRoute>
+          </PrivateRoute>
+        ),
       },
       {
         path: "add-events",
-        element: <AddEvents />,
+        element: (
+          <PrivateRoute>
+            <HostRoute>
+              <AddEvents />
+            </HostRoute>
+          </PrivateRoute>
+        ),
       },
       // Role:admin
       {
         path: "manage-users",
-        element: <ManageUsers />,
+        element: (
+          <PrivateRoute>
+            <AdminRoute>
+              <ManageUsers />
+            </AdminRoute>
+          </PrivateRoute>
+        ),
       },
     ],
   },
