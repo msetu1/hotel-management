@@ -132,7 +132,7 @@ async function run() {
 
     // -------- Statistics --------//
 
-    // -------- user--------//
+     // --------user and Admin--------//
     // save user is required
     app.put("/user", async (req, res) => {
       const user = req.body;
@@ -222,22 +222,22 @@ async function run() {
       const result = await bookingsCollection.insertOne(bookingData);
 
       // sent email to guest
-      sendEmail(bookingData?.guest?.email, {
-        subject: "Booking Successfully",
-        message: `You have successfully booked room through stayVista . Transaction id: ${bookingData.transactionId}`,
-      });
+      // sendEmail(bookingData?.guest?.email, {
+      //   subject: "Booking Successfully",
+      //   message: `You have successfully booked room through stayVista . Transaction id: ${bookingData.transactionId}`,
+      // });
 
       // sent email to host
-      sendEmail(bookingData?.host?.email, {
-        subject: "Your room got booked successfully!",
-        message: `Get ready to welcome ${bookingData.guest.name}`,
-      });
+      // sendEmail(bookingData?.host?.email, {
+      //   subject: "Your room got booked successfully!",
+      //   message: `Get ready to welcome ${bookingData.guest.name}`,
+      // });
 
       res.send(result);
     });
 
      // update room status
-     app.patch("/room/status/:id", async (req, res) => {
+    app.patch("/room/status/:id", async (req, res) => {
       const id = req.params.id;
       const status = req.body.status;
 
@@ -261,7 +261,7 @@ async function run() {
       res.send(result);
     });
     //  delete a booking
-    app.delete("/booking/:id", verifyToken, async (req, res) => {
+    app.delete("/booking-room/:id", verifyToken, async (req, res) => {
       const id = req.params.id;
       const query = { _id: new ObjectId(id) };
       const result = await bookingsCollection.deleteOne(query);
@@ -324,7 +324,7 @@ async function run() {
     );
 
 
-    // -------- Admin--------//
+   
 
     // Send a ping to confirm a successful connection
     await client.db("admin").command({ ping: 1 });
@@ -338,9 +338,9 @@ async function run() {
 run().catch(console.dir);
 
 app.get("/", (req, res) => {
-  res.send("Hello from StayVista Server..");
+  res.send("Hello from StaySphere Server..");
 });
 
 app.listen(port, () => {
-  console.log(`StayVista is running on port ${port}`);
+  console.log(`StaySphere is running on port ${port}`);
 });

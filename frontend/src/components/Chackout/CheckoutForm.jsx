@@ -20,7 +20,7 @@ const CheckoutForm = ({ closeModal, bookingInfo, refetch }) => {
 
   useEffect(() => {
     // fetch the client secret
-    if (bookingInfo?.price && bookingInfo?.price > 0) {
+    if (bookingInfo?.price && bookingInfo?.price > 1) {
       getClientSecret({ price: bookingInfo?.price });
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps

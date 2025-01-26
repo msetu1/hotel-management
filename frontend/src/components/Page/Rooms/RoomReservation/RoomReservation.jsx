@@ -58,7 +58,7 @@ const RoomReservation = ({ room, refetch }) => {
       <hr />
       <div className="p-4">
         <Button
-          disabled={room?.booked}
+          disabled={room?.booked===true}
           onClick={() => setIsOpen(true)}
           label={room?.booked ? "booked" : "Reserve"}
         />

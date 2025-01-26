@@ -22,6 +22,7 @@ const ManageBookings = () => {
       return data;
     },
   });
+  console.log(roomBookings)
   if (isLoading) return <LoadingSpinner />;
     return (
         <div>

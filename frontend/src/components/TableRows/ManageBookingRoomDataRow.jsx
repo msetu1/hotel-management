@@ -6,6 +6,7 @@ import { format } from "date-fns";
 import DeleteModal from "../Modal/DeleteModal";
 
 const ManageBookingRoomDataRow = ({ index, booking, refetch }) => {
+  console.log(booking?.image)
   const axiosSecure = useAxiosSecure();
   const [isOpen, setIsOpen] = useState(false);
 
@@ -17,7 +18,7 @@ const ManageBookingRoomDataRow = ({ index, booking, refetch }) => {
   // delete
   const { mutateAsync } = useMutation({
     mutationFn: async (id) => {
-      const { data } = await axiosSecure.delete(`/booking/${id}`);
+      const { data } = await axiosSecure.delete(`/booking-room/${id}`);
       return data;
     },
     onSuccess: async (data) => {
@@ -57,8 +58,8 @@ const ManageBookingRoomDataRow = ({ index, booking, refetch }) => {
       <td className="p-4 font-medium">{booking?.title}</td>
       <td className="p-4">{booking?.location}</td>
       <td className="p-4">${booking?.price}</td>
-      <td className="p-4">{format(new Date(booking?.from), "P")}</td>
-      <td className="p-4">{format(new Date(booking?.to), "P")}</td>
+      {/* <td className="p-4">{format(new Date(booking?.from), "P")}</td>
+      <td className="p-4">{format(new Date(booking?.to), "P")}</td> */}
 
       <td className="p-4 flex justify-center gap-2">
         <button
