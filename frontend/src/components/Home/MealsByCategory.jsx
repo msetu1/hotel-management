@@ -1,31 +1,39 @@
-import { useEffect, useState } from "react";
+import { useState, useEffect } from "react";
 import "react-tabs/style/react-tabs.css";
 import MealsCategoryCard from "../mealsCategory/MealsCategoryCard/MealsCategoryCard";
+import { useQuery } from "@tanstack/react-query";
+import useAxiosCommon from "../../Hooks/useAxiosCommon";
+import LoadingSpinner from "../Common/LoadingSpinner";
 
 const MealsByCategory = () => {
-  const [mealsData, setMealsData] = useState([]);
-  const [categories, setCategories] = useState([]);
+  const axiosCommon = useAxiosCommon();
   const [activeTab, setActiveTab] = useState("All Meals");
+  const [categories, setCategories] = useState([]); // Initialize as an empty array
   const [showAll, setShowAll] = useState(false); // State to manage the view toggle
 
+  const { data: meals = [], isLoading } = useQuery({
+    queryKey: ["meals"],
+    queryFn: async () => {
+      const { data } = await axiosCommon.get(`/meals`);
+      return data;
+    },
+  });
+
   useEffect(() => {
-    fetch("/mealsByCategory.json")
-      .then((response) => response.json())
-      .then((data) => {
-        setMealsData(data); // Save all meal data
-        const uniqueCategories = [
-          "All Meals",
-          ...new Set(data.map((meal) => meal.category)), // Extract unique categories
-        ];
-        setCategories(uniqueCategories); // Set the categories state
-      });
-  }, []);
+    if (meals.length) {
+      // Extract unique categories from the meals data
+      const uniqueCategories = ["All Meals", ...new Set(meals.map((meal) => meal.category))];
+      setCategories(uniqueCategories);
+    }
+  }, [meals]);
+
+  if (isLoading) return <LoadingSpinner />;
 
   // Filter the meals based on the activeTab (category selected)
   const filteredMeals =
     activeTab === "All Meals"
-      ? mealsData
-      : mealsData.filter((meal) => meal.category === activeTab);
+      ? meals
+      : meals.filter((meal) => meal.category === activeTab);
 
   // Determine which meals to display
   const displayedMeals = showAll ? filteredMeals : filteredMeals.slice(0, 6);
@@ -63,7 +71,7 @@ const MealsByCategory = () => {
         {filteredMeals.length > 6 && (
           <div className="flex justify-center mt-10">
             <button
-              className="bg-rose-500 hover:bg-black text-[16px] font-bold rounded-full w-[205px] py-3  text-white"
+              className="bg-rose-500 hover:bg-black text-[16px] font-bold rounded-full w-[205px] py-3 text-white"
               onClick={() => setShowAll((prev) => !prev)}
             >
               {showAll ? "Show Less" : "Show All"}
