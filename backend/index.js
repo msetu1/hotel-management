@@ -54,6 +54,7 @@ async function run() {
     const usersCollection = db.collection("users");
     const roomsCollection = db.collection("rooms");
     const bookingsCollection = db.collection("bookings");
+    const mealsCollection = db.collection("meals");
 
     // --------  Verify Middleware--------//
     // admin
@@ -128,8 +129,6 @@ async function run() {
       res.send({ clientSecret: client_secret });
     });
 
-    // -------- crate payment intent--------//
-
     // -------- Statistics --------//
 
      // --------user and Admin--------//
@@ -191,6 +190,13 @@ async function run() {
       const result = await usersCollection.updateOne(query, updateDoc);
       res.send(result);
     });
+
+   // -------- Meals--------//
+   // get all meals
+   app.get("/meals", async (req, res) => {
+    const result = await mealsCollection.find().toArray();
+      res.send(result);
+   })
 
     // -------- Rooms--------//
     // get all rooms

@@ -1,8 +1,9 @@
+import EventsBanner from "../../components/Common/EventsBanner";
 
 const Events = () => {
     return (
         <div>
-            gtfjhu
+           <EventsBanner/>
         </div>
     );
 };

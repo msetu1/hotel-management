@@ -4,7 +4,7 @@ import useAuth from "../../../Hooks/useAuth";
 import useAxiosSecure from "../../../Hooks/useAxiosSecure";
 import { useQuery } from "@tanstack/react-query";
 import LoadingSpinner from "../../../components/Common/LoadingSpinner";
-import ManageBookingRoomDataRow from "../../../components/TableRows/ManageBookingRoomDataRow";
+import MyBookingRoomDataRow from "../../../components/TableRows/MyBookingRoomDataRow";
 
 const MyBookings = () => {
     const { user} = useAuth();
@@ -58,9 +58,8 @@ const MyBookings = () => {
                 <thead>
                   <tr className="bg-rose-500 text-white text-left">
                     <th className="p-4 font-semibold">#</th>
-                    <th className="p-4 font-semibold">Image</th>
-                    <th className="p-4 font-semibold">Title</th>
-                    <th className="p-4 font-semibold">Location</th>
+                    <th className="p-4 font-semibold">Image & Title</th>
+                    <th className="p-4 font-semibold">My Info</th>
                     <th className="p-4 font-semibold">Price</th>
                     <th className="p-4 font-semibold">Form</th>
                     <th className="p-4 font-semibold">To</th>
@@ -70,7 +69,7 @@ const MyBookings = () => {
                 <tbody className="text-myGray">
                   {/* Room row data */}
                   {bookings?.map((booking,index) => (
-                    <ManageBookingRoomDataRow
+                    <MyBookingRoomDataRow
                       key={booking._id}
                       booking={booking}
                       refetch={refetch}

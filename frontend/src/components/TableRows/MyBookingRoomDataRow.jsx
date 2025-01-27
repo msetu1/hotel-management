@@ -4,19 +4,20 @@ import toast from "react-hot-toast";
 import { useMutation } from "@tanstack/react-query";
 import { format } from "date-fns";
 import DeleteModal from "../Modal/DeleteModal";
-import { FaRegEye } from "react-icons/fa6";
-import ViewRoomModal from "../Modal/ViewRoomModal";
 
-const ManageBookingRoomDataRow = ({ index, booking, refetch }) => {
-  console.log(booking);
+const MyBookingRoomDataRow = ({ index, booking, refetch }) => {
+  console.log(booking?.image);
   const axiosSecure = useAxiosSecure();
   const [isOpen, setIsOpen] = useState(false);
-  const [openViewModal, setIsOpenViewModal] = useState(false);
+  const [isFullTextVisible, setIsFullTextVisible] = useState(false);
+
+  const handleToggleText = () => {
+    setIsFullTextVisible(!isFullTextVisible);
+  };
 
   // close modal
   const closeModal = () => {
     setIsOpen(false);
-    setIsOpenViewModal(false);
   };
 
   // delete
@@ -65,8 +66,18 @@ const ManageBookingRoomDataRow = ({ index, booking, refetch }) => {
             </div>
           </div>
           <div className="ml-3">
-            <p className="text-gray-900 whitespace-no-wrap">{booking?.title}</p>
-          </div>
+      <p className="text-gray-900 whitespace-no-wrap">
+        {isFullTextVisible 
+          ? booking?.title 
+          : `${booking?.title.slice(0, 12)}...`}{" "}
+        <span 
+          onClick={handleToggleText} 
+          className="underline text-blue-500 cursor-pointer"
+        >
+          {isFullTextVisible ? "less" : "more"}
+        </span>
+      </p>
+    </div>
         </div>
       </td>
       <td className="p-4 font-medium">
@@ -93,18 +104,6 @@ const ManageBookingRoomDataRow = ({ index, booking, refetch }) => {
 
       <td className="p-4 flex justify-center gap-2">
         <button
-          onClick={() => setIsOpenViewModal(true)}
-          className="relative cursor-pointer inline-block px-3 py-1 font-semibold text-green-900 leading-tight"
-        >
-          <span
-            aria-hidden="true"
-            className="absolute inset-0 bg-red-200 opacity-50 rounded-full"
-          ></span>
-          <span className="relative">
-            <FaRegEye />
-          </span>
-        </button>
-        <button
           onClick={() => setIsOpen(true)}
           className="relative cursor-pointer inline-block px-3 py-1 font-semibold text-green-900 leading-tight"
         >
@@ -114,15 +113,6 @@ const ManageBookingRoomDataRow = ({ index, booking, refetch }) => {
           ></span>
           <span className="relative">Cancel</span>
         </button>
-
-        {/* View modal  */}
-        <ViewRoomModal
-          refetch={refetch}
-          booking={booking}
-          openViewModal={openViewModal}
-          setIsOpenViewModal={setIsOpenViewModal}
-        />
-
         {/* Delete Modal */}
         <DeleteModal
           closeModal={closeModal}
@@ -135,4 +125,4 @@ const ManageBookingRoomDataRow = ({ index, booking, refetch }) => {
   );
 };
 
-export default ManageBookingRoomDataRow;
+export default MyBookingRoomDataRow;

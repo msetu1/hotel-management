@@ -1,0 +1,36 @@
+[
+    {
+      "id": 6,
+      "location": "Maldives",
+      "category": "Islands",
+      "title": "Overwater Bungalow with Infinity Pool",
+      "price": 499,
+      "total_guests": 3,
+      "bedrooms": 1,
+      "bathrooms": 1,
+      "description": "Float above turquoise waters in this stunning overwater bungalow in the Maldives. Featuring an infinity pool, glass floor panels, and private sun decks, this accommodation offers a once-in-a-lifetime experience. Enjoy direct access to the lagoon, gourmet dining, and impeccable service at this exclusive island retreat."
+    },
+    {
+      "id": 7,
+      "location": "Lake Tahoe, USA",
+      "category": "Lake",
+      "title": "Cabin Retreat by the Lake",
+      "price": 420,
+      "total_guests": 5,
+      "bedrooms": 2,
+      "bathrooms": 2,
+      "description": "Nestled amidst tall pines, this cozy lakeside cabin offers breathtaking views of Lake Tahoe and a private dock for guests to enjoy kayaking, fishing, or relaxing by the water. With rustic interiors and a stone fireplace, it’s perfect for a peaceful mountain getaway."
+    },
+    {
+      "id": 8,
+      "location": "Aspen, Colorado, USA",
+      "category": "Skiing",
+      "title": "Luxury Ski Chalet",
+      "price": 480,
+      "total_guests": 8,
+      "bedrooms": 4,
+      "bathrooms": 3,
+      "description": "Located at the base of Aspen’s renowned ski slopes, this luxurious chalet combines alpine charm with modern elegance. After a day on the slopes, relax in front of the roaring fireplace or unwind in the private hot tub. Ideal for groups or families, this chalet offers an unforgettable mountain experience."
+    }
+  ]
+  

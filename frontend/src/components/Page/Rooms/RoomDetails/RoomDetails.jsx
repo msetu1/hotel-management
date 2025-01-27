@@ -5,6 +5,7 @@ import useAxiosCommon from "../../../../Hooks/useAxiosCommon";
 import { useParams } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
 import LoadingSpinner from "../../../Common/LoadingSpinner";
+import RoomDetailsBanner from "../../../Common/RoomDetailsBanner";
 
 const RoomDetails = () => {
   const { id } = useParams();
@@ -20,7 +21,8 @@ const RoomDetails = () => {
   if (isLoading) return <LoadingSpinner />;
 
   return (
-    <div className="pt-32">
+    <div className="">
+      <RoomDetailsBanner/>
       <Helmet>
         <title>{room?.title}</title>
       </Helmet>
@@ -28,9 +30,9 @@ const RoomDetails = () => {
         <div className='max-w-screen-lg mx-auto'>
           {/* Header */}
           <div className='flex flex-col gap-6'>
-            <div>
+            <div className="mt-10">
               <Heading title={room.title} subtitle={room.location} />
-              <div className='w-full md:h-[60vh] overflow-hidden rounded-xl'>
+              <div className='w-full md:h-[60vh] overflow-hidden rounded-xl '>
                 <img
                   className='object-cover w-full'
                   src={room.image}

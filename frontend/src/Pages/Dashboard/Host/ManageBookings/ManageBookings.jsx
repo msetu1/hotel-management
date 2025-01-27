@@ -7,22 +7,17 @@ import LoadingSpinner from "../../../../components/Common/LoadingSpinner";
 import ManageBookingRoomDataRow from "../../../../components/TableRows/ManageBookingRoomDataRow";
 
 const ManageBookings = () => {
-    const { user } = useAuth();
-    const axiosSecure = useAxiosSecure();
+  const { user} = useAuth();
+  const axiosSecure = useAxiosSecure();
 
-    // fetch all bookings data
-  const {
-    data: roomBookings = [],
-    refetch,
-    isLoading,
-  } = useQuery({
-    queryKey: ["manage-bookings-room", user?.email],
+  // fetch all bookings data
+  const { data: bookings = [], refetch,isLoading } = useQuery({
+    queryKey: ["my-bookings", user?.email],
     queryFn: async () => {
       const { data } = await axiosSecure.get(`/manage-bookings-room/${user?.email}`);
       return data;
     },
   });
-  console.log(roomBookings)
   if (isLoading) return <LoadingSpinner />;
     return (
         <div>
@@ -65,7 +60,6 @@ const ManageBookings = () => {
                       <th className="p-4 font-semibold">#</th>
                       <th className="p-4 font-semibold">Image & Title</th>
                       <th className="p-4 font-semibold">Guest Info</th>
-                      <th className="p-4 font-semibold">Location</th>
                       <th className="p-4 font-semibold">Price</th>
                       <th className="p-4 font-semibold">Form</th>
                       <th className="p-4 font-semibold">To</th>
@@ -74,10 +68,10 @@ const ManageBookings = () => {
                   </thead>
                   <tbody className="text-myGray">
                    {/* Table row data */}
-                  {roomBookings?.map((booking,index) => (
+                   {bookings?.map((booking,index) => (
                     <ManageBookingRoomDataRow
                       key={booking._id}
-                      booking={roomBookings}
+                      booking={booking}
                       refetch={refetch}
                       index={index}
                     />

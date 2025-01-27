@@ -1,60 +1,33 @@
-import { FaEdit, FaTrash } from "react-icons/fa";
+import React from 'react';
 
 const Example = () => {
   return (
-    <div>
-      <div className="custom-scrollbar h-[80vh] overflow-y-auto shadow-myCustomShadow bg-white rounded-lg">
-        <table className="min-w-full border border-gray-200">
-          <thead>
-            <tr className="bg-rose-500 text-white text-left">
-              <th className="p-4 font-semibold">#</th>
-              <th className="p-4 font-semibold">Image</th>
-              <th className="p-4 font-semibold">Title</th>
-              <th className="p-4 font-semibold">Category</th>
-              <th className="p-4 font-semibold">Rating && View</th>
-              <th className="p-4 font-semibold text-center">Actions</th>
-            </tr>
-          </thead>
-          <tbody className="text-myGray">
-            <tr
-            //   className={`${
-            //     index % 2 === 0 ? "bg-primaryLight bg-opacity-10" : "bg-white"
-            //   }`}
-            >
-              <td className="p-4 font-medium">1</td>
-              <td className="p-4">
-                <img
-                  className="w-12 h-12 object-cover rounded-md shadow-md"
-                />
-              </td>
-              <td className="p-4 font-medium">tttitlr</td>
-              <td className="p-4">modern</td>
-              <td className="p-4">
-                <p className="flex items-center gap-1">
-                 
-                </p>
-                <span>
-                  <span className="text-sm">Total View</span>
-                </span>
-              </td>
+    <div className="rounded-lg shadow-md px-2 bg-white ">
+      <div>
+      <img
+        src={image}
+        alt={title}
+        className="w-full h-[220px] object-cover rounded-t-lg"
+      />
+      </div>
 
-              <td className="p-4 flex justify-center gap-2">
-                <button
-               
-                  className=" text-rose-500 bg- rounded-full text-2xl"
-                >
-                  <FaEdit />
-                </button>
-                <button
-                  
-                  className="text-red-600 bg- rounded-full text-2xl"
-                >
-                  <FaTrash />
-                </button>
-              </td>
-            </tr>
-          </tbody>
-        </table>
+      
+      <div className="p-4">
+        <h3 className="text-lg font-bold mb-2">{title}</h3>
+        <p className="text-gray-600 text-sm mb-3">{shortDescription}</p>
+
+        <p className=" text-gray-800 font-bold mb-2">
+          Price: <span className="text-rose-500">${price}</span>
+        </p>
+        <div className="flex items-center gap-20">
+          <p className="text-sm text-gray-800">Rating: {rating}/5</p>
+          <p className="text-sm text-gray-800"> {preparationTime}</p>
+        </div>
+        <div className="flex items-center justify-center mt-5">
+          <button className="mt-4 bg-rose-500 hover:bg-black text-white px-4 py-3 rounded-lg font-bold w-full">
+            By Now
+          </button>
+        </div>
       </div>
     </div>
   );

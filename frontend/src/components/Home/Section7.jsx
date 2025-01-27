@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import Button from "../Banner/Button";
 import HostTitle from "../Common/HostTitle";
 import GuidesAndTips from "../Section/GuidesAndTips";
 

@@ -1,8 +1,11 @@
+import MealsBanner from "../../components/Common/MealsBanner";
+import MealsByCategory from "../../components/Home/MealsByCategory";
 
 const Meals = () => {
     return (
         <div>
-            fjhk
+            <MealsBanner/>
+            <MealsByCategory/>
         </div>
     );
 };

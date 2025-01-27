@@ -1,5 +1,6 @@
 import { useState } from "react";
 import filter from '../../assets/Filter Btn.png'
+import PropertyBanner from "../Common/PropertyBanner";
 
 const categoryData = {
   Apartments: [
@@ -60,7 +61,8 @@ const App = () => {
   };
 
   return (
-    <div className=" bg-gray-100 px-10 pt-32">
+    <div className=" bg-gray-100 ">
+      <PropertyBanner/>
       <div className="flex justify-between my-10">
         <h1 className="text-2xl font-bold text-gray-800 mb-5">Properties</h1>
 
