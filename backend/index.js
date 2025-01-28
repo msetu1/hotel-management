@@ -232,12 +232,6 @@ async function run() {
       res.send(result);
     });
 
-    // Save a room data Add event
-    app.post("/event", verifyToken, verifyHost, async (req, res) => {
-      const result = await eventsCollection.insertOne(req.body);
-      res.send(result);
-    })
-
     // -------- Properties--------//
 
     // -------- Guest--------//
@@ -303,7 +297,7 @@ async function run() {
 
     // get all rooms and my listing for host
     app.get(
-      "/my-listings/room/:email",
+      "/my-listings-room/:email",
       verifyToken,
       verifyHost,
       async (req, res) => {
@@ -347,6 +341,27 @@ async function run() {
         res.send(result);
       }
     );
+
+    // event related
+    // Save a room data Add event
+    app.post("/event", verifyToken, verifyHost, async (req, res) => {
+      const result = await eventsCollection.insertOne(req.body);
+      res.send(result);
+    })
+
+    // get all rooms and my listing for host
+    app.get(
+      "/my-listings-event/:email",
+      verifyToken,
+      verifyHost,
+      async (req, res) => {
+        const email = req.params.email;
+        let query = { "host.email": email };
+        const result = await eventsCollection.find(query).toArray();
+        res.send(result);
+      }
+    );
+
 
     // Send a ping to confirm a successful connection
     await client.db("admin").command({ ping: 1 });
