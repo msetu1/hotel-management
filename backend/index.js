@@ -55,6 +55,7 @@ async function run() {
     const roomsCollection = db.collection("rooms");
     const bookingsCollection = db.collection("bookings");
     const mealsCollection = db.collection("meals");
+    const eventsCollection = db.collection("events");
 
     // --------  Verify Middleware--------//
     // admin
@@ -109,9 +110,8 @@ async function run() {
       }
     });
 
-   
-     // -------- crate payment intent--------//
-     app.post("/create-payment-intent", verifyToken, async (req, res) => {
+    // -------- crate payment intent--------//
+    app.post("/create-payment-intent", verifyToken, async (req, res) => {
       const { price } = req.body;
       const priceInCent = parseFloat(price) * 100;
       if (!price || priceInCent < 1) return;
@@ -131,7 +131,7 @@ async function run() {
 
     // -------- Statistics --------//
 
-     // --------user and Admin--------//
+    // --------user and Admin--------//
     // save user is required
     app.put("/user", async (req, res) => {
       const user = req.body;
@@ -191,12 +191,12 @@ async function run() {
       res.send(result);
     });
 
-   // -------- Meals--------//
-   // get all meals
-   app.get("/meals", async (req, res) => {
-    const result = await mealsCollection.find().toArray();
+    // -------- Meals--------//
+    // get all meals
+    app.get("/meals", async (req, res) => {
+      const result = await mealsCollection.find().toArray();
       res.send(result);
-   })
+    });
 
     // -------- Rooms--------//
     // get all rooms
@@ -218,6 +218,25 @@ async function run() {
     });
 
     // -------- Events--------//
+    // get all events
+    app.get("/events", async (req, res) => {
+      const result = await eventsCollection.find().toArray();
+      res.send(result);
+    });
+
+    // single event
+    app.get("/event/:id", async (req, res) => {
+      const id = req.params.id;
+      const query = { _id: new ObjectId(id) };
+      const result = await eventsCollection.findOne(query);
+      res.send(result);
+    });
+
+    // Save a room data Add event
+    app.post("/event", verifyToken, verifyHost, async (req, res) => {
+      const result = await eventsCollection.insertOne(req.body);
+      res.send(result);
+    })
 
     // -------- Properties--------//
 
@@ -242,7 +261,7 @@ async function run() {
       res.send(result);
     });
 
-     // update room status
+    // update room status
     app.patch("/room/status/:id", async (req, res) => {
       const id = req.params.id;
       const status = req.body.status;
@@ -273,6 +292,8 @@ async function run() {
       const result = await bookingsCollection.deleteOne(query);
       res.send(result);
     });
+
+
     // -------- Host --------//
     // Save a room data Add room
     app.post("/room", verifyToken, verifyHost, async (req, res) => {
@@ -301,7 +322,6 @@ async function run() {
       res.send(result);
     });
 
-
     // Update a room for host data
     app.put("/room/update/:id", verifyToken, verifyHost, async (req, res) => {
       const id = req.params.id;
@@ -313,7 +333,6 @@ async function run() {
       const result = await roomsCollection.updateOne(query, updateDoc);
       res.send(result);
     });
-
 
     // get all manage booking for room a host
     app.get(
@@ -328,9 +347,6 @@ async function run() {
         res.send(result);
       }
     );
-
-
-   
 
     // Send a ping to confirm a successful connection
     await client.db("admin").command({ ping: 1 });

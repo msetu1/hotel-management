@@ -30,17 +30,19 @@ const MealsCategoryCard = ({ meal, refetch }) => {
         <h3 className="text-lg font-bold mb-2">{title}</h3>
         <p className="text-gray-600 text-sm mb-3">{shortDescription}</p>
 
-        <p className=" text-gray-800 font-bold mb-2">
-          Price: <span className="text-rose-500">${price}</span>
-        </p>
+        
         <div className="flex items-center gap-20">
           <p className="text-sm text-gray-800">Rating: {rating}/5</p>
           <p className="text-sm text-gray-800"> {preparationTime}</p>
         </div>
-        <div className="flex items-center justify-center mt-5">
+        
+        <div className="flex items-center justify-between mt-5">
+        <p className=" text-gray-800 font-bold ">
+          Price: <span className="text-rose-500">${price}</span>
+        </p>
           <button
             onClick={() => setIsOpen(true)}
-            className="mt-4 bg-rose-500 hover:bg-black text-white px-4 py-3 rounded-lg font-bold w-full"
+            className=" bg-rose-500 hover:bg-black text-white px-7 py-3 rounded-lg font-bold "
           >
             By Now
           </button>

@@ -1,36 +1,62 @@
 [
-    {
-      "id": 6,
-      "location": "Maldives",
-      "category": "Islands",
-      "title": "Overwater Bungalow with Infinity Pool",
-      "price": 499,
-      "total_guests": 3,
-      "bedrooms": 1,
-      "bathrooms": 1,
-      "description": "Float above turquoise waters in this stunning overwater bungalow in the Maldives. Featuring an infinity pool, glass floor panels, and private sun decks, this accommodation offers a once-in-a-lifetime experience. Enjoy direct access to the lagoon, gourmet dining, and impeccable service at this exclusive island retreat."
-    },
-    {
-      "id": 7,
-      "location": "Lake Tahoe, USA",
-      "category": "Lake",
-      "title": "Cabin Retreat by the Lake",
-      "price": 420,
-      "total_guests": 5,
-      "bedrooms": 2,
-      "bathrooms": 2,
-      "description": "Nestled amidst tall pines, this cozy lakeside cabin offers breathtaking views of Lake Tahoe and a private dock for guests to enjoy kayaking, fishing, or relaxing by the water. With rustic interiors and a stone fireplace, it’s perfect for a peaceful mountain getaway."
-    },
-    {
-      "id": 8,
-      "location": "Aspen, Colorado, USA",
-      "category": "Skiing",
-      "title": "Luxury Ski Chalet",
-      "price": 480,
-      "total_guests": 8,
-      "bedrooms": 4,
-      "bathrooms": 3,
-      "description": "Located at the base of Aspen’s renowned ski slopes, this luxurious chalet combines alpine charm with modern elegance. After a day on the slopes, relax in front of the roaring fireplace or unwind in the private hot tub. Ideal for groups or families, this chalet offers an unforgettable mountain experience."
-    }
-  ]
-  
+  {
+    "category": "Conferences",
+    "title": "Tech Innovators Conference ",
+    "description": "A conference bringing together the brightest minds in technology.",
+    "date": "2025-03-15",
+    "time": "09:00 AM",
+    "venue": "Grand Hall, Hotel XYZ",
+    "address": "123 Tech Ave, Silicon City",
+    "ticketPrice": 100,
+    "capacity": 500,
+    "availableSeats": 350,
+    "organizer": "TechWorld Inc.",
+    "image": "https://media.istockphoto.com/id/471906412/photo/beautiful-table-setting-for-an-wedding-reception-or-an-event.jpg?s=612x612&w=0&k=20&c=knlIBspy-ZKuQV7bUVr_eclJmyC24ShNAva_Jh9Rwfc=",
+    "status": "Upcoming"
+  },
+  {
+    "category": "Weddings",
+    "title": "Alice & Bob's Wedding",
+    "description": "A beautiful destination wedding on the beach with close friends and family.",
+    "date": "2025-04-02",
+    "time": "06:00 PM",
+    "venue": "Seaside Resort, Beachfront",
+    "address": "Beachside Street, Oceanview Town",
+    "ticketPrice": 50,
+    "capacity": 150,
+    "availableSeats": 120,
+    "organizer": "Love Story Weddings",
+    "image": "https://media.istockphoto.com/id/1169564701/photo/bride-and-groom-dancing-their-first-dance.jpg?s=612x612&w=0&k=20&c=OugllY6asAkyFuIV_hI4_8KU4oTqgtjP14nut3aS-EU=",
+    "status": "Upcoming"
+  },
+  {
+    "category": "Corporate",
+    "title": "Global Business Summit 2025",
+    "description": "A summit focused on global economy, business trends, and sustainability.",
+    "date": "2025-05-10",
+    "time": "08:30 AM",
+    "venue": "Business Center, Royal Hotel",
+    "address": "456 Business Blvd, Metro City",
+    "ticketPrice": 200,
+    "capacity": 300,
+    "availableSeats": 250,
+    "organizer": "Global Enterprises",
+    "image": "https://media.istockphoto.com/id/160985444/photo/wedding-event-decorations.jpg?s=612x612&w=0&k=20&c=NEIxzLRkoryINIRbVhvUsAxOOo3hV-byfB-zDwHIcA4=",
+    "status": "Upcoming"
+  },
+  {
+    "category": "Music",
+    "title": "Rock n’ Roll Night",
+    "description": "An electrifying night with popular rock bands and live performances.",
+    "date": "2025-06-20",
+    "time": "07:00 PM",
+    "venue": "Main Stage, Hotel XYZ",
+    "address": "123 Concert Ave, Music City",
+    "ticketPrice": 30,
+    "capacity": 600,
+    "availableSeats": 500,
+    "organizer": "Music Corp.",
+    "image": "https://media.istockphoto.com/id/1340256496/photo/shot-of-a-young-woman-decorating-a-table-with-place-card-holders-in-preparation-for-a-wedding.jpg?s=612x612&w=0&k=20&c=gBQHa3_HywGsZv4MYRfvMpWAsgLLUkQvyMbG-lHBOSo=",
+    "status": "Upcoming"
+  }
+]
