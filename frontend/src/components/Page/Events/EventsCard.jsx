@@ -1,4 +1,3 @@
-// import { FaArrowRight } from "react-icons/fa";
 import { FaArrowRight } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
@@ -27,7 +26,7 @@ const EventsCard = ({ event }) => {
         {/* Event Date & Category */}
         <div className="flex justify-between items-center text-sm text-gray-500 mb-4">
           <span>
-            📅 {event.date} | 🕒 {event.time}
+            📅  | 🕒 {event.time}
           </span>
           <span className="px-3 py-1 bg-red-100 text-red-900 hover:bg-red-200 rounded-full text-xs focus:outline-none focus-visible:ring-2 focus-visible:ring-red-500 focus-visible:ring-offset-2 font-medium">
             {event.category}

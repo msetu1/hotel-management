@@ -63,7 +63,7 @@ const MyListings = () => {
       return data;
     },
   });
-  console.log(events);
+
   if (isLoading) return <LoadingSpinner />;
   return (
     <div>

@@ -51,6 +51,7 @@ const AddEvents = () => {
     const ticketPrice = form.ticketPrice.value;
     const capacity = form.capacity.value;
     const availableSeats = form.availableSeats.value;
+    const time = form.time.value;
     const organizer = form.organizer.value;
     const description = form.description.value;
     const image = form.image.files[0];
@@ -72,6 +73,7 @@ const AddEvents = () => {
         ticketPrice,
         capacity,
         availableSeats,
+        time,
         organizer,
         description,
         image: image_url,

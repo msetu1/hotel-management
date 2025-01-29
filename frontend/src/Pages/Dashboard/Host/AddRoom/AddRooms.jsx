@@ -75,8 +75,8 @@ const AddRooms = () => {
         image: image_url,
         host,
       };
-      console.table(roomData);
 
+      console.log(roomData)
       // post request to server
       await mutateAsync(roomData);
     } catch (err) {

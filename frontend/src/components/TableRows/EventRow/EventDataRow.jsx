@@ -5,14 +5,14 @@ import UpdateEventModal from "./UpdateEventModal";
 import { format } from "date-fns";
 
 const EventDataRow = ({ event, index, refetch }) => {
-    let [isOpen, setIsOpen] = useState(false);
-      let [isEditModalOpen, setIsEditModalOpen] = useState(false);
-    
-      const closeModal = () => {
-        setIsOpen(false);
-      };
-    return (
-        <tr
+  let [isOpen, setIsOpen] = useState(false);
+  let [isEditModalOpen, setIsEditModalOpen] = useState(false);
+
+  const closeModal = () => {
+    setIsOpen(false);
+  };
+  return (
+    <tr
       className={`${
         index % 2 === 0 ? "bg-primaryLight bg-opacity-10" : "bg-white"
       }`}
@@ -31,7 +31,10 @@ const EventDataRow = ({ event, index, refetch }) => {
       <td className="p-4">{format(new Date(event?.to), "P")}</td>
 
       <td className="p-4 flex justify-center gap-2">
-        <button onClick={()=>setIsEditModalOpen(true)} className=" text-rose-500 bg- rounded-full text-2xl">
+        <button
+          onClick={() => setIsEditModalOpen(true)}
+          className=" text-rose-500 bg- rounded-full text-2xl"
+        >
           <FaEdit />
         </button>
         {/* Update Modal */}
@@ -55,12 +58,12 @@ const EventDataRow = ({ event, index, refetch }) => {
         <DeleteEventModal
           closeModal={closeModal}
           isOpen={isOpen}
-        //   handleDelete={handleDelete}
+          //   handleDelete={handleDelete}
           id={event?._id}
         />
       </td>
     </tr>
-    );
+  );
 };
 
 export default EventDataRow;
