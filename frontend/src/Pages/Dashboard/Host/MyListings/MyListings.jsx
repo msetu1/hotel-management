@@ -52,9 +52,7 @@ const MyListings = () => {
 
   // event
   // Fetch  all event data
-  const {
-    data: events = [],
-  } = useQuery({
+  const { data: events = [] } = useQuery({
     queryKey: ["my-listings-event", user?.email],
     queryFn: async () => {
       const { data } = await axiosSecure.get(
@@ -132,7 +130,7 @@ const MyListings = () => {
 
           {/* events  */}
           <TabPanel className="bg-white ">
-          <h2 className="text-lg font-semibold mb-2">Property</h2>
+            <h2 className="text-lg font-semibold mb-2">Property</h2>
           </TabPanel>
           {/* property  */}
           <TabPanel className="bg-white ">
@@ -156,7 +154,6 @@ const MyListings = () => {
                     <EventDataRow
                       key={event._id}
                       event={event}
-                      // handleDelete={handleDelete}
                       refetch={refetch}
                       index={index}
                     />

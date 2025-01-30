@@ -1,15 +1,40 @@
 import { useState } from "react";
 import { FaEdit, FaTrash } from "react-icons/fa";
 import DeleteEventModal from "../../Modal/EventModal/DeleteEventModal";
-import UpdateEventModal from "./UpdateEventModal";
 import { format } from "date-fns";
+import { useMutation } from "@tanstack/react-query";
+import useAxiosSecure from "../../../Hooks/useAxiosSecure";
+import toast from "react-hot-toast";
+import UpdateEventModal from "../../Modal/EventModal/UpdateEventModal";
 
 const EventDataRow = ({ event, index, refetch }) => {
-  let [isOpen, setIsOpen] = useState(false);
+  const axiosSecure = useAxiosSecure();
+   let [isOpen, setIsOpen] = useState(false);
   let [isEditModalOpen, setIsEditModalOpen] = useState(false);
 
   const closeModal = () => {
     setIsOpen(false);
+  };
+
+  // delete
+  const { mutateAsync } = useMutation({
+    mutationFn: async (id) => {
+      const { data } = await axiosSecure.delete(`/event/${id}`);
+      return data;
+    },
+    onSuccess: (data) => {
+      console.log(data);
+      refetch();
+      toast.success("Event deleted successfully");
+    },
+  });
+  // handle delete data
+  const handleDelete = async (id) => {
+    try {
+      await mutateAsync(id);
+    } catch (error) {
+      toast.error(error.message);
+    }
   };
   return (
     <tr
@@ -31,10 +56,7 @@ const EventDataRow = ({ event, index, refetch }) => {
       <td className="p-4">{format(new Date(event?.to), "P")}</td>
 
       <td className="p-4 flex justify-center gap-2">
-        <button
-          onClick={() => setIsEditModalOpen(true)}
-          className=" text-rose-500 bg- rounded-full text-2xl"
-        >
+      <button onClick={()=>setIsEditModalOpen(true)} className=" text-rose-500 bg- rounded-full text-2xl">
           <FaEdit />
         </button>
         {/* Update Modal */}
@@ -58,7 +80,7 @@ const EventDataRow = ({ event, index, refetch }) => {
         <DeleteEventModal
           closeModal={closeModal}
           isOpen={isOpen}
-          //   handleDelete={handleDelete}
+          handleDelete={handleDelete}
           id={event?._id}
         />
       </td>

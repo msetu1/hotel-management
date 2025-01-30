@@ -4,7 +4,6 @@ import Home from "../Pages/Home/Home";
 import Login from "../components/Login/Login";
 import SignUp from "../components/SignUp/SignUp";
 import MealsCategoryCard from "../components/mealsCategory/MealsCategoryCard/MealsCategoryCard";
-import PropertyDropdown from "../components/properties/PropertyDropdown";
 import Gallery from "../Pages/Gallery/Gallery";
 import Profile from "../Profile/Profile";
 import Meals from "../Pages/Meals/Meals";
@@ -24,6 +23,7 @@ import PrivateRoute from "./PrivateRoute";
 import AdminRoute from "./AdminRoute";
 import HostRoute from "./HostRoute";
 import EventDetails from "../components/Page/Events/EventDetails";
+import Properties from "../Pages/Properties/Properties";
 
 const router = createBrowserRouter([
   {
@@ -68,8 +68,9 @@ const router = createBrowserRouter([
       },
       {
         path: "/properties",
-        element: <PropertyDropdown />,
+        element: <Properties/>,
       },
+      
       {
         path: "/gallery",
         element: <Gallery />,

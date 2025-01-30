@@ -14,7 +14,6 @@ const AllEvents = () => {
       return data;
     },
   });
-  console.log(events);
   if (isLoading) return <LoadingSpinner />;
   return (
     <Container>

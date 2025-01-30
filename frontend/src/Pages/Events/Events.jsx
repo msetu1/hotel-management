@@ -7,7 +7,7 @@ const Events = () => {
   return (
     <div>
       <Helmet>
-        <title>StayVista | Vacation Homes & Condo Rentals</title>
+        <title>StaySphere | Events</title>
       </Helmet>
 
       <EventsBanner />

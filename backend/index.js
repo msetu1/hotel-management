@@ -361,7 +361,25 @@ async function run() {
         res.send(result);
       }
     );
+    // delete a event for host
+    app.delete("/event/:id", verifyToken, verifyHost, async (req, res) => {
+      const id = req.params.id;
+      const query = { _id: new ObjectId(id) };
+      const result = await eventsCollection.deleteOne(query);
+      res.send(result);
+    });
 
+    // Update a event for host data
+    app.put("/event-update/:id", verifyToken, verifyHost, async (req, res) => {
+      const id = req.params.id;
+      const eventData = req.body;
+      const query = { _id: new ObjectId(id) };
+      const updateDoc = {
+        $set: eventData,
+      };
+      const result = await eventsCollection.updateOne(query, updateDoc);
+      res.send(result);
+    });
 
     // Send a ping to confirm a successful connection
     await client.db("admin").command({ ping: 1 });

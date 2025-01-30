@@ -8,7 +8,6 @@ import { FaRegEye } from "react-icons/fa6";
 import ViewRoomModal from "../Modal/ViewRoomModal";
 
 const ManageBookingRoomDataRow = ({ index, booking, refetch }) => {
-  console.log(booking);
   const axiosSecure = useAxiosSecure();
   const [isOpen, setIsOpen] = useState(false);
   const [openViewModal, setIsOpenViewModal] = useState(false);
