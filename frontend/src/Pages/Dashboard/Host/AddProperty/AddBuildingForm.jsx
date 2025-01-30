@@ -21,6 +21,7 @@ const AddBuildingForm = ({
       <form onSubmit={handleBuildingSubmit}>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
           <div className="space-y-6">
+            {/* location  */}
             <div className="space-y-1 text-sm">
               <label htmlFor="location" className="block text-gray-600">
                 Location
@@ -42,7 +43,7 @@ const AddBuildingForm = ({
                 Yes
               </div>
 
-              {/* Nearby Facilities  */}
+              {/* Total Floor  */}
               <div className="space-y-1 text-sm w-full">
                 <label htmlFor="total_floor" className="block text-gray-600">
                   Total Floor
@@ -92,7 +93,7 @@ const AddBuildingForm = ({
                 />
               </div>
             </div>
-
+            {/* kitchen  */}
             <div className="flex justify-between gap-2">
               <div className="space-y-1 text-sm">
                 <label htmlFor="kitchen_length" className="block text-gray-600">
@@ -153,7 +154,7 @@ const AddBuildingForm = ({
                 />
               </div>
             </div>
-
+            {/* bathrooms */}
             <div className="flex justify-between gap-2">
               <div className="space-y-1 text-sm">
                 <label
@@ -223,7 +224,7 @@ const AddBuildingForm = ({
                 required
               />
             </div>
-
+            {/* investment and rood access  */}
             <div className="flex justify-between gap-2">
               <div className="w-full">
                 <label className="block font-medium">Investment Option</label>
@@ -303,7 +304,7 @@ const AddBuildingForm = ({
               </div>
             </div>
 
-            {/* price  */}
+            {/* price and Ownership Type  */}
             <div className="flex justify-between gap-2">
               <div className="space-y-1 text-sm w-full">
                 <label htmlFor="price" className="block text-gray-600">
@@ -336,7 +337,7 @@ const AddBuildingForm = ({
                 </select>
               </div>
             </div>
-
+            {/* Sale Status and Legal Status */}
             <div className="flex justify-between gap-2">
               {/* Sale Status */}
               <div className="space-y-1 text-sm w-full">
@@ -387,15 +388,23 @@ const AddBuildingForm = ({
                 name="description"
               ></textarea>
             </div>
-
+            {/* Year build and parking availability */}
             <div className="flex justify-between items-center gap-2">
               {/* Year build  */}
-              <div className="w-full">
-                <label className="block font-medium">Year Build</label>
-                <input type="checkbox" name="year_build" className="mr-2" />
-                Yes
+              <div className="space-y-1 text-sm w-full">
+                <label htmlFor="year_build" className="block text-gray-600">
+                  Year build
+                </label>
+                <input
+                  className="w-full px-4 py-3 text-gray-800 border border-rose-300 focus:outline-rose-500 rounded-md "
+                  name="year_build"
+                  id="year_build"
+                  type="number"
+                  placeholder="Year Build"
+                  required
+                />
               </div>
-              {/* Property Tax  */}
+              {/* parking availability  */}
               <div className="w-full">
                 <label className="block font-medium">
                   Parking Availability
@@ -516,7 +525,6 @@ const AddBuildingForm = ({
             </div>
           </div>
         </div>
-
         <button
           //   disabled={loading}
           type="submit"
