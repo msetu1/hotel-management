@@ -46,3 +46,6 @@ export const legalStatus=[
     label: "Pending Documents",
   },
 ]
+
+export const propertyFeatures=["Garden", "Pool", "Garage", "Security Systems"]
+export const amenities=["Swimming Pool", "Gym", "Power Backup", "Sauna"]

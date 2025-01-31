@@ -3,24 +3,24 @@ import useAxiosCommon from "../../../Hooks/useAxiosCommon";
 import LoadingSpinner from "../../Common/LoadingSpinner";
 import Container from "../../Shared/Container";
 import Heading from "../../Common/Heading";
-import EventsCard from "./EventsCard";
+import LandCard from "./LandCard";
 
-const AllEvents = () => {
-  const axiosCommon = useAxiosCommon();
-  const { data: events = [], isLoading } = useQuery({
-    queryKey: ["events"],
-    queryFn: async () => {
-      const { data } = await axiosCommon.get(`/events`);
-      return data;
-    },
-  });
-  if (isLoading) return <LoadingSpinner />;
-  return (
-    <Container>
-      {events && events.length > 0 ? (
+const AllLandsData = () => {
+    const axiosCommon = useAxiosCommon();
+    const { data: lands = [], isLoading } = useQuery({
+      queryKey: ["lands"],
+      queryFn: async () => {
+        const { data } = await axiosCommon.get(`/lands`);
+        return data;
+      },
+    });
+    if (isLoading) return <LoadingSpinner />;
+    return (
+        <Container>
+      {lands && lands.length > 0 ? (
         <div className="pt-12 grid grid-cols-1  md:grid-cols-3 lg:grid-cols-4  gap-8 gap-y-16">
-          {events.map((event) => (
-            <EventsCard key={event._id} event={event} />
+          {lands.map((land) => (
+            <LandCard key={land._id} land={land} />
           ))}
         </div>
       ) : (
@@ -33,7 +33,7 @@ const AllEvents = () => {
         </div>
       )}
     </Container>
-  );
+    );
 };
 
-export default AllEvents;
+export default AllLandsData;

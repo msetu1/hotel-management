@@ -10,6 +10,10 @@ import { TbFidgetSpinner } from "react-icons/tb";
 const AddLandForm = ({
   dates,
   handleDates,
+  investment,
+  setInvestment,
+  roadAccess,
+  setRoadAccess,
   handleLandSubmit,
   imagePreview,
   handleImage,
@@ -58,13 +62,13 @@ const AddLandForm = ({
                 <label className="block font-medium">Property Tax</label>
                 <input
                   type="checkbox"
-                  name="parkingAvailability"
+                  name="property_tax"
                   className="mr-2"
                 />
                 Yes
               </div>
 
-              {/* Nearby Facilities  */}
+              {/* Katha */}
               <div className="space-y-1 text-sm w-full">
                 <label htmlFor="katha" className="block text-gray-600">
                   Katha
@@ -114,56 +118,57 @@ const AddLandForm = ({
               />
             </div>
 
-            <div className="flex justify-between gap-2">
+             {/* investment and rood access  */}
+             <div className="flex justify-between gap-2">
               <div className="w-full">
                 <label className="block font-medium">Investment Option</label>
                 <div className="flex items-center space-x-4">
                   <label className="flex items-center">
                     <input
-                      type="radio"
-                      name="propertyTax"
+                      type="checkbox"
+                      name="investment"
                       value="yes"
-                      // checked={selected === "yes"}
-                      // onChange={() => setSelected("yes")}
                       className="mr-2"
+                      checked={investment === "yes"}
+                      onChange={() => setInvestment("yes")}
                     />
                     Yes
                   </label>
                   <label className="flex items-center">
                     <input
-                      type="radio"
-                      name="propertyTax"
+                      type="checkbox"
+                      name="investment"
                       value="no"
-                      // checked={selected === "no"}
-                      // onChange={() => setSelected("no")}
                       className="mr-2"
+                      checked={investment === "no"}
+                      onChange={() => setInvestment("no")}
                     />
                     No
                   </label>
                 </div>
               </div>
               <div className="w-full">
-                <label className="block font-medium">Road Access:</label>
+                <label className="block font-medium">Road Access</label>
                 <div className="flex items-center space-x-4">
                   <label className="flex items-center">
                     <input
-                      type="radio"
-                      name="propertyTax"
+                      type="checkbox"
+                      name="roadAccess"
                       value="yes"
-                      // checked={selected === "yes"}
-                      // onChange={() => setSelected("yes")}
                       className="mr-2"
+                      checked={roadAccess === "yes"}
+                      onChange={() => setRoadAccess("yes")}
                     />
                     Yes
                   </label>
                   <label className="flex items-center">
                     <input
-                      type="radio"
-                      name="propertyTax"
+                      type="checkbox"
+                      name="road_access"
                       value="no"
-                      // checked={selected === "no"}
-                      // onChange={() => setSelected("no")}
                       className="mr-2"
+                      checked={roadAccess === "no"}
+                      onChange={() => setRoadAccess("no")}
                     />
                     No
                   </label>
@@ -218,13 +223,13 @@ const AddLandForm = ({
               </div>
               {/* Ownership Type  */}
               <div className="space-y-1 text-sm w-full ">
-                <label htmlFor="ownershipType" className="block text-gray-600">
+                <label htmlFor="ownership_type" className="block text-gray-600">
                   Ownership Type
                 </label>
                 <select
                   required
                   className="w-full px-4 py-3 border-rose-300 focus:outline-rose-500 rounded-md border"
-                  name="category"
+                  name="ownership_type"
                 >
                   {ownershipType.map((category) => (
                     <option value={category.label} key={category.label}>
@@ -238,13 +243,13 @@ const AddLandForm = ({
             <div className="flex justify-between gap-2">
               {/* Sale Status */}
               <div className="space-y-1 text-sm w-full">
-                <label htmlFor="saleStatus" className="block text-gray-600">
+                <label htmlFor="sale_status" className="block text-gray-600">
                   Sale Status
                 </label>
                 <select
                   required
                   className="w-full px-4 py-3 border-rose-300 focus:outline-rose-500 rounded-md border"
-                  name="category"
+                  name="sale_status"
                 >
                   {saleStatus.map((category) => (
                     <option value={category.label} key={category.label}>
@@ -256,13 +261,13 @@ const AddLandForm = ({
 
               {/* Legal Status */}
               <div className="space-y-1 text-sm w-full">
-                <label htmlFor="legalStatus" className="block text-gray-600">
+                <label htmlFor="legal_status" className="block text-gray-600">
                   Legal Status
                 </label>
                 <select
                   required
                   className="w-full px-4 py-3 border-rose-300 focus:outline-rose-500 rounded-md border"
-                  name="category"
+                  name="legal_status"
                 >
                   {legalStatus.map((category) => (
                     <option value={category.label} key={category.label}>

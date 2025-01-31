@@ -1,5 +1,4 @@
 import Banner from "../../components/Banner/Banner";
-import MealsByCategory from "../../components/Home/MealsByCategory";
 import Section1 from "../../components/Home/Section1";
 import Section2 from "../../components/Home/Section2";
 import Section3 from "../../components/Home/Section3";
@@ -15,7 +14,6 @@ const Home = () => {
             <Banner/>
             <div className="mx-10 my-20">
             <Section1/>
-            <MealsByCategory/>
             <Section2/>
             <Section3/>
             <Section4/>

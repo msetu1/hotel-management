@@ -8,9 +8,13 @@ import useAuth from "../../../../Hooks/useAuth";
 import toast from "react-hot-toast";
 import LoadingSpinner from "../../../../components/Common/LoadingSpinner";
 import EventDataRow from "../../../../components/TableRows/EventRow/EventDataRow";
+import { useState } from "react";
+import BuildingDataRow from "../../../../components/TableRows/PropertiesDataRow/BuildingDataRow";
+import LandDataRow from "../../../../components/TableRows/PropertiesDataRow/LandDataRow";
 const MyListings = () => {
   const axiosSecure = useAxiosSecure();
   const { user } = useAuth();
+  const [selected, setSelected] = useState("Building");
 
   // rooms
   // Fetch  all room data
@@ -57,6 +61,28 @@ const MyListings = () => {
     queryFn: async () => {
       const { data } = await axiosSecure.get(
         `/my-listings-event/${user?.email}`
+      );
+      return data;
+    },
+  });
+
+  // building 
+  // Fetch  all building data
+  const { data: buildings = [] } = useQuery({
+    queryKey: ["my-listings-building", user?.email],
+    queryFn: async () => {
+      const { data } = await axiosSecure.get(
+        `/my-listings-building/${user?.email}`
+      );
+      return data;
+    },
+  });
+  // Fetch  all land data
+  const { data: lands = [] } = useQuery({
+    queryKey: ["my-listings-land", user?.email],
+    queryFn: async () => {
+      const { data } = await axiosSecure.get(
+        `/my-listings-land/${user?.email}`
       );
       return data;
     },
@@ -130,7 +156,100 @@ const MyListings = () => {
 
           {/* events  */}
           <TabPanel className="bg-white ">
-            <h2 className="text-lg font-semibold mb-2">Property</h2>
+            {/* <div className="flex items-center justify-end gap-3 mb-4">
+              <button className="px-4 py-2 bg-rose-500 text-white hover:bg-black text-xl font-bold rounded-md">
+                Building
+              </button>
+              <button className="px-8 py-2 bg-rose-500 text-white hover:bg-black text-xl font-bold rounded-md">
+                Land
+              </button>
+            </div> */}
+
+          <div>
+      {/* Buttons */}
+      <div className="flex items-center justify-end gap-3 mb-4">
+        <button
+          className={`px-4 py-2 ${
+            selected === "Building" ? "bg-rose-500" : "bg-rose-400"
+          } text-white hover:bg-rose-400 text-xl font-bold rounded-md`}
+          onClick={() => setSelected("Building")}
+        >
+          Building
+        </button>
+        <button
+          className={`px-8 py-2 ${
+            selected === "Land" ? "bg-rose-500" : "bg-rose-400"
+          } text-white hover:bg-rose-400 text-xl font-bold rounded-md`}
+          onClick={() => setSelected("Land")}
+        >
+          Land
+        </button>
+      </div>
+
+      {/* Content Area */}
+      <div className="">
+        {selected === "Building" ? (
+         <div className="custom-scrollbar h-[80vh] overflow-y-auto shadow-myCustomShadow bg-white rounded-lg">
+         <table className="min-w-full border border-gray-200">
+           <thead>
+             <tr className="bg-rose-500 text-white text-left">
+               <th className="p-4 font-semibold">#</th>
+               <th className="p-4 font-semibold">Image</th>
+               <th className="p-4 font-semibold">Title</th>
+               <th className="p-4 font-semibold">Location</th>
+               <th className="p-4 font-semibold">Category</th>
+               <th className="p-4 font-semibold">Property Area</th>
+               <th className="p-4 font-semibold">Price</th>
+               <th className="p-4 font-semibold">Build Year</th>
+               <th className="p-4 font-semibold">Form</th>
+               <th className="p-4 font-semibold text-center">Actions</th>
+             </tr>
+           </thead>
+           <tbody className="text-myGray">
+             {/* building row data */}
+             {buildings?.map((building, index) => (
+               <BuildingDataRow
+                 key={building._id}
+                 building={building}
+                 refetch={refetch}
+                 index={index}
+               />
+             ))}
+           </tbody>
+         </table>
+       </div>
+        ) : (
+          <div className="custom-scrollbar h-[80vh] overflow-y-auto shadow-myCustomShadow bg-white rounded-lg">
+          <table className="min-w-full border border-gray-200">
+            <thead>
+              <tr className="bg-rose-500 text-white text-left">
+                <th className="p-4 font-semibold">#</th>
+                <th className="p-4 font-semibold">Image</th>
+                <th className="p-4 font-semibold">Title</th>
+                <th className="p-4 font-semibold">Location</th>
+                <th className="p-4 font-semibold">Category</th>
+                <th className="p-4 font-semibold">Land Area</th>
+                <th className="p-4 font-semibold">Price</th>
+                <th className="p-4 font-semibold">Form</th>
+                <th className="p-4 font-semibold text-center">Actions</th>
+              </tr>
+            </thead>
+            <tbody className="text-myGray">
+              {/* building row data */}
+              {lands?.map((land, index) => (
+                <LandDataRow
+                  key={land._id}
+                  land={land}
+                  refetch={refetch}
+                  index={index}
+                />
+              ))}
+            </tbody>
+          </table>
+        </div>
+        )}
+      </div>
+    </div>
           </TabPanel>
           {/* property  */}
           <TabPanel className="bg-white ">

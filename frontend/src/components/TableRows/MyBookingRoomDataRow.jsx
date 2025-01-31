@@ -66,18 +66,18 @@ const MyBookingRoomDataRow = ({ index, booking, refetch }) => {
             </div>
           </div>
           <div className="ml-3">
-      <p className="text-gray-900 whitespace-no-wrap">
-        {isFullTextVisible 
-          ? booking?.title 
-          : `${booking?.title.slice(0, 12)}...`}{" "}
-        <span 
-          onClick={handleToggleText} 
-          className="underline text-blue-500 cursor-pointer"
-        >
-          {isFullTextVisible ? "less" : "more"}
-        </span>
-      </p>
-    </div>
+            <p className="text-gray-900 whitespace-no-wrap">
+              {isFullTextVisible
+                ? booking?.title
+                : `${booking?.title.slice(0, 12)}...`}{" "}
+              <span
+                onClick={handleToggleText}
+                className="underline text-blue-500 cursor-pointer"
+              >
+                {isFullTextVisible ? "less" : "more"}
+              </span>
+            </p>
+          </div>
         </div>
       </td>
       <td className="p-4 font-medium">

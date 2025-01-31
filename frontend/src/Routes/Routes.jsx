@@ -24,6 +24,8 @@ import AdminRoute from "./AdminRoute";
 import HostRoute from "./HostRoute";
 import EventDetails from "../components/Page/Events/EventDetails";
 import Properties from "../Pages/Properties/Properties";
+import BuildingDetails from "../components/Page/Properties/BuildingDetails";
+import LandDetails from "../components/Page/Properties/LandDetails";
 
 const router = createBrowserRouter([
   {
@@ -36,9 +38,11 @@ const router = createBrowserRouter([
       },
       {
         path: "/meal-category-details",
-        element: <PrivateRoute>
-          <MealsCategoryCard />
-        </PrivateRoute>,
+        element: (
+          <PrivateRoute>
+            <MealsCategoryCard />
+          </PrivateRoute>
+        ),
       },
       {
         path: "/meals",
@@ -62,15 +66,33 @@ const router = createBrowserRouter([
       },
       {
         path: "/event/:id",
-        element: <PrivateRoute>
-          <EventDetails />
-        </PrivateRoute>,
+        element: (
+          <PrivateRoute>
+            <EventDetails />
+          </PrivateRoute>
+        ),
       },
       {
         path: "/properties",
-        element: <Properties/>,
+        element: <Properties />,
       },
-      
+      {
+        path: "/building/:id",
+        element: (
+          <PrivateRoute>
+            <BuildingDetails />
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "/land/:id",
+        element: (
+          <PrivateRoute>
+            <LandDetails />
+          </PrivateRoute>
+        ),
+      },
+
       {
         path: "/gallery",
         element: <Gallery />,

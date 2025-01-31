@@ -5,7 +5,7 @@ const EventsCard = ({ event }) => {
 
   return (
     <Link to={`/event/${event?._id}`}>
-      <div className="overflow-hidden rounded bg-white text-slate-500 shadow-md shadow-slate-200">
+      <div className="overflow-hidden rounded bg-white text-slate-500 shadow-md shadow-slate-200 h-[480px]">
         {/*  <!-- Image --> */}
         <div className="col-span-1 cursor-pointer group">
           <figure>

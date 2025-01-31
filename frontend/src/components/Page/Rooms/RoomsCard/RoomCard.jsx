@@ -5,7 +5,7 @@ const RoomCard = ({ room }) => {
   const { category, image, location } = room;
   return (
     <Link to={`/room/${room?._id}`}>
-    <div className="overflow-hidden rounded bg-white text-slate-500 shadow-md shadow-slate-200">
+    <div className="overflow-hidden rounded bg-white text-slate-500 shadow-md shadow-slate-200 h-[450px]">
       {/*  <!-- Image --> */}
       <div className="col-span-1 cursor-pointer group">
       <figure>

@@ -1,8 +1,10 @@
 import { DateRange } from "react-date-range";
 import {
+  amenities,
   buildingcategory,
   legalStatus,
   ownershipType,
+  propertyFeatures,
   saleStatus,
 } from "../../../../components/Category/BuildingCategoryData";
 import { TbFidgetSpinner } from "react-icons/tb";
@@ -10,6 +12,12 @@ import { TbFidgetSpinner } from "react-icons/tb";
 const AddBuildingForm = ({
   dates,
   handleDates,
+  handleFeatureChange,
+  handleAmenityChange,
+  investment,
+  setInvestment,
+  roadAccess,
+  setRoadAccess,
   handleBuildingSubmit,
   imagePreview,
   handleImage,
@@ -35,6 +43,7 @@ const AddBuildingForm = ({
                 required
               />
             </div>
+            {/* property tax and total flore  */}
             <div className="flex justify-between items-center gap-2">
               {/* Property Tax  */}
               <div className="w-full">
@@ -225,6 +234,7 @@ const AddBuildingForm = ({
               />
             </div>
             {/* investment and rood access  */}
+            
             <div className="flex justify-between gap-2">
               <div className="w-full">
                 <label className="block font-medium">Investment Option</label>
@@ -235,6 +245,8 @@ const AddBuildingForm = ({
                       name="investment"
                       value="yes"
                       className="mr-2"
+                      checked={investment === "yes"}
+                      onChange={() => setInvestment("yes")}
                     />
                     Yes
                   </label>
@@ -244,6 +256,8 @@ const AddBuildingForm = ({
                       name="investment"
                       value="no"
                       className="mr-2"
+                      checked={investment === "no"}
+                      onChange={() => setInvestment("no")}
                     />
                     No
                   </label>
@@ -255,18 +269,22 @@ const AddBuildingForm = ({
                   <label className="flex items-center">
                     <input
                       type="checkbox"
-                      name="road_access"
+                      name="roadAccess"
                       value="yes"
                       className="mr-2"
+                      checked={roadAccess === "yes"}
+                      onChange={() => setRoadAccess("yes")}
                     />
                     Yes
                   </label>
                   <label className="flex items-center">
                     <input
-                      type="radio"
+                      type="checkbox"
                       name="road_access"
                       value="no"
                       className="mr-2"
+                      checked={roadAccess === "no"}
+                      onChange={() => setRoadAccess("no")}
                     />
                     No
                   </label>
@@ -437,90 +455,39 @@ const AddBuildingForm = ({
 
             {/* Property Features */}
             <div>
-              <label htmlFor="property_features" className="block font-medium">
-                Property Features
-              </label>
-              <div className="flex text-sm justify-between items-center space-y-2  ">
-                <label className="flex items-center">
-                  <input
-                    name="garden_feature"
-                    type="checkbox"
-                    className="mr-2"
-                    value="Garden"
-                  />
-                  Garden
-                </label>
-                <label className="flex items-center">
-                  <input
-                    name="pool_feature"
-                    type="checkbox"
-                    className="mr-2"
-                    value="Pool"
-                  />
-                  Pool
-                </label>
-                <label className="flex items-center">
-                  <input
-                    name="garage_feature"
-                    type="checkbox"
-                    className="mr-2"
-                    value="Garage"
-                  />
-                  Garage
-                </label>
-                <label className="flex items-center">
-                  <input
-                    name="security_systems"
-                    type="checkbox"
-                    className="mr-2"
-                    value="Security Systems"
-                  />
-                  Security Systems
-                </label>
+              <label className="block font-medium">Property Features</label>
+              <div className="flex text-sm justify-between items-center space-y-2">
+                {propertyFeatures?.map((feature) => (
+                  <label key={feature} className="flex items-center">
+                    <input
+                      name="feature"
+                      type="checkbox"
+                      value={feature}
+                      className="mr-2"
+                      onChange={() => handleFeatureChange(feature)}
+                    />
+                    {feature}
+                  </label>
+                ))}
               </div>
             </div>
-            {/* Amenities  */}
+
+            {/* Amenities */}
             <div>
-              <label htmlFor="amenities" className="block font-medium">
-                Amenities
-              </label>
-              <div className="flex text-sm justify-between items-center space-y-2  ">
-                <label className="flex items-center">
-                  <input
-                    name="swimming_pool"
-                    type="checkbox"
-                    className="mr-2"
-                    value="Swimming Pool"
-                  />
-                  Swimming Pool
-                </label>
-                <label className="flex items-center">
-                  <input
-                    name="gym_amenities"
-                    type="checkbox"
-                    className="mr-2"
-                    value="Gym"
-                  />
-                  Gym
-                </label>
-                <label className="flex items-center">
-                  <input
-                    name="power_backup"
-                    type="checkbox"
-                    className="mr-2"
-                    value="Power Backup"
-                  />
-                  Power Backup
-                </label>
-                <label className="flex items-center">
-                  <input
-                    name="sauna_amenities"
-                    type="checkbox"
-                    className="mr-2"
-                    value="Sauna"
-                  />
-                  Sauna
-                </label>
+              <label className="block font-medium">Amenities</label>
+              <div className="flex text-sm justify-between items-center space-y-2">
+                {amenities?.map((amenity) => (
+                  <label key={amenity} className="flex items-center">
+                    <input
+                      name="amenity"
+                      type="checkbox"
+                      value={amenity}
+                      className="mr-2"
+                      onChange={() => handleAmenityChange(amenity)}
+                    />
+                    {amenity}
+                  </label>
+                ))}
               </div>
             </div>
           </div>

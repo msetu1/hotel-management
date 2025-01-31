@@ -56,8 +56,8 @@ async function run() {
     const bookingsCollection = db.collection("bookings");
     const mealsCollection = db.collection("meals");
     const eventsCollection = db.collection("events");
-
-    // --------  Verify Middleware--------//
+    const buildingCollection = db.collection("buildings");
+    const landCollection = db.collection("lands");
     // admin
     const verifyAdmin = async (req, res, next) => {
       const user = req.user;
@@ -232,7 +232,35 @@ async function run() {
       res.send(result);
     });
 
-    // -------- Properties--------//
+    // -------- Events--------//
+
+    // building
+    app.get("/buildings", async (req, res) => {
+      const result = await buildingCollection.find().toArray();
+      res.send(result);
+    });
+
+    // land
+    app.get("/lands", async (req, res) => {
+      const result = await landCollection.find().toArray();
+      res.send(result);
+    });
+
+    // single building
+    app.get("/building/:id", async (req, res) => {
+      const id = req.params.id;
+      const query = { _id: new ObjectId(id) };
+      const result = await buildingCollection.findOne(query);
+      res.send(result);
+    });
+
+    // single land
+    app.get("/land/:id", async (req, res) => {
+      const id = req.params.id;
+      const query = { _id: new ObjectId(id) };
+      const result = await landCollection.findOne(query);
+      res.send(result);
+    });
 
     // -------- Guest--------//
     // save a guest booking room
@@ -286,7 +314,6 @@ async function run() {
       const result = await bookingsCollection.deleteOne(query);
       res.send(result);
     });
-
 
     // -------- Host --------//
     // Save a room data Add room
@@ -347,7 +374,7 @@ async function run() {
     app.post("/event", verifyToken, verifyHost, async (req, res) => {
       const result = await eventsCollection.insertOne(req.body);
       res.send(result);
-    })
+    });
 
     // get all rooms and my listing for host
     app.get(
@@ -380,6 +407,87 @@ async function run() {
       const result = await eventsCollection.updateOne(query, updateDoc);
       res.send(result);
     });
+
+    // property
+
+    // building or property
+    // Save a building data Add building
+    app.post("/building", verifyToken, verifyHost, async (req, res) => {
+      const result = await buildingCollection.insertOne(req.body);
+      res.send(result);
+    });
+
+    // land or property
+    // save a land data Add land
+    app.post("/land", verifyToken, verifyHost, async (req, res) => {
+      const result = await landCollection.insertOne(req.body);
+      res.send(result);
+    });
+
+    // get all building and my listing for host
+    app.get(
+      "/my-listings-building/:email",
+      verifyToken,
+      verifyHost,
+      async (req, res) => {
+        const email = req.params.email;
+        let query = { "host.email": email };
+        const result = await buildingCollection.find(query).toArray();
+        res.send(result);
+      }
+    );
+    // get all land and my listing for host
+    app.get(
+      "/my-listings-land/:email",
+      verifyToken,
+      verifyHost,
+      async (req, res) => {
+        const email = req.params.email;
+        let query = { "host.email": email };
+        const result = await landCollection.find(query).toArray();
+        res.send(result);
+      }
+    );
+
+    // delete a building for host
+    app.delete("/building/:id", verifyToken, verifyHost, async (req, res) => {
+      const id = req.params.id;
+      const query = { _id: new ObjectId(id) };
+      const result = await buildingCollection.deleteOne(query);
+      res.send(result);
+    });
+    // delete a building for host
+    app.delete("/land/:id", verifyToken, verifyHost, async (req, res) => {
+      const id = req.params.id;
+      const query = { _id: new ObjectId(id) };
+      const result = await landCollection.deleteOne(query);
+      res.send(result);
+    });
+
+      // Update a building data for host data
+      app.put("/building-update/:id", verifyToken, verifyHost, async (req, res) => {
+        const id = req.params.id;
+        const buildingData = req.body;
+        const query = { _id: new ObjectId(id) };
+        const updateDoc = {
+          $set: buildingData,
+        };
+        const result = await buildingCollection.updateOne(query, updateDoc);
+        res.send(result);
+      });
+
+      // Update a land data for host data
+      app.put("/land-update/:id", verifyToken, verifyHost, async (req, res) => {
+        const id = req.params.id;
+        const landData = req.body;
+        const query = { _id: new ObjectId(id) };
+        const updateDoc = {
+          $set: landData,
+        };
+        const result = await landCollection.updateOne(query, updateDoc);
+        res.send(result);
+      });
+  
 
     // Send a ping to confirm a successful connection
     await client.db("admin").command({ ping: 1 });
