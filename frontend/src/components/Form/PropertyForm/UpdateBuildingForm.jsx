@@ -27,6 +27,7 @@ const UpdateBuildingForm = ({
       return { ...prev, [category]: updatedValues };
     });
   };
+  // investment 
   useEffect(() => {
     setBuildingData({
       ...buildingData,
@@ -590,43 +591,7 @@ const UpdateBuildingForm = ({
           </div>
 
           <div className="flex flex-col gap-4">
-            {/* Property Features */}
-            {/* <div>
-              <label className="block font-medium">Property Features</label>
-              <div className="flex text-sm justify-between items-center space-y-2">
-                {propertyFeatures?.map((feature) => (
-                  <label key={feature} className="flex items-center">
-                    <input
-                      name="feature"
-                      type="checkbox"
-                      value={feature}
-                      className="mr-2"
-                     
-                    />
-                    {feature}
-                  </label>
-                ))}
-              </div>
-            </div> */}
-            {/* Amenities */}
-            {/* <div>
-              <label className="block font-medium">Amenities</label>
-              <div className="flex text-sm justify-between items-center space-y-2">
-                {amenities?.map((amenity) => (
-                  <label key={amenity} className="flex items-center">
-                    <input
-                      name="amenity"
-                      type="checkbox"
-                      value={amenity}
-                      className="mr-2"
-                     
-                    />
-                    {amenity}
-                  </label>
-                ))}
-              </div>
-            </div> */}
-
+           
             {/* Property Features */}
             <div>
               <label className="block font-medium">Property Features</label>
